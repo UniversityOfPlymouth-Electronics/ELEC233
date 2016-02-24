@@ -1,0 +1,245 @@
+Simulator report for behavioural
+Fri Oct 29 09:23:24 2010
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 62 nodes     ;
+; Simulation Coverage         ;      84.72 % ;
+; Total Number of Transitions ; 2973         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C5Q208C7  ;
++-----------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                 ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
+; Option                                                                                     ; Setting               ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
+; Simulation mode                                                                            ; Timing                ; Timing        ;
+; Start time                                                                                 ; 0 ns                  ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF                  ;               ;
+; Vector input source                                                                        ; behavioural_tests.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                    ; On            ;
+; Check outputs                                                                              ; Off                   ; Off           ;
+; Report simulation coverage                                                                 ; On                    ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                    ; On            ;
+; Display missing 1-value coverage report                                                    ; On                    ; On            ;
+; Display missing 0-value coverage report                                                    ; On                    ; On            ;
+; Detect setup and hold time violations                                                      ; Off                   ; Off           ;
+; Detect glitches                                                                            ; Off                   ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                   ; Off           ;
+; Generate Signal Activity File                                                              ; Off                   ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                   ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                   ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                    ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE            ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                   ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                   ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                  ; Auto          ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      84.72 % ;
+; Total nodes checked                                 ; 62           ;
+; Total output ports checked                          ; 72           ;
+; Total output ports with complete 1/0-value coverage ; 61           ;
+; Total output ports with no 1/0-value coverage       ; 11           ;
+; Total output ports with no 1-value coverage         ; 11           ;
+; Total output ports with no 0-value coverage         ; 11           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                        ;
++----------------------------------------+----------------------------------------+------------------+
+; Node Name                              ; Output Port Name                       ; Output Port Type ;
++----------------------------------------+----------------------------------------+------------------+
+; |behavioural|bit_counter:inst|Add9~0   ; |behavioural|bit_counter:inst|Add9~0   ; combout          ;
+; |behavioural|bit_counter:inst|Add9~0   ; |behavioural|bit_counter:inst|Add9~1   ; cout             ;
+; |behavioural|bit_counter:inst|Add9~2   ; |behavioural|bit_counter:inst|Add9~2   ; combout          ;
+; |behavioural|bit_counter:inst|Add9~2   ; |behavioural|bit_counter:inst|Add9~3   ; cout             ;
+; |behavioural|bit_counter:inst|Add9~4   ; |behavioural|bit_counter:inst|Add9~4   ; combout          ;
+; |behavioural|bit_counter:inst|Add9~4   ; |behavioural|bit_counter:inst|Add9~5   ; cout             ;
+; |behavioural|bit_counter:inst|Add9~6   ; |behavioural|bit_counter:inst|Add9~6   ; combout          ;
+; |behavioural|bit_counter:inst|Add12~0  ; |behavioural|bit_counter:inst|Add12~0  ; combout          ;
+; |behavioural|bit_counter:inst|Add12~0  ; |behavioural|bit_counter:inst|Add12~1  ; cout             ;
+; |behavioural|bit_counter:inst|Add12~2  ; |behavioural|bit_counter:inst|Add12~2  ; combout          ;
+; |behavioural|bit_counter:inst|Add12~2  ; |behavioural|bit_counter:inst|Add12~3  ; cout             ;
+; |behavioural|bit_counter:inst|Add12~4  ; |behavioural|bit_counter:inst|Add12~4  ; combout          ;
+; |behavioural|bit_counter:inst|Add12~4  ; |behavioural|bit_counter:inst|Add12~5  ; cout             ;
+; |behavioural|bit_counter:inst|Add12~6  ; |behavioural|bit_counter:inst|Add12~6  ; combout          ;
+; |behavioural|bit_counter:inst|Add13~1  ; |behavioural|bit_counter:inst|Add13~1  ; cout             ;
+; |behavioural|bit_counter:inst|Add13~2  ; |behavioural|bit_counter:inst|Add13~2  ; combout          ;
+; |behavioural|bit_counter:inst|Add13~2  ; |behavioural|bit_counter:inst|Add13~3  ; cout             ;
+; |behavioural|bit_counter:inst|Add13~4  ; |behavioural|bit_counter:inst|Add13~4  ; combout          ;
+; |behavioural|bit_counter:inst|Add13~4  ; |behavioural|bit_counter:inst|Add13~5  ; cout             ;
+; |behavioural|bit_counter:inst|Add13~6  ; |behavioural|bit_counter:inst|Add13~6  ; combout          ;
+; |behavioural|bit_counter:inst|Add13~6  ; |behavioural|bit_counter:inst|Add13~7  ; cout             ;
+; |behavioural|bit_counter:inst|Add13~8  ; |behavioural|bit_counter:inst|Add13~8  ; combout          ;
+; |behavioural|bit_counter:inst|Add13~8  ; |behavioural|bit_counter:inst|Add13~9  ; cout             ;
+; |behavioural|bit_counter:inst|Add13~10 ; |behavioural|bit_counter:inst|Add13~10 ; combout          ;
+; |behavioural|bit_counter:inst|Add1~0   ; |behavioural|bit_counter:inst|Add1~0   ; combout          ;
+; |behavioural|bit_counter:inst|Add1~1   ; |behavioural|bit_counter:inst|Add1~1   ; combout          ;
+; |behavioural|bit_counter:inst|Add2~0   ; |behavioural|bit_counter:inst|Add2~0   ; combout          ;
+; |behavioural|bit_counter:inst|Add3~0   ; |behavioural|bit_counter:inst|Add3~0   ; combout          ;
+; |behavioural|bit_counter:inst|Add4~2   ; |behavioural|bit_counter:inst|Add4~2   ; combout          ;
+; |behavioural|bit_counter:inst|Add5~0   ; |behavioural|bit_counter:inst|Add5~0   ; combout          ;
+; |behavioural|bit_counter:inst|Add5~1   ; |behavioural|bit_counter:inst|Add5~1   ; combout          ;
+; |behavioural|bit_counter:inst|Add5~2   ; |behavioural|bit_counter:inst|Add5~2   ; combout          ;
+; |behavioural|bit_counter:inst|Add7~0   ; |behavioural|bit_counter:inst|Add7~0   ; combout          ;
+; |behavioural|bit_counter:inst|Add5~3   ; |behavioural|bit_counter:inst|Add5~3   ; combout          ;
+; |behavioural|bit_counter:inst|Add7~1   ; |behavioural|bit_counter:inst|Add7~1   ; combout          ;
+; |behavioural|bit_counter:inst|Add5~4   ; |behavioural|bit_counter:inst|Add5~4   ; combout          ;
+; |behavioural|bit_counter:inst|Add7~2   ; |behavioural|bit_counter:inst|Add7~2   ; combout          ;
+; |behavioural|bit_counter:inst|Add11~0  ; |behavioural|bit_counter:inst|Add11~0  ; combout          ;
+; |behavioural|bit_counter:inst|Add11~1  ; |behavioural|bit_counter:inst|Add11~1  ; combout          ;
+; |behavioural|bit_counter:inst|Add4~3   ; |behavioural|bit_counter:inst|Add4~3   ; combout          ;
+; |behavioural|Y[4]                      ; |behavioural|Y[4]                      ; padio            ;
+; |behavioural|Y[3]                      ; |behavioural|Y[3]                      ; padio            ;
+; |behavioural|Y[2]                      ; |behavioural|Y[2]                      ; padio            ;
+; |behavioural|Y[1]                      ; |behavioural|Y[1]                      ; padio            ;
+; |behavioural|Y[0]                      ; |behavioural|Y[0]                      ; padio            ;
+; |behavioural|X[13]                     ; |behavioural|X[13]~corein              ; combout          ;
+; |behavioural|X[15]                     ; |behavioural|X[15]~corein              ; combout          ;
+; |behavioural|X[14]                     ; |behavioural|X[14]~corein              ; combout          ;
+; |behavioural|X[10]                     ; |behavioural|X[10]~corein              ; combout          ;
+; |behavioural|X[12]                     ; |behavioural|X[12]~corein              ; combout          ;
+; |behavioural|X[11]                     ; |behavioural|X[11]~corein              ; combout          ;
+; |behavioural|X[9]                      ; |behavioural|X[9]~corein               ; combout          ;
+; |behavioural|X[8]                      ; |behavioural|X[8]~corein               ; combout          ;
+; |behavioural|X[7]                      ; |behavioural|X[7]~corein               ; combout          ;
+; |behavioural|X[6]                      ; |behavioural|X[6]~corein               ; combout          ;
+; |behavioural|X[5]                      ; |behavioural|X[5]~corein               ; combout          ;
+; |behavioural|X[4]                      ; |behavioural|X[4]~corein               ; combout          ;
+; |behavioural|X[3]                      ; |behavioural|X[3]~corein               ; combout          ;
+; |behavioural|X[2]                      ; |behavioural|X[2]~corein               ; combout          ;
+; |behavioural|X[1]                      ; |behavioural|X[1]~corein               ; combout          ;
+; |behavioural|X[0]                      ; |behavioural|X[0]~corein               ; combout          ;
++----------------------------------------+----------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------+
+; Missing 1-Value Coverage                                   ;
++--------------------+--------------------+------------------+
+; Node Name          ; Output Port Name   ; Output Port Type ;
++--------------------+--------------------+------------------+
+; |behavioural|Y[15] ; |behavioural|Y[15] ; padio            ;
+; |behavioural|Y[14] ; |behavioural|Y[14] ; padio            ;
+; |behavioural|Y[13] ; |behavioural|Y[13] ; padio            ;
+; |behavioural|Y[12] ; |behavioural|Y[12] ; padio            ;
+; |behavioural|Y[11] ; |behavioural|Y[11] ; padio            ;
+; |behavioural|Y[10] ; |behavioural|Y[10] ; padio            ;
+; |behavioural|Y[9]  ; |behavioural|Y[9]  ; padio            ;
+; |behavioural|Y[8]  ; |behavioural|Y[8]  ; padio            ;
+; |behavioural|Y[7]  ; |behavioural|Y[7]  ; padio            ;
+; |behavioural|Y[6]  ; |behavioural|Y[6]  ; padio            ;
+; |behavioural|Y[5]  ; |behavioural|Y[5]  ; padio            ;
++--------------------+--------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------+
+; Missing 0-Value Coverage                                   ;
++--------------------+--------------------+------------------+
+; Node Name          ; Output Port Name   ; Output Port Type ;
++--------------------+--------------------+------------------+
+; |behavioural|Y[15] ; |behavioural|Y[15] ; padio            ;
+; |behavioural|Y[14] ; |behavioural|Y[14] ; padio            ;
+; |behavioural|Y[13] ; |behavioural|Y[13] ; padio            ;
+; |behavioural|Y[12] ; |behavioural|Y[12] ; padio            ;
+; |behavioural|Y[11] ; |behavioural|Y[11] ; padio            ;
+; |behavioural|Y[10] ; |behavioural|Y[10] ; padio            ;
+; |behavioural|Y[9]  ; |behavioural|Y[9]  ; padio            ;
+; |behavioural|Y[8]  ; |behavioural|Y[8]  ; padio            ;
+; |behavioural|Y[7]  ; |behavioural|Y[7]  ; padio            ;
+; |behavioural|Y[6]  ; |behavioural|Y[6]  ; padio            ;
+; |behavioural|Y[5]  ; |behavioural|Y[5]  ; padio            ;
++--------------------+--------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Fri Oct 29 09:23:23 2010
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off behavioural -c behavioural
+Info: Using vector source file "C:/Users/noutram/Desktop/ELEC226 Session 4/tasks/Task03-02 - for loop - bit counter/behavioural_tests.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      84.72 %
+Info: Number of transitions in simulation is 2973
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 154 megabytes
+    Info: Processing ended: Fri Oct 29 09:23:26 2010
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:00
+
+

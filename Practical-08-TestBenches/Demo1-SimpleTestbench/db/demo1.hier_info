@@ -1,0 +1,14 @@
+|demo1
+Y <= myxor:inst.y
+A => myxor:inst.a
+B => myxor:inst.b
+
+
+|demo1|myxor:inst
+a => y2.IN0
+a => y1.IN0
+b => y1.IN1
+b => y2.IN1
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+

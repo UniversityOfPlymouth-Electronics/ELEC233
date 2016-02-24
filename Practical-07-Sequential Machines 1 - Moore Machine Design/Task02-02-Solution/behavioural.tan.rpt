@@ -1,0 +1,234 @@
+Classic Timing Analyzer report for behavioural
+Fri Nov 26 09:50:57 2010
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'CLK'
+  6. tsu
+  7. tco
+  8. th
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                          ;
++------------------------------+-------+---------------+------------------------------------------------+---------------------------------+---------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                                    ; From                            ; To                              ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+------------------------------------------------+---------------------------------+---------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 4.170 ns                                       ; RESET                           ; uop_pattern_gen:inst|state.RES  ; --         ; CLK      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 7.740 ns                                       ; uop_pattern_gen:inst|state.p0b1 ; Y                               ; CLK        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -3.419 ns                                      ; P                               ; uop_pattern_gen:inst|state.p0b0 ; --         ; CLK      ; 0            ;
+; Clock Setup: 'CLK'           ; N/A   ; None          ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; uop_pattern_gen:inst|state.p1b1 ; uop_pattern_gen:inst|state.p1b2 ; CLK        ; CLK      ; 0            ;
+; Total number of failed paths ;       ;               ;                                                ;                                 ;                                 ;            ;          ; 0            ;
++------------------------------+-------+---------------+------------------------------------------------+---------------------------------+---------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C5Q208C7        ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLK             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLK'                                                                                                                                                                                                                     ;
++-------+------------------------------------------------+---------------------------------+---------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                            ; To                              ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+---------------------------------+---------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; uop_pattern_gen:inst|state.p1b1 ; uop_pattern_gen:inst|state.p1b2 ; CLK        ; CLK      ; None                        ; None                      ; 0.996 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; uop_pattern_gen:inst|state.p0b3 ; uop_pattern_gen:inst|state.RES  ; CLK        ; CLK      ; None                        ; None                      ; 0.914 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; uop_pattern_gen:inst|state.p0b1 ; uop_pattern_gen:inst|state.p0b2 ; CLK        ; CLK      ; None                        ; None                      ; 0.777 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; uop_pattern_gen:inst|state.p1b0 ; uop_pattern_gen:inst|state.p1b1 ; CLK        ; CLK      ; None                        ; None                      ; 0.769 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; uop_pattern_gen:inst|state.RES  ; uop_pattern_gen:inst|state.p0b0 ; CLK        ; CLK      ; None                        ; None                      ; 0.649 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; uop_pattern_gen:inst|state.p0b2 ; uop_pattern_gen:inst|state.p0b3 ; CLK        ; CLK      ; None                        ; None                      ; 0.646 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; uop_pattern_gen:inst|state.RES  ; uop_pattern_gen:inst|state.p1b0 ; CLK        ; CLK      ; None                        ; None                      ; 0.643 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; uop_pattern_gen:inst|state.p0b0 ; uop_pattern_gen:inst|state.p0b1 ; CLK        ; CLK      ; None                        ; None                      ; 0.631 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; uop_pattern_gen:inst|state.p1b3 ; uop_pattern_gen:inst|state.RES  ; CLK        ; CLK      ; None                        ; None                      ; 0.626 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; uop_pattern_gen:inst|state.p1b2 ; uop_pattern_gen:inst|state.p1b3 ; CLK        ; CLK      ; None                        ; None                      ; 0.621 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; uop_pattern_gen:inst|state.RES  ; uop_pattern_gen:inst|state.RES  ; CLK        ; CLK      ; None                        ; None                      ; 0.454 ns                ;
++-------+------------------------------------------------+---------------------------------+---------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; tsu                                                                                    ;
++-------+--------------+------------+-------+---------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From  ; To                              ; To Clock ;
++-------+--------------+------------+-------+---------------------------------+----------+
+; N/A   ; None         ; 4.170 ns   ; RESET ; uop_pattern_gen:inst|state.RES  ; CLK      ;
+; N/A   ; None         ; 4.151 ns   ; RESET ; uop_pattern_gen:inst|state.p1b0 ; CLK      ;
+; N/A   ; None         ; 4.149 ns   ; RESET ; uop_pattern_gen:inst|state.p0b0 ; CLK      ;
+; N/A   ; None         ; 3.754 ns   ; P     ; uop_pattern_gen:inst|state.p1b0 ; CLK      ;
+; N/A   ; None         ; 3.667 ns   ; P     ; uop_pattern_gen:inst|state.p0b0 ; CLK      ;
++-------+--------------+------------+-------+---------------------------------+----------+
+
+
++---------------------------------------------------------------------------------------+
+; tco                                                                                   ;
++-------+--------------+------------+---------------------------------+----+------------+
+; Slack ; Required tco ; Actual tco ; From                            ; To ; From Clock ;
++-------+--------------+------------+---------------------------------+----+------------+
+; N/A   ; None         ; 7.740 ns   ; uop_pattern_gen:inst|state.p0b1 ; Y  ; CLK        ;
+; N/A   ; None         ; 7.486 ns   ; uop_pattern_gen:inst|state.p0b2 ; Y  ; CLK        ;
+; N/A   ; None         ; 7.142 ns   ; uop_pattern_gen:inst|state.RES  ; Y  ; CLK        ;
+; N/A   ; None         ; 6.948 ns   ; uop_pattern_gen:inst|state.p1b2 ; Y  ; CLK        ;
++-------+--------------+------------+---------------------------------+----+------------+
+
+
++----------------------------------------------------------------------------------------------+
+; th                                                                                           ;
++---------------+-------------+-----------+-------+---------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From  ; To                              ; To Clock ;
++---------------+-------------+-----------+-------+---------------------------------+----------+
+; N/A           ; None        ; -3.419 ns ; P     ; uop_pattern_gen:inst|state.p0b0 ; CLK      ;
+; N/A           ; None        ; -3.506 ns ; P     ; uop_pattern_gen:inst|state.p1b0 ; CLK      ;
+; N/A           ; None        ; -3.901 ns ; RESET ; uop_pattern_gen:inst|state.p0b0 ; CLK      ;
+; N/A           ; None        ; -3.903 ns ; RESET ; uop_pattern_gen:inst|state.p1b0 ; CLK      ;
+; N/A           ; None        ; -3.922 ns ; RESET ; uop_pattern_gen:inst|state.RES  ; CLK      ;
++---------------+-------------+-----------+-------+---------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Fri Nov 26 09:50:57 2010
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off behavioural -c behavioural --timing_analysis_only
+Info: Only one processor detected - disabling parallel compilation
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLK" is an undefined clock
+Info: Clock "CLK" Internal fmax is restricted to 380.08 MHz between source register "uop_pattern_gen:inst|state.p1b1" and destination register "uop_pattern_gen:inst|state.p1b2"
+    Info: fmax restricted to clock pin edge rate 2.631 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 0.996 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X1_Y12_N19; Fanout = 1; REG Node = 'uop_pattern_gen:inst|state.p1b1'
+            Info: 2: + IC(0.583 ns) + CELL(0.413 ns) = 0.996 ns; Loc. = LCFF_X1_Y12_N13; Fanout = 2; REG Node = 'uop_pattern_gen:inst|state.p1b2'
+            Info: Total cell delay = 0.413 ns ( 41.47 % )
+            Info: Total interconnect delay = 0.583 ns ( 58.53 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "CLK" to destination register is 2.577 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.066 ns) = 1.066 ns; Loc. = PIN_23; Fanout = 1; CLK Node = 'CLK'
+                Info: 2: + IC(0.132 ns) + CELL(0.000 ns) = 1.198 ns; Loc. = CLKCTRL_G2; Fanout = 9; COMB Node = 'CLK~clkctrl'
+                Info: 3: + IC(0.777 ns) + CELL(0.602 ns) = 2.577 ns; Loc. = LCFF_X1_Y12_N13; Fanout = 2; REG Node = 'uop_pattern_gen:inst|state.p1b2'
+                Info: Total cell delay = 1.668 ns ( 64.73 % )
+                Info: Total interconnect delay = 0.909 ns ( 35.27 % )
+            Info: - Longest clock path from clock "CLK" to source register is 2.577 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.066 ns) = 1.066 ns; Loc. = PIN_23; Fanout = 1; CLK Node = 'CLK'
+                Info: 2: + IC(0.132 ns) + CELL(0.000 ns) = 1.198 ns; Loc. = CLKCTRL_G2; Fanout = 9; COMB Node = 'CLK~clkctrl'
+                Info: 3: + IC(0.777 ns) + CELL(0.602 ns) = 2.577 ns; Loc. = LCFF_X1_Y12_N19; Fanout = 1; REG Node = 'uop_pattern_gen:inst|state.p1b1'
+                Info: Total cell delay = 1.668 ns ( 64.73 % )
+                Info: Total interconnect delay = 0.909 ns ( 35.27 % )
+        Info: + Micro clock to output delay of source is 0.277 ns
+        Info: + Micro setup delay of destination is -0.038 ns
+Info: tsu for register "uop_pattern_gen:inst|state.RES" (data pin = "RESET", clock pin = "CLK") is 4.170 ns
+    Info: + Longest pin to register delay is 6.785 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.954 ns) = 0.954 ns; Loc. = PIN_4; Fanout = 3; PIN Node = 'RESET'
+        Info: 2: + IC(5.190 ns) + CELL(0.545 ns) = 6.689 ns; Loc. = LCCOMB_X1_Y12_N22; Fanout = 1; COMB Node = 'uop_pattern_gen:inst|Selector0~0'
+        Info: 3: + IC(0.000 ns) + CELL(0.096 ns) = 6.785 ns; Loc. = LCFF_X1_Y12_N23; Fanout = 4; REG Node = 'uop_pattern_gen:inst|state.RES'
+        Info: Total cell delay = 1.595 ns ( 23.51 % )
+        Info: Total interconnect delay = 5.190 ns ( 76.49 % )
+    Info: + Micro setup delay of destination is -0.038 ns
+    Info: - Shortest clock path from clock "CLK" to destination register is 2.577 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.066 ns) = 1.066 ns; Loc. = PIN_23; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.132 ns) + CELL(0.000 ns) = 1.198 ns; Loc. = CLKCTRL_G2; Fanout = 9; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(0.777 ns) + CELL(0.602 ns) = 2.577 ns; Loc. = LCFF_X1_Y12_N23; Fanout = 4; REG Node = 'uop_pattern_gen:inst|state.RES'
+        Info: Total cell delay = 1.668 ns ( 64.73 % )
+        Info: Total interconnect delay = 0.909 ns ( 35.27 % )
+Info: tco from clock "CLK" to destination pin "Y" through register "uop_pattern_gen:inst|state.p0b1" is 7.740 ns
+    Info: + Longest clock path from clock "CLK" to source register is 2.577 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.066 ns) = 1.066 ns; Loc. = PIN_23; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.132 ns) + CELL(0.000 ns) = 1.198 ns; Loc. = CLKCTRL_G2; Fanout = 9; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(0.777 ns) + CELL(0.602 ns) = 2.577 ns; Loc. = LCFF_X1_Y12_N9; Fanout = 2; REG Node = 'uop_pattern_gen:inst|state.p0b1'
+        Info: Total cell delay = 1.668 ns ( 64.73 % )
+        Info: Total interconnect delay = 0.909 ns ( 35.27 % )
+    Info: + Micro clock to output delay of source is 0.277 ns
+    Info: + Longest register to pin delay is 4.886 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X1_Y12_N9; Fanout = 2; REG Node = 'uop_pattern_gen:inst|state.p0b1'
+        Info: 2: + IC(0.605 ns) + CELL(0.545 ns) = 1.150 ns; Loc. = LCCOMB_X1_Y12_N12; Fanout = 1; COMB Node = 'uop_pattern_gen:inst|WideOr1~0'
+        Info: 3: + IC(0.816 ns) + CELL(2.920 ns) = 4.886 ns; Loc. = PIN_5; Fanout = 0; PIN Node = 'Y'
+        Info: Total cell delay = 3.465 ns ( 70.92 % )
+        Info: Total interconnect delay = 1.421 ns ( 29.08 % )
+Info: th for register "uop_pattern_gen:inst|state.p0b0" (data pin = "P", clock pin = "CLK") is -3.419 ns
+    Info: + Longest clock path from clock "CLK" to destination register is 2.577 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.066 ns) = 1.066 ns; Loc. = PIN_23; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.132 ns) + CELL(0.000 ns) = 1.198 ns; Loc. = CLKCTRL_G2; Fanout = 9; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(0.777 ns) + CELL(0.602 ns) = 2.577 ns; Loc. = LCFF_X1_Y12_N1; Fanout = 1; REG Node = 'uop_pattern_gen:inst|state.p0b0'
+        Info: Total cell delay = 1.668 ns ( 64.73 % )
+        Info: Total interconnect delay = 0.909 ns ( 35.27 % )
+    Info: + Micro hold delay of destination is 0.286 ns
+    Info: - Shortest pin to register delay is 6.282 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.914 ns) = 0.914 ns; Loc. = PIN_8; Fanout = 2; PIN Node = 'P'
+        Info: 2: + IC(4.815 ns) + CELL(0.457 ns) = 6.186 ns; Loc. = LCCOMB_X1_Y12_N0; Fanout = 1; COMB Node = 'uop_pattern_gen:inst|state~13'
+        Info: 3: + IC(0.000 ns) + CELL(0.096 ns) = 6.282 ns; Loc. = LCFF_X1_Y12_N1; Fanout = 1; REG Node = 'uop_pattern_gen:inst|state.p0b0'
+        Info: Total cell delay = 1.467 ns ( 23.35 % )
+        Info: Total interconnect delay = 4.815 ns ( 76.65 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 179 megabytes
+    Info: Processing ended: Fri Nov 26 09:50:57 2010
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

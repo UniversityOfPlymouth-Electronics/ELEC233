@@ -1,0 +1,60 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\noutram\Desktop\TestBench\Demo5 - checking timing\simulation\modelsim
+Emy_jk
+Z1 w1353516981
+Z2 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z4 dC:\Users\noutram\Desktop\TestBench\Demo5 - checking timing\simulation\modelsim
+Z5 8C:/Users/noutram/Desktop/TestBench/Demo5 - checking timing/my_jk.vhd
+Z6 FC:/Users/noutram/Desktop/TestBench/Demo5 - checking timing/my_jk.vhd
+l0
+L8
+VmRGhmAo3V^2VM=Gn0gEN80
+Z7 OV;C;6.6d;45
+31
+Z8 o-93 -work work -O0
+Z9 tExplicit 1
+!s100 6f4ecYSBVLP_A0Oian2T60
+Ajk_v1
+R2
+R3
+DEx4 work 5 my_jk 0 22 mRGhmAo3V^2VM=Gn0gEN80
+l18
+L16
+VX[l_TcEVa>jRa1JIS>Tc02
+R7
+31
+Z10 Mx2 4 ieee 14 std_logic_1164
+Mx1 4 ieee 11 numeric_std
+R8
+R9
+!s100 >8aVz1DHBUlZf[P4@5lD>3
+Emy_jk_vhd_tst
+Z11 w1353692367
+R3
+R4
+Z12 8C:/Users/noutram/Desktop/TestBench/Demo5 - checking timing/simulation/modelsim/my_jk.vht
+Z13 FC:/Users/noutram/Desktop/TestBench/Demo5 - checking timing/simulation/modelsim/my_jk.vht
+l0
+L10
+V^jF[3ElD0SQz^UcIOVA741
+!s100 MfdO7H<7X=i;F8DD?@jAS0
+R7
+31
+R8
+R9
+Amy_jk_arch
+R3
+DEx4 work 13 my_jk_vhd_tst 0 22 ^jF[3ElD0SQz^UcIOVA741
+l38
+L14
+VQ;zk`Qd0eBINozSi2H4F^0
+!s100 n>Tzg4z5MW<Bdd4zdhWSh0
+R7
+31
+Z14 Mx1 4 ieee 14 std_logic_1164
+R8
+R9

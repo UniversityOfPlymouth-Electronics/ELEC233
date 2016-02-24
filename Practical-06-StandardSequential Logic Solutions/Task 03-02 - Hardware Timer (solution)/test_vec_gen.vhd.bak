@@ -1,0 +1,38 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.std_logic_arith.all;
+
+--This entity counts the number of leading '1' terms
+entity test_vec_gen is
+
+	port 
+	(
+		Y      : out std_logic_vector(15 downto 0) := ('0', others=>'0')  -- output only
+	);
+
+end entity;
+
+architecture test_vec_gen_v1 of test_vec_gen is
+begin
+		
+	process
+	
+		--Local declarations
+		variable idx : integer := 0;
+		
+	begin
+	    Y <= "1000" & "000000000000";
+	    wait for 10ns;
+	    Y <= "1100" & "000000000000";
+	    wait for 10ns;
+	    Y <= "1110" & "000000000000";
+	    wait for 10ns;
+	    Y <= "1111" & "000000000000";
+	    wait for 10ns;
+	    Y <= "0000" & "000000000000";
+	    wait;	
+	    				
+	end process;
+
+end test_vec_gen_v1;

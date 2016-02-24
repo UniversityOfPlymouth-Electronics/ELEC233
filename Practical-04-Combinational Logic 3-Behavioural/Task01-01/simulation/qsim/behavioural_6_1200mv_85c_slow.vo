@@ -1,0 +1,137 @@
+// Copyright (C) 1991-2014 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus II 32-bit"
+// VERSION "Version 13.1.4 Build 182 03/12/2014 SJ Full Version"
+
+// DATE "10/21/2014 10:33:53"
+
+// 
+// Device: Altera EP4CE6E22C6 Package TQFP144
+// 
+
+// 
+// This Verilog file should be used for ModelSim-Altera (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module behavioural (
+	Y_behave,
+	A,
+	B,
+	Y_library);
+output 	Y_behave;
+input 	A;
+input 	B;
+output 	Y_library;
+
+// Design Ports Information
+// Y_behave	=>  Location: PIN_11,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// Y_library	=>  Location: PIN_10,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// A	=>  Location: PIN_28,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// B	=>  Location: PIN_137,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+// synopsys translate_off
+initial $sdf_annotate("behavioural_6_1200mv_85c_v_slow.sdo");
+// synopsys translate_on
+
+wire \Y_behave~output_o ;
+wire \Y_library~output_o ;
+wire \A~input_o ;
+wire \B~input_o ;
+wire \inst|Y~combout ;
+
+
+// Location: IOOBUF_X0_Y18_N23
+cycloneive_io_obuf \Y_behave~output (
+	.i(\inst|Y~combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Y_behave~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Y_behave~output .bus_hold = "false";
+defparam \Y_behave~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOOBUF_X0_Y18_N16
+cycloneive_io_obuf \Y_library~output (
+	.i(\inst|Y~combout ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\Y_library~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \Y_library~output .bus_hold = "false";
+defparam \Y_library~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y9_N8
+cycloneive_io_ibuf \A~input (
+	.i(A),
+	.ibar(gnd),
+	.o(\A~input_o ));
+// synopsys translate_off
+defparam \A~input .bus_hold = "false";
+defparam \A~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X7_Y24_N1
+cycloneive_io_ibuf \B~input (
+	.i(B),
+	.ibar(gnd),
+	.o(\B~input_o ));
+// synopsys translate_off
+defparam \B~input .bus_hold = "false";
+defparam \B~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y20_N24
+cycloneive_lcell_comb \inst|Y (
+// Equation(s):
+// \inst|Y~combout  = (\A~input_o  & \B~input_o )
+
+	.dataa(\A~input_o ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(\B~input_o ),
+	.cin(gnd),
+	.combout(\inst|Y~combout ),
+	.cout());
+// synopsys translate_off
+defparam \inst|Y .lut_mask = 16'hAA00;
+defparam \inst|Y .sum_lutc_input = "datac";
+// synopsys translate_on
+
+assign Y_behave = \Y_behave~output_o ;
+
+assign Y_library = \Y_library~output_o ;
+
+endmodule

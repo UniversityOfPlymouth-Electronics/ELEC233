@@ -1,0 +1,225 @@
+Classic Timing Analyzer report for behavioural
+Fri Nov 26 08:52:13 2010
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'CLK'
+  6. tsu
+  7. tco
+  8. th
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                              ;
++------------------------------+-------+---------------+------------------------------------------------+-----------------------------------+-----------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                                    ; From                              ; To                                ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+------------------------------------------------+-----------------------------------+-----------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 3.828 ns                                       ; DATA_IN                           ; moore_state_machine:inst|state.s3 ; --         ; CLK      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 6.367 ns                                       ; moore_state_machine:inst|state.s4 ; Y                                 ; CLK        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -3.485 ns                                      ; DATA_IN                           ; moore_state_machine:inst|state.s4 ; --         ; CLK      ; 0            ;
+; Clock Setup: 'CLK'           ; N/A   ; None          ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; moore_state_machine:inst|state.s2 ; moore_state_machine:inst|state.s1 ; CLK        ; CLK      ; 0            ;
+; Total number of failed paths ;       ;               ;                                                ;                                   ;                                   ;            ;          ; 0            ;
++------------------------------+-------+---------------+------------------------------------------------+-----------------------------------+-----------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C5Q208C7        ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLK             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLK'                                                                                                                                                                                                                         ;
++-------+------------------------------------------------+-----------------------------------+-----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                              ; To                                ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-----------------------------------+-----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; moore_state_machine:inst|state.s2 ; moore_state_machine:inst|state.s1 ; CLK        ; CLK      ; None                        ; None                      ; 1.009 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; moore_state_machine:inst|state.s3 ; moore_state_machine:inst|state.s1 ; CLK        ; CLK      ; None                        ; None                      ; 0.637 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; moore_state_machine:inst|state.s3 ; moore_state_machine:inst|state.s4 ; CLK        ; CLK      ; None                        ; None                      ; 0.634 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; moore_state_machine:inst|state.s1 ; moore_state_machine:inst|state.s2 ; CLK        ; CLK      ; None                        ; None                      ; 0.632 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; moore_state_machine:inst|state.s2 ; moore_state_machine:inst|state.s3 ; CLK        ; CLK      ; None                        ; None                      ; 0.630 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; moore_state_machine:inst|state.s3 ; moore_state_machine:inst|state.s3 ; CLK        ; CLK      ; None                        ; None                      ; 0.454 ns                ;
+; N/A   ; Restricted to 380.08 MHz ( period = 2.631 ns ) ; moore_state_machine:inst|state.s2 ; moore_state_machine:inst|state.s2 ; CLK        ; CLK      ; None                        ; None                      ; 0.454 ns                ;
++-------+------------------------------------------------+-----------------------------------+-----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; tsu                                                                                        ;
++-------+--------------+------------+---------+-----------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From    ; To                                ; To Clock ;
++-------+--------------+------------+---------+-----------------------------------+----------+
+; N/A   ; None         ; 3.828 ns   ; DATA_IN ; moore_state_machine:inst|state.s3 ; CLK      ;
+; N/A   ; None         ; 3.824 ns   ; DATA_IN ; moore_state_machine:inst|state.s1 ; CLK      ;
+; N/A   ; None         ; 3.766 ns   ; DATA_IN ; moore_state_machine:inst|state.s2 ; CLK      ;
+; N/A   ; None         ; 3.733 ns   ; DATA_IN ; moore_state_machine:inst|state.s4 ; CLK      ;
++-------+--------------+------------+---------+-----------------------------------+----------+
+
+
++-----------------------------------------------------------------------------------------+
+; tco                                                                                     ;
++-------+--------------+------------+-----------------------------------+----+------------+
+; Slack ; Required tco ; Actual tco ; From                              ; To ; From Clock ;
++-------+--------------+------------+-----------------------------------+----+------------+
+; N/A   ; None         ; 6.367 ns   ; moore_state_machine:inst|state.s4 ; Y  ; CLK        ;
++-------+--------------+------------+-----------------------------------+----+------------+
+
+
++--------------------------------------------------------------------------------------------------+
+; th                                                                                               ;
++---------------+-------------+-----------+---------+-----------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From    ; To                                ; To Clock ;
++---------------+-------------+-----------+---------+-----------------------------------+----------+
+; N/A           ; None        ; -3.485 ns ; DATA_IN ; moore_state_machine:inst|state.s4 ; CLK      ;
+; N/A           ; None        ; -3.518 ns ; DATA_IN ; moore_state_machine:inst|state.s2 ; CLK      ;
+; N/A           ; None        ; -3.576 ns ; DATA_IN ; moore_state_machine:inst|state.s1 ; CLK      ;
+; N/A           ; None        ; -3.580 ns ; DATA_IN ; moore_state_machine:inst|state.s3 ; CLK      ;
++---------------+-------------+-----------+---------+-----------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Fri Nov 26 08:52:13 2010
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off behavioural -c behavioural --timing_analysis_only
+Info: Only one processor detected - disabling parallel compilation
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLK" is an undefined clock
+Info: Clock "CLK" Internal fmax is restricted to 380.08 MHz between source register "moore_state_machine:inst|state.s2" and destination register "moore_state_machine:inst|state.s1"
+    Info: fmax restricted to clock pin edge rate 2.631 ns. Expand message to see actual delay path.
+        Info: + Longest register to register delay is 1.009 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X1_Y13_N13; Fanout = 3; REG Node = 'moore_state_machine:inst|state.s2'
+            Info: 2: + IC(0.591 ns) + CELL(0.322 ns) = 0.913 ns; Loc. = LCCOMB_X1_Y13_N22; Fanout = 1; COMB Node = 'moore_state_machine:inst|state~11'
+            Info: 3: + IC(0.000 ns) + CELL(0.096 ns) = 1.009 ns; Loc. = LCFF_X1_Y13_N23; Fanout = 1; REG Node = 'moore_state_machine:inst|state.s1'
+            Info: Total cell delay = 0.418 ns ( 41.43 % )
+            Info: Total interconnect delay = 0.591 ns ( 58.57 % )
+        Info: - Smallest clock skew is 0.000 ns
+            Info: + Shortest clock path from clock "CLK" to destination register is 2.578 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.066 ns) = 1.066 ns; Loc. = PIN_23; Fanout = 1; CLK Node = 'CLK'
+                Info: 2: + IC(0.132 ns) + CELL(0.000 ns) = 1.198 ns; Loc. = CLKCTRL_G2; Fanout = 4; COMB Node = 'CLK~clkctrl'
+                Info: 3: + IC(0.778 ns) + CELL(0.602 ns) = 2.578 ns; Loc. = LCFF_X1_Y13_N23; Fanout = 1; REG Node = 'moore_state_machine:inst|state.s1'
+                Info: Total cell delay = 1.668 ns ( 64.70 % )
+                Info: Total interconnect delay = 0.910 ns ( 35.30 % )
+            Info: - Longest clock path from clock "CLK" to source register is 2.578 ns
+                Info: 1: + IC(0.000 ns) + CELL(1.066 ns) = 1.066 ns; Loc. = PIN_23; Fanout = 1; CLK Node = 'CLK'
+                Info: 2: + IC(0.132 ns) + CELL(0.000 ns) = 1.198 ns; Loc. = CLKCTRL_G2; Fanout = 4; COMB Node = 'CLK~clkctrl'
+                Info: 3: + IC(0.778 ns) + CELL(0.602 ns) = 2.578 ns; Loc. = LCFF_X1_Y13_N13; Fanout = 3; REG Node = 'moore_state_machine:inst|state.s2'
+                Info: Total cell delay = 1.668 ns ( 64.70 % )
+                Info: Total interconnect delay = 0.910 ns ( 35.30 % )
+        Info: + Micro clock to output delay of source is 0.277 ns
+        Info: + Micro setup delay of destination is -0.038 ns
+Info: tsu for register "moore_state_machine:inst|state.s3" (data pin = "DATA_IN", clock pin = "CLK") is 3.828 ns
+    Info: + Longest pin to register delay is 6.444 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.954 ns) = 0.954 ns; Loc. = PIN_4; Fanout = 4; PIN Node = 'DATA_IN'
+        Info: 2: + IC(4.873 ns) + CELL(0.521 ns) = 6.348 ns; Loc. = LCCOMB_X1_Y13_N2; Fanout = 1; COMB Node = 'moore_state_machine:inst|state~10'
+        Info: 3: + IC(0.000 ns) + CELL(0.096 ns) = 6.444 ns; Loc. = LCFF_X1_Y13_N3; Fanout = 3; REG Node = 'moore_state_machine:inst|state.s3'
+        Info: Total cell delay = 1.571 ns ( 24.38 % )
+        Info: Total interconnect delay = 4.873 ns ( 75.62 % )
+    Info: + Micro setup delay of destination is -0.038 ns
+    Info: - Shortest clock path from clock "CLK" to destination register is 2.578 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.066 ns) = 1.066 ns; Loc. = PIN_23; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.132 ns) + CELL(0.000 ns) = 1.198 ns; Loc. = CLKCTRL_G2; Fanout = 4; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(0.778 ns) + CELL(0.602 ns) = 2.578 ns; Loc. = LCFF_X1_Y13_N3; Fanout = 3; REG Node = 'moore_state_machine:inst|state.s3'
+        Info: Total cell delay = 1.668 ns ( 64.70 % )
+        Info: Total interconnect delay = 0.910 ns ( 35.30 % )
+Info: tco from clock "CLK" to destination pin "Y" through register "moore_state_machine:inst|state.s4" is 6.367 ns
+    Info: + Longest clock path from clock "CLK" to source register is 2.578 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.066 ns) = 1.066 ns; Loc. = PIN_23; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.132 ns) + CELL(0.000 ns) = 1.198 ns; Loc. = CLKCTRL_G2; Fanout = 4; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(0.778 ns) + CELL(0.602 ns) = 2.578 ns; Loc. = LCFF_X1_Y13_N9; Fanout = 1; REG Node = 'moore_state_machine:inst|state.s4'
+        Info: Total cell delay = 1.668 ns ( 64.70 % )
+        Info: Total interconnect delay = 0.910 ns ( 35.30 % )
+    Info: + Micro clock to output delay of source is 0.277 ns
+    Info: + Longest register to pin delay is 3.512 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X1_Y13_N9; Fanout = 1; REG Node = 'moore_state_machine:inst|state.s4'
+        Info: 2: + IC(0.582 ns) + CELL(2.930 ns) = 3.512 ns; Loc. = PIN_3; Fanout = 0; PIN Node = 'Y'
+        Info: Total cell delay = 2.930 ns ( 83.43 % )
+        Info: Total interconnect delay = 0.582 ns ( 16.57 % )
+Info: th for register "moore_state_machine:inst|state.s4" (data pin = "DATA_IN", clock pin = "CLK") is -3.485 ns
+    Info: + Longest clock path from clock "CLK" to destination register is 2.578 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.066 ns) = 1.066 ns; Loc. = PIN_23; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.132 ns) + CELL(0.000 ns) = 1.198 ns; Loc. = CLKCTRL_G2; Fanout = 4; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(0.778 ns) + CELL(0.602 ns) = 2.578 ns; Loc. = LCFF_X1_Y13_N9; Fanout = 1; REG Node = 'moore_state_machine:inst|state.s4'
+        Info: Total cell delay = 1.668 ns ( 64.70 % )
+        Info: Total interconnect delay = 0.910 ns ( 35.30 % )
+    Info: + Micro hold delay of destination is 0.286 ns
+    Info: - Shortest pin to register delay is 6.349 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.954 ns) = 0.954 ns; Loc. = PIN_4; Fanout = 4; PIN Node = 'DATA_IN'
+        Info: 2: + IC(4.872 ns) + CELL(0.427 ns) = 6.253 ns; Loc. = LCCOMB_X1_Y13_N8; Fanout = 1; COMB Node = 'moore_state_machine:inst|state~9'
+        Info: 3: + IC(0.000 ns) + CELL(0.096 ns) = 6.349 ns; Loc. = LCFF_X1_Y13_N9; Fanout = 1; REG Node = 'moore_state_machine:inst|state.s4'
+        Info: Total cell delay = 1.477 ns ( 23.26 % )
+        Info: Total interconnect delay = 4.872 ns ( 76.74 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 179 megabytes
+    Info: Processing ended: Fri Nov 26 08:52:13 2010
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

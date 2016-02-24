@@ -1,0 +1,11 @@
+|my_jk
+J => process_0.IN0
+J => process_0.IN0
+J => process_0.IN0
+K => process_0.IN1
+K => process_0.IN1
+K => process_0.IN1
+CLK => state.CLK
+Q <= state.DB_MAX_OUTPUT_PORT_TYPE
+
+

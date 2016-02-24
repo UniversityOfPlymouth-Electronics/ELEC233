@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\noutram\Desktop\ELE233-P3\Task01-03_if_statements_and_std_logic\simulation\qsim
+vbehavioural
+Z1 !s100 _R4Y51fofW`O<i^UBGnH[2
+Z2 IhTS1WjL95<Uf3a=D=Ukho1
+Z3 VJ0K78n9X6GlYKj:0kFDnV2
+Z4 dC:\Users\noutram\Desktop\Topic4-Tasks\Task01-03_if_statements_and_std_logic\simulation\qsim
+Z5 w1413884605
+Z6 8behavioural.vo
+Z7 Fbehavioural.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|behavioural.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1413884606.969000
+Z12 !s107 behavioural.vo|
+!s101 -O0
+vbehavioural_vlg_check_tst
+!i10b 1
+Z13 !s100 eZ?`YSOhMSEAn0b99lJkS2
+Z14 I;29@F[0]=`I3aLSh?`O583
+Z15 Vn>f0kZ8]l9S76aD:iNlV@2
+R4
+Z16 w1413884602
+Z17 8behavioural_tests.vwf.vt
+Z18 Fbehavioural_tests.vwf.vt
+L0 63
+R8
+r1
+!s85 0
+31
+Z19 !s108 1413884607.110000
+Z20 !s107 behavioural_tests.vwf.vt|
+Z21 !s90 -work|work|behavioural_tests.vwf.vt|
+!s101 -O0
+R10
+vbehavioural_vlg_sample_tst
+!i10b 1
+Z22 !s100 dj=n470DoCkC1l>G8;e[B1
+Z23 I03?W0QTcj4V0aDfc`YRXW3
+Z24 V1k>P=2IPTY>H;;?]Y:N1X1
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vbehavioural_vlg_vec_tst
+!i10b 1
+Z25 !s100 `<Q<@bEWBoc`;^=2P^NPg0
+Z26 IfRg2TcmS=f]h;e>CL5RKj1
+Z27 VH2@8K6OXgjBQE6V71MWAI2
+R4
+R16
+R17
+R18
+Z28 L0 427
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

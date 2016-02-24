@@ -1,0 +1,285 @@
+Simulator report for behavioural
+Fri Nov 12 09:25:53 2010
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 72 nodes     ;
+; Simulation Coverage         ;      43.04 % ;
+; Total Number of Transitions ; 479          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C5Q208C7  ;
++-----------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                 ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
+; Option                                                                                     ; Setting               ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
+; Simulation mode                                                                            ; Timing                ; Timing        ;
+; Start time                                                                                 ; 0 ns                  ; 0 ns          ;
+; End time                                                                                   ; 1 ms                  ;               ;
+; Simulation results format                                                                  ; CVWF                  ;               ;
+; Vector input source                                                                        ; behavioural_tests.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                    ; On            ;
+; Check outputs                                                                              ; Off                   ; Off           ;
+; Report simulation coverage                                                                 ; On                    ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                    ; On            ;
+; Display missing 1-value coverage report                                                    ; On                    ; On            ;
+; Display missing 0-value coverage report                                                    ; On                    ; On            ;
+; Detect setup and hold time violations                                                      ; Off                   ; Off           ;
+; Detect glitches                                                                            ; Off                   ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                   ; Off           ;
+; Generate Signal Activity File                                                              ; Off                   ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                   ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                   ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                    ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE            ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                   ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                   ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                  ; Auto          ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      43.04 % ;
+; Total nodes checked                                 ; 72           ;
+; Total output ports checked                          ; 79           ;
+; Total output ports with complete 1/0-value coverage ; 34           ;
+; Total output ports with no 1/0-value coverage       ; 34           ;
+; Total output ports with no 1-value coverage         ; 34           ;
+; Total output ports with no 0-value coverage         ; 45           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                  ;
++---------------------------------------------+---------------------------------------------+------------------+
+; Node Name                                   ; Output Port Name                            ; Output Port Type ;
++---------------------------------------------+---------------------------------------------+------------------+
+; |behavioural|my_counter:inst|Add0~0         ; |behavioural|my_counter:inst|Add0~0         ; combout          ;
+; |behavioural|my_counter:inst|Add0~0         ; |behavioural|my_counter:inst|Add0~1         ; cout             ;
+; |behavioural|my_counter:inst|Add0~2         ; |behavioural|my_counter:inst|Add0~2         ; combout          ;
+; |behavioural|my_counter:inst|Add0~2         ; |behavioural|my_counter:inst|Add0~3         ; cout             ;
+; |behavioural|my_counter:inst|Add0~4         ; |behavioural|my_counter:inst|Add0~4         ; combout          ;
+; |behavioural|my_counter:inst|Add0~4         ; |behavioural|my_counter:inst|Add0~5         ; cout             ;
+; |behavioural|my_counter:inst|Add0~6         ; |behavioural|my_counter:inst|Add0~6         ; combout          ;
+; |behavioural|my_counter:inst|REC            ; |behavioural|my_counter:inst|REC            ; regout           ;
+; |behavioural|my_counter:inst|x[3]           ; |behavioural|my_counter:inst|x[3]           ; regout           ;
+; |behavioural|my_counter:inst|x[2]           ; |behavioural|my_counter:inst|x[2]           ; regout           ;
+; |behavioural|my_counter:inst|x[1]           ; |behavioural|my_counter:inst|x[1]           ; regout           ;
+; |behavioural|my_counter:inst|x[0]           ; |behavioural|my_counter:inst|x[0]           ; regout           ;
+; |behavioural|my_counter:inst|Equal0~0       ; |behavioural|my_counter:inst|Equal0~0       ; combout          ;
+; |behavioural|my_counter:inst|Equal0~1       ; |behavioural|my_counter:inst|Equal0~1       ; combout          ;
+; |behavioural|my_counter:inst|Equal0~4       ; |behavioural|my_counter:inst|Equal0~4       ; combout          ;
+; |behavioural|my_counter:inst|REC~0          ; |behavioural|my_counter:inst|REC~0          ; combout          ;
+; |behavioural|my_counter:inst|Equal0~5       ; |behavioural|my_counter:inst|Equal0~5       ; combout          ;
+; |behavioural|my_counter:inst|x~4            ; |behavioural|my_counter:inst|x~4            ; combout          ;
+; |behavioural|my_counter:inst|x~5            ; |behavioural|my_counter:inst|x~5            ; combout          ;
+; |behavioural|my_counter:inst|x~6            ; |behavioural|my_counter:inst|x~6            ; combout          ;
+; |behavioural|my_counter:inst|x~7            ; |behavioural|my_counter:inst|x~7            ; combout          ;
+; |behavioural|my_counter:inst|process_0~0    ; |behavioural|my_counter:inst|process_0~0    ; combout          ;
+; |behavioural|my_counter:inst|PeriodReg[1]~1 ; |behavioural|my_counter:inst|PeriodReg[1]~1 ; combout          ;
+; |behavioural|my_counter:inst|PeriodReg[3]~3 ; |behavioural|my_counter:inst|PeriodReg[3]~3 ; combout          ;
+; |behavioural|RECYCLE                        ; |behavioural|RECYCLE                        ; padio            ;
+; |behavioural|Y1[3]                          ; |behavioural|Y1[3]                          ; padio            ;
+; |behavioural|Y1[2]                          ; |behavioural|Y1[2]                          ; padio            ;
+; |behavioural|Y1[1]                          ; |behavioural|Y1[1]                          ; padio            ;
+; |behavioural|Y1[0]                          ; |behavioural|Y1[0]                          ; padio            ;
+; |behavioural|CLK                            ; |behavioural|CLK~corein                     ; combout          ;
+; |behavioural|LOAD                           ; |behavioural|LOAD~corein                    ; combout          ;
+; |behavioural|PR[1]                          ; |behavioural|PR[1]~corein                   ; combout          ;
+; |behavioural|PR[3]                          ; |behavioural|PR[3]~corein                   ; combout          ;
+; |behavioural|CLK~clkctrl                    ; |behavioural|CLK~clkctrl                    ; outclk           ;
++---------------------------------------------+---------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                     ;
++---------------------------------------------+---------------------------------------------+------------------+
+; Node Name                                   ; Output Port Name                            ; Output Port Type ;
++---------------------------------------------+---------------------------------------------+------------------+
+; |behavioural|my_counter:inst|Add0~6         ; |behavioural|my_counter:inst|Add0~7         ; cout             ;
+; |behavioural|my_counter:inst|Add0~8         ; |behavioural|my_counter:inst|Add0~8         ; combout          ;
+; |behavioural|my_counter:inst|Add0~8         ; |behavioural|my_counter:inst|Add0~9         ; cout             ;
+; |behavioural|my_counter:inst|Add0~10        ; |behavioural|my_counter:inst|Add0~10        ; combout          ;
+; |behavioural|my_counter:inst|Add0~10        ; |behavioural|my_counter:inst|Add0~11        ; cout             ;
+; |behavioural|my_counter:inst|Add0~12        ; |behavioural|my_counter:inst|Add0~12        ; combout          ;
+; |behavioural|my_counter:inst|Add0~12        ; |behavioural|my_counter:inst|Add0~13        ; cout             ;
+; |behavioural|my_counter:inst|Add0~14        ; |behavioural|my_counter:inst|Add0~14        ; combout          ;
+; |behavioural|my_counter:inst|x[7]           ; |behavioural|my_counter:inst|x[7]           ; regout           ;
+; |behavioural|my_counter:inst|x[6]           ; |behavioural|my_counter:inst|x[6]           ; regout           ;
+; |behavioural|my_counter:inst|x[5]           ; |behavioural|my_counter:inst|x[5]           ; regout           ;
+; |behavioural|my_counter:inst|x[4]           ; |behavioural|my_counter:inst|x[4]           ; regout           ;
+; |behavioural|my_counter:inst|PeriodReg[1]   ; |behavioural|my_counter:inst|PeriodReg[1]   ; regout           ;
+; |behavioural|my_counter:inst|PeriodReg[3]   ; |behavioural|my_counter:inst|PeriodReg[3]   ; regout           ;
+; |behavioural|my_counter:inst|x~0            ; |behavioural|my_counter:inst|x~0            ; combout          ;
+; |behavioural|my_counter:inst|x~1            ; |behavioural|my_counter:inst|x~1            ; combout          ;
+; |behavioural|my_counter:inst|x~2            ; |behavioural|my_counter:inst|x~2            ; combout          ;
+; |behavioural|my_counter:inst|x~3            ; |behavioural|my_counter:inst|x~3            ; combout          ;
+; |behavioural|my_counter:inst|PeriodReg[0]~0 ; |behavioural|my_counter:inst|PeriodReg[0]~0 ; combout          ;
+; |behavioural|my_counter:inst|PeriodReg[2]~2 ; |behavioural|my_counter:inst|PeriodReg[2]~2 ; combout          ;
+; |behavioural|my_counter:inst|PeriodReg[4]~4 ; |behavioural|my_counter:inst|PeriodReg[4]~4 ; combout          ;
+; |behavioural|my_counter:inst|PeriodReg[5]~5 ; |behavioural|my_counter:inst|PeriodReg[5]~5 ; combout          ;
+; |behavioural|my_counter:inst|PeriodReg[6]~6 ; |behavioural|my_counter:inst|PeriodReg[6]~6 ; combout          ;
+; |behavioural|my_counter:inst|PeriodReg[7]~7 ; |behavioural|my_counter:inst|PeriodReg[7]~7 ; combout          ;
+; |behavioural|Y1[7]                          ; |behavioural|Y1[7]                          ; padio            ;
+; |behavioural|Y1[6]                          ; |behavioural|Y1[6]                          ; padio            ;
+; |behavioural|Y1[5]                          ; |behavioural|Y1[5]                          ; padio            ;
+; |behavioural|Y1[4]                          ; |behavioural|Y1[4]                          ; padio            ;
+; |behavioural|PR[0]                          ; |behavioural|PR[0]~corein                   ; combout          ;
+; |behavioural|PR[2]                          ; |behavioural|PR[2]~corein                   ; combout          ;
+; |behavioural|PR[4]                          ; |behavioural|PR[4]~corein                   ; combout          ;
+; |behavioural|PR[5]                          ; |behavioural|PR[5]~corein                   ; combout          ;
+; |behavioural|PR[6]                          ; |behavioural|PR[6]~corein                   ; combout          ;
+; |behavioural|PR[7]                          ; |behavioural|PR[7]~corein                   ; combout          ;
++---------------------------------------------+---------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                     ;
++---------------------------------------------+---------------------------------------------+------------------+
+; Node Name                                   ; Output Port Name                            ; Output Port Type ;
++---------------------------------------------+---------------------------------------------+------------------+
+; |behavioural|my_counter:inst|Add0~6         ; |behavioural|my_counter:inst|Add0~7         ; cout             ;
+; |behavioural|my_counter:inst|Add0~8         ; |behavioural|my_counter:inst|Add0~8         ; combout          ;
+; |behavioural|my_counter:inst|Add0~8         ; |behavioural|my_counter:inst|Add0~9         ; cout             ;
+; |behavioural|my_counter:inst|Add0~10        ; |behavioural|my_counter:inst|Add0~10        ; combout          ;
+; |behavioural|my_counter:inst|Add0~10        ; |behavioural|my_counter:inst|Add0~11        ; cout             ;
+; |behavioural|my_counter:inst|Add0~12        ; |behavioural|my_counter:inst|Add0~12        ; combout          ;
+; |behavioural|my_counter:inst|Add0~12        ; |behavioural|my_counter:inst|Add0~13        ; cout             ;
+; |behavioural|my_counter:inst|Add0~14        ; |behavioural|my_counter:inst|Add0~14        ; combout          ;
+; |behavioural|my_counter:inst|x[7]           ; |behavioural|my_counter:inst|x[7]           ; regout           ;
+; |behavioural|my_counter:inst|x[6]           ; |behavioural|my_counter:inst|x[6]           ; regout           ;
+; |behavioural|my_counter:inst|x[5]           ; |behavioural|my_counter:inst|x[5]           ; regout           ;
+; |behavioural|my_counter:inst|x[4]           ; |behavioural|my_counter:inst|x[4]           ; regout           ;
+; |behavioural|my_counter:inst|PeriodReg[0]   ; |behavioural|my_counter:inst|PeriodReg[0]   ; regout           ;
+; |behavioural|my_counter:inst|PeriodReg[1]   ; |behavioural|my_counter:inst|PeriodReg[1]   ; regout           ;
+; |behavioural|my_counter:inst|PeriodReg[2]   ; |behavioural|my_counter:inst|PeriodReg[2]   ; regout           ;
+; |behavioural|my_counter:inst|PeriodReg[3]   ; |behavioural|my_counter:inst|PeriodReg[3]   ; regout           ;
+; |behavioural|my_counter:inst|PeriodReg[4]   ; |behavioural|my_counter:inst|PeriodReg[4]   ; regout           ;
+; |behavioural|my_counter:inst|PeriodReg[5]   ; |behavioural|my_counter:inst|PeriodReg[5]   ; regout           ;
+; |behavioural|my_counter:inst|Equal0~2       ; |behavioural|my_counter:inst|Equal0~2       ; combout          ;
+; |behavioural|my_counter:inst|PeriodReg[6]   ; |behavioural|my_counter:inst|PeriodReg[6]   ; regout           ;
+; |behavioural|my_counter:inst|PeriodReg[7]   ; |behavioural|my_counter:inst|PeriodReg[7]   ; regout           ;
+; |behavioural|my_counter:inst|Equal0~3       ; |behavioural|my_counter:inst|Equal0~3       ; combout          ;
+; |behavioural|my_counter:inst|x~0            ; |behavioural|my_counter:inst|x~0            ; combout          ;
+; |behavioural|my_counter:inst|x~1            ; |behavioural|my_counter:inst|x~1            ; combout          ;
+; |behavioural|my_counter:inst|x~2            ; |behavioural|my_counter:inst|x~2            ; combout          ;
+; |behavioural|my_counter:inst|x~3            ; |behavioural|my_counter:inst|x~3            ; combout          ;
+; |behavioural|my_counter:inst|PeriodReg[0]~0 ; |behavioural|my_counter:inst|PeriodReg[0]~0 ; combout          ;
+; |behavioural|my_counter:inst|PeriodReg[2]~2 ; |behavioural|my_counter:inst|PeriodReg[2]~2 ; combout          ;
+; |behavioural|my_counter:inst|PeriodReg[4]~4 ; |behavioural|my_counter:inst|PeriodReg[4]~4 ; combout          ;
+; |behavioural|my_counter:inst|PeriodReg[5]~5 ; |behavioural|my_counter:inst|PeriodReg[5]~5 ; combout          ;
+; |behavioural|my_counter:inst|PeriodReg[6]~6 ; |behavioural|my_counter:inst|PeriodReg[6]~6 ; combout          ;
+; |behavioural|my_counter:inst|PeriodReg[7]~7 ; |behavioural|my_counter:inst|PeriodReg[7]~7 ; combout          ;
+; |behavioural|Y1[7]                          ; |behavioural|Y1[7]                          ; padio            ;
+; |behavioural|Y1[6]                          ; |behavioural|Y1[6]                          ; padio            ;
+; |behavioural|Y1[5]                          ; |behavioural|Y1[5]                          ; padio            ;
+; |behavioural|Y1[4]                          ; |behavioural|Y1[4]                          ; padio            ;
+; |behavioural|COUNT                          ; |behavioural|COUNT~corein                   ; combout          ;
+; |behavioural|RESET                          ; |behavioural|RESET~corein                   ; combout          ;
+; |behavioural|PR[0]                          ; |behavioural|PR[0]~corein                   ; combout          ;
+; |behavioural|PR[2]                          ; |behavioural|PR[2]~corein                   ; combout          ;
+; |behavioural|PR[4]                          ; |behavioural|PR[4]~corein                   ; combout          ;
+; |behavioural|PR[5]                          ; |behavioural|PR[5]~corein                   ; combout          ;
+; |behavioural|PR[6]                          ; |behavioural|PR[6]~corein                   ; combout          ;
+; |behavioural|PR[7]                          ; |behavioural|PR[7]~corein                   ; combout          ;
+; |behavioural|RESET~clkctrl                  ; |behavioural|RESET~clkctrl                  ; outclk           ;
++---------------------------------------------+---------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Fri Nov 12 09:25:52 2010
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off behavioural -c behavioural
+Info: Using vector source file "C:/Users/noutram/Desktop/06 - Standard  Logic Solutions/tasks/Task 03-02 - Hardware Timer (solution)/behavioural_tests.vwf"
+Info: Inverted registers were found during simulation
+    Info: Register: |behavioural|my_counter:inst|PeriodReg[0]
+    Info: Register: |behavioural|my_counter:inst|PeriodReg[1]
+    Info: Register: |behavioural|my_counter:inst|PeriodReg[2]
+    Info: Register: |behavioural|my_counter:inst|PeriodReg[3]
+    Info: Register: |behavioural|my_counter:inst|PeriodReg[4]
+    Info: Register: |behavioural|my_counter:inst|PeriodReg[5]
+    Info: Register: |behavioural|my_counter:inst|PeriodReg[6]
+    Info: Register: |behavioural|my_counter:inst|PeriodReg[7]
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      43.04 %
+Info: Number of transitions in simulation is 479
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 158 megabytes
+    Info: Processing ended: Fri Nov 12 09:25:55 2010
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:00
+
+

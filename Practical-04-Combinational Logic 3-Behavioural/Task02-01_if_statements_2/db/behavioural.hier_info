@@ -1,0 +1,16 @@
+|behavioural
+Y_behave <= clevergate_behavioural:inst.Y
+A => clevergate_behavioural:inst.A
+B => clevergate_behavioural:inst.B
+CTRL => clevergate_behavioural:inst.mode
+
+
+|behavioural|clevergate_behavioural:inst
+A => P.IN0
+A => P.IN0
+B => P.IN1
+B => P.IN1
+mode => P.OUTPUTSELECT
+Y <= P.DB_MAX_OUTPUT_PORT_TYPE
+
+

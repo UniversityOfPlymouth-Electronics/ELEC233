@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/noutram/Desktop/Topic4-Tasks/Task01-01/behavioural.bdf
+source_file = 1, C:/Users/noutram/Desktop/Topic4-Tasks/Task01-01/and2_behavioural.vhd
+source_file = 1, C:/Users/noutram/Desktop/Topic4-Tasks/Task01-01/behavioural_tests.vwf
+source_file = 1, C:/Users/noutram/Desktop/Topic4-Tasks/Task01-01/db/behavioural.cbx.xml
+source_file = 1, c:/altera/13.1_subscription/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.1_subscription/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.1_subscription/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.1_subscription/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = behavioural
+instance = comp, \Y_behave~output , Y_behave~output, behavioural, 1
+instance = comp, \Y_library~output , Y_library~output, behavioural, 1
+instance = comp, \A~input , A~input, behavioural, 1
+instance = comp, \B~input , B~input, behavioural, 1
+instance = comp, \inst|Y , inst|Y, behavioural, 1

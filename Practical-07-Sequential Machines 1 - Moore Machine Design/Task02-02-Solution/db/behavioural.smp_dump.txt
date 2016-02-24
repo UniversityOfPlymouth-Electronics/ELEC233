@@ -1,0 +1,12 @@
+
+State Machine - |behavioural|uop_pattern_gen:inst|state
+Name state.p1b3 state.p1b2 state.p1b1 state.p1b0 state.p0b3 state.p0b2 state.p0b1 state.p0b0 state.RES 
+state.RES 0 0 0 0 0 0 0 0 0 
+state.p0b0 0 0 0 0 0 0 0 1 1 
+state.p0b1 0 0 0 0 0 0 1 0 1 
+state.p0b2 0 0 0 0 0 1 0 0 1 
+state.p0b3 0 0 0 0 1 0 0 0 1 
+state.p1b0 0 0 0 1 0 0 0 0 1 
+state.p1b1 0 0 1 0 0 0 0 0 1 
+state.p1b2 0 1 0 0 0 0 0 0 1 
+state.p1b3 1 0 0 0 0 0 0 0 1 

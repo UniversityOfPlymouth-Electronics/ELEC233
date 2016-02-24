@@ -1,0 +1,228 @@
+Simulator report for behavioural
+Thu Oct 28 22:20:07 2010
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 67 nodes     ;
+; Simulation Coverage         ;      98.51 % ;
+; Total Number of Transitions ; 1642         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C5Q208C7  ;
++-----------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                 ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
+; Option                                                                                     ; Setting               ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
+; Simulation mode                                                                            ; Timing                ; Timing        ;
+; Start time                                                                                 ; 0 ns                  ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF                  ;               ;
+; Vector input source                                                                        ; behavioural_tests.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                    ; On            ;
+; Check outputs                                                                              ; Off                   ; Off           ;
+; Report simulation coverage                                                                 ; On                    ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                    ; On            ;
+; Display missing 1-value coverage report                                                    ; On                    ; On            ;
+; Display missing 0-value coverage report                                                    ; On                    ; On            ;
+; Detect setup and hold time violations                                                      ; Off                   ; Off           ;
+; Detect glitches                                                                            ; Off                   ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                   ; Off           ;
+; Generate Signal Activity File                                                              ; Off                   ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                   ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                   ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                    ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE            ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                   ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                   ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                  ; Auto          ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      98.51 % ;
+; Total nodes checked                                 ; 67           ;
+; Total output ports checked                          ; 67           ;
+; Total output ports with complete 1/0-value coverage ; 66           ;
+; Total output ports with no 1/0-value coverage       ; 0            ;
+; Total output ports with no 1-value coverage         ; 1            ;
+; Total output ports with no 0-value coverage         ; 0            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                      ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; Node Name                                     ; Output Port Name                              ; Output Port Type ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+; |behavioural|clevergate_behavioural:inst|P~0  ; |behavioural|clevergate_behavioural:inst|P~0  ; combout          ;
+; |behavioural|clevergate_behavioural:inst|P~1  ; |behavioural|clevergate_behavioural:inst|P~1  ; combout          ;
+; |behavioural|clevergate_behavioural:inst|P~2  ; |behavioural|clevergate_behavioural:inst|P~2  ; combout          ;
+; |behavioural|clevergate_behavioural:inst|P~3  ; |behavioural|clevergate_behavioural:inst|P~3  ; combout          ;
+; |behavioural|clevergate_behavioural:inst|P~4  ; |behavioural|clevergate_behavioural:inst|P~4  ; combout          ;
+; |behavioural|clevergate_behavioural:inst|P~5  ; |behavioural|clevergate_behavioural:inst|P~5  ; combout          ;
+; |behavioural|clevergate_behavioural:inst|P~6  ; |behavioural|clevergate_behavioural:inst|P~6  ; combout          ;
+; |behavioural|clevergate_behavioural:inst|P~7  ; |behavioural|clevergate_behavioural:inst|P~7  ; combout          ;
+; |behavioural|clevergate_behavioural:inst|P~8  ; |behavioural|clevergate_behavioural:inst|P~8  ; combout          ;
+; |behavioural|clevergate_behavioural:inst|P~9  ; |behavioural|clevergate_behavioural:inst|P~9  ; combout          ;
+; |behavioural|clevergate_behavioural:inst|P~10 ; |behavioural|clevergate_behavioural:inst|P~10 ; combout          ;
+; |behavioural|clevergate_behavioural:inst|P~11 ; |behavioural|clevergate_behavioural:inst|P~11 ; combout          ;
+; |behavioural|clevergate_behavioural:inst|P~12 ; |behavioural|clevergate_behavioural:inst|P~12 ; combout          ;
+; |behavioural|clevergate_behavioural:inst|P~13 ; |behavioural|clevergate_behavioural:inst|P~13 ; combout          ;
+; |behavioural|clevergate_behavioural:inst|P~14 ; |behavioural|clevergate_behavioural:inst|P~14 ; combout          ;
+; |behavioural|clevergate_behavioural:inst|P~15 ; |behavioural|clevergate_behavioural:inst|P~15 ; combout          ;
+; |behavioural|Y[15]                            ; |behavioural|Y[15]                            ; padio            ;
+; |behavioural|Y[14]                            ; |behavioural|Y[14]                            ; padio            ;
+; |behavioural|Y[13]                            ; |behavioural|Y[13]                            ; padio            ;
+; |behavioural|Y[12]                            ; |behavioural|Y[12]                            ; padio            ;
+; |behavioural|Y[11]                            ; |behavioural|Y[11]                            ; padio            ;
+; |behavioural|Y[10]                            ; |behavioural|Y[10]                            ; padio            ;
+; |behavioural|Y[9]                             ; |behavioural|Y[9]                             ; padio            ;
+; |behavioural|Y[8]                             ; |behavioural|Y[8]                             ; padio            ;
+; |behavioural|Y[7]                             ; |behavioural|Y[7]                             ; padio            ;
+; |behavioural|Y[6]                             ; |behavioural|Y[6]                             ; padio            ;
+; |behavioural|Y[5]                             ; |behavioural|Y[5]                             ; padio            ;
+; |behavioural|Y[4]                             ; |behavioural|Y[4]                             ; padio            ;
+; |behavioural|Y[3]                             ; |behavioural|Y[3]                             ; padio            ;
+; |behavioural|Y[2]                             ; |behavioural|Y[2]                             ; padio            ;
+; |behavioural|Y[1]                             ; |behavioural|Y[1]                             ; padio            ;
+; |behavioural|Y[0]                             ; |behavioural|Y[0]                             ; padio            ;
+; |behavioural|B[15]                            ; |behavioural|B[15]~corein                     ; combout          ;
+; |behavioural|A[15]                            ; |behavioural|A[15]~corein                     ; combout          ;
+; |behavioural|mode[0]                          ; |behavioural|mode[0]~corein                   ; combout          ;
+; |behavioural|mode[1]                          ; |behavioural|mode[1]~corein                   ; combout          ;
+; |behavioural|B[14]                            ; |behavioural|B[14]~corein                     ; combout          ;
+; |behavioural|A[14]                            ; |behavioural|A[14]~corein                     ; combout          ;
+; |behavioural|B[13]                            ; |behavioural|B[13]~corein                     ; combout          ;
+; |behavioural|A[13]                            ; |behavioural|A[13]~corein                     ; combout          ;
+; |behavioural|B[12]                            ; |behavioural|B[12]~corein                     ; combout          ;
+; |behavioural|A[12]                            ; |behavioural|A[12]~corein                     ; combout          ;
+; |behavioural|B[11]                            ; |behavioural|B[11]~corein                     ; combout          ;
+; |behavioural|A[11]                            ; |behavioural|A[11]~corein                     ; combout          ;
+; |behavioural|B[10]                            ; |behavioural|B[10]~corein                     ; combout          ;
+; |behavioural|A[10]                            ; |behavioural|A[10]~corein                     ; combout          ;
+; |behavioural|B[9]                             ; |behavioural|B[9]~corein                      ; combout          ;
+; |behavioural|A[9]                             ; |behavioural|A[9]~corein                      ; combout          ;
+; |behavioural|B[8]                             ; |behavioural|B[8]~corein                      ; combout          ;
+; |behavioural|A[8]                             ; |behavioural|A[8]~corein                      ; combout          ;
+; |behavioural|B[7]                             ; |behavioural|B[7]~corein                      ; combout          ;
+; |behavioural|A[7]                             ; |behavioural|A[7]~corein                      ; combout          ;
+; |behavioural|B[6]                             ; |behavioural|B[6]~corein                      ; combout          ;
+; |behavioural|A[6]                             ; |behavioural|A[6]~corein                      ; combout          ;
+; |behavioural|B[5]                             ; |behavioural|B[5]~corein                      ; combout          ;
+; |behavioural|A[5]                             ; |behavioural|A[5]~corein                      ; combout          ;
+; |behavioural|B[4]                             ; |behavioural|B[4]~corein                      ; combout          ;
+; |behavioural|A[4]                             ; |behavioural|A[4]~corein                      ; combout          ;
+; |behavioural|B[3]                             ; |behavioural|B[3]~corein                      ; combout          ;
+; |behavioural|A[3]                             ; |behavioural|A[3]~corein                      ; combout          ;
+; |behavioural|B[2]                             ; |behavioural|B[2]~corein                      ; combout          ;
+; |behavioural|A[2]                             ; |behavioural|A[2]~corein                      ; combout          ;
+; |behavioural|B[1]                             ; |behavioural|B[1]~corein                      ; combout          ;
+; |behavioural|A[1]                             ; |behavioural|A[1]~corein                      ; combout          ;
+; |behavioural|B[0]                             ; |behavioural|B[0]~corein                      ; combout          ;
+; |behavioural|A[0]                             ; |behavioural|A[0]~corein                      ; combout          ;
++-----------------------------------------------+-----------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------------------+
+; Missing 1-Value Coverage                                    ;
++-----------------+------------------------+------------------+
+; Node Name       ; Output Port Name       ; Output Port Type ;
++-----------------+------------------------+------------------+
+; |behavioural|EN ; |behavioural|EN~corein ; combout          ;
++-----------------+------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------+
+; Missing 0-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Thu Oct 28 22:20:06 2010
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off behavioural -c behavioural
+Info: Using vector source file "C:/Users/noutram/Desktop/ELEC226 Session 4/Task01-03 - if statements and std_logic/behavioural_tests.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      98.51 %
+Info: Number of transitions in simulation is 1642
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 154 megabytes
+    Info: Processing ended: Thu Oct 28 22:20:08 2010
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:00
+
+

@@ -1,0 +1,70 @@
+|behavioural
+Y[0] <= for_behavioural:inst.Y[0]
+Y[1] <= for_behavioural:inst.Y[1]
+Y[2] <= for_behavioural:inst.Y[2]
+Y[3] <= for_behavioural:inst.Y[3]
+Y[4] <= for_behavioural:inst.Y[4]
+Y[5] <= for_behavioural:inst.Y[5]
+Y[6] <= for_behavioural:inst.Y[6]
+Y[7] <= for_behavioural:inst.Y[7]
+Y[8] <= for_behavioural:inst.Y[8]
+Y[9] <= for_behavioural:inst.Y[9]
+Y[10] <= for_behavioural:inst.Y[10]
+Y[11] <= for_behavioural:inst.Y[11]
+Y[12] <= for_behavioural:inst.Y[12]
+Y[13] <= for_behavioural:inst.Y[13]
+Y[14] <= for_behavioural:inst.Y[14]
+Y[15] <= for_behavioural:inst.Y[15]
+X[0] => for_behavioural:inst.A[0]
+X[1] => for_behavioural:inst.A[1]
+X[2] => for_behavioural:inst.A[2]
+X[3] => for_behavioural:inst.A[3]
+X[4] => for_behavioural:inst.A[4]
+X[5] => for_behavioural:inst.A[5]
+X[6] => for_behavioural:inst.A[6]
+X[7] => for_behavioural:inst.A[7]
+X[8] => for_behavioural:inst.A[8]
+X[9] => for_behavioural:inst.A[9]
+X[10] => for_behavioural:inst.A[10]
+X[11] => for_behavioural:inst.A[11]
+X[12] => for_behavioural:inst.A[12]
+X[13] => for_behavioural:inst.A[13]
+X[14] => for_behavioural:inst.A[14]
+X[15] => for_behavioural:inst.A[15]
+
+
+|behavioural|for_behavioural:inst
+A[0] => Y[15].DATAIN
+A[1] => Y[14].DATAIN
+A[2] => Y[13].DATAIN
+A[3] => Y[12].DATAIN
+A[4] => Y[11].DATAIN
+A[5] => Y[10].DATAIN
+A[6] => Y[9].DATAIN
+A[7] => Y[8].DATAIN
+A[8] => Y[7].DATAIN
+A[9] => Y[6].DATAIN
+A[10] => Y[5].DATAIN
+A[11] => Y[4].DATAIN
+A[12] => Y[3].DATAIN
+A[13] => Y[2].DATAIN
+A[14] => Y[1].DATAIN
+A[15] => Y[0].DATAIN
+Y[0] <= A[15].DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= A[14].DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= A[13].DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= A[12].DB_MAX_OUTPUT_PORT_TYPE
+Y[4] <= A[11].DB_MAX_OUTPUT_PORT_TYPE
+Y[5] <= A[10].DB_MAX_OUTPUT_PORT_TYPE
+Y[6] <= A[9].DB_MAX_OUTPUT_PORT_TYPE
+Y[7] <= A[8].DB_MAX_OUTPUT_PORT_TYPE
+Y[8] <= A[7].DB_MAX_OUTPUT_PORT_TYPE
+Y[9] <= A[6].DB_MAX_OUTPUT_PORT_TYPE
+Y[10] <= A[5].DB_MAX_OUTPUT_PORT_TYPE
+Y[11] <= A[4].DB_MAX_OUTPUT_PORT_TYPE
+Y[12] <= A[3].DB_MAX_OUTPUT_PORT_TYPE
+Y[13] <= A[2].DB_MAX_OUTPUT_PORT_TYPE
+Y[14] <= A[1].DB_MAX_OUTPUT_PORT_TYPE
+Y[15] <= A[0].DB_MAX_OUTPUT_PORT_TYPE
+
+

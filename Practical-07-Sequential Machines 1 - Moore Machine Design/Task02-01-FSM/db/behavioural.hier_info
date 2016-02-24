@@ -1,0 +1,18 @@
+|behavioural
+Y <= moore_state_machine:inst.output
+CLK => moore_state_machine:inst.clk
+DATA_IN => moore_state_machine:inst.input
+RESET => moore_state_machine:inst.reset
+
+
+|behavioural|moore_state_machine:inst
+clk => state~1.DATAIN
+input => state.DATAA
+input => state.DATAB
+input => Selector0.IN1
+input => Selector1.IN1
+input => state.DATAB
+reset => state~3.DATAIN
+output <= output.DB_MAX_OUTPUT_PORT_TYPE
+
+

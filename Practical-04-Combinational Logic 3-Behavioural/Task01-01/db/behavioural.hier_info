@@ -1,0 +1,15 @@
+|behavioural
+Y_behave <= and2_behavioural:inst.Y
+A => and2_behavioural:inst.A
+A => inst1.IN0
+B => and2_behavioural:inst.B
+B => inst1.IN1
+Y_library <= inst1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|behavioural|and2_behavioural:inst
+A => P.IN0
+B => P.IN1
+Y <= P.DB_MAX_OUTPUT_PORT_TYPE
+
+

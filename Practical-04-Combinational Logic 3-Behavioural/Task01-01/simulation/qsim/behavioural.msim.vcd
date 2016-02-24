@@ -1,0 +1,105 @@
+$comment
+	File created using the following command:
+		vcd file behavioural.msim.vcd -direction
+$end
+$date
+	Tue Oct 21 10:33:56 2014
+$end
+$version
+	ModelSim Version 10.1d
+$end
+$timescale
+	1ps
+$end
+$scope module behavioural_vlg_vec_tst $end
+$var reg 1 ! A $end
+$var reg 1 " B $end
+$var wire 1 # Y_behave $end
+$var wire 1 $ Y_library $end
+$var wire 1 % sampler $end
+$scope module i1 $end
+$var wire 1 & gnd $end
+$var wire 1 ' vcc $end
+$var wire 1 ( unknown $end
+$var tri1 1 ) devclrn $end
+$var tri1 1 * devpor $end
+$var tri1 1 + devoe $end
+$var wire 1 , Y_behave~output_o $end
+$var wire 1 - Y_library~output_o $end
+$var wire 1 . A~input_o $end
+$var wire 1 / B~input_o $end
+$var wire 1 0 inst|Y~combout $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+0"
+x#
+x$
+x%
+0&
+1'
+x(
+1)
+1*
+1+
+x,
+x-
+0.
+0/
+x0
+$end
+#3515
+00
+#6777
+0-
+0,
+0$
+0#
+#10000
+1!
+0%
+#10596
+1.
+#20000
+1"
+0!
+1%
+#20594
+1/
+#20761
+0.
+#23875
+10
+#24504
+00
+#30000
+1!
+0%
+#30596
+1.
+#34047
+10
+#37305
+1-
+1,
+1$
+1#
+#40000
+0"
+0!
+1%
+#40759
+0/
+#40761
+0.
+#44274
+00
+#47536
+0-
+0,
+0$
+0#
+#1000000

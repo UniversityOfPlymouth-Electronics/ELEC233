@@ -1,0 +1,23 @@
+entity vector_bits is
+
+	port
+	(
+		-- Input ports
+		X	: in  bit_vector(7 downto 0);	--this is an 8-bit value
+		
+		-- Output ports
+		Y	: out bit_vector(1 downto 0)	-- 2 bit output
+	);
+end vector_bits;
+
+
+architecture circuit1 of vector_bits is
+
+	-- Declarations (optional)
+
+begin
+	
+	Y(0) <= X(0) xor X(1) xor X(2) xor X(3);
+	Y(1) <= X(4) xor X(5) xor X(6) xor X(7);
+					
+end circuit1;

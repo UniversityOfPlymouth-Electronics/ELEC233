@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/simulation/modelsim/demo1.vht
+source_file = 1, C:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/demo1.bdf
+source_file = 1, C:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/myxor.vhd
+source_file = 1, C:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/db/demo1.cbx.xml
+source_file = 1, c:/altera/13.1_subscription/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.1_subscription/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.1_subscription/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.1_subscription/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = demo1
+instance = comp, \Y~output\, Y~output, demo1, 1
+instance = comp, \A~input\, A~input, demo1, 1
+instance = comp, \B~input\, B~input, demo1, 1
+instance = comp, \inst|y~0\, inst|y~0, demo1, 1

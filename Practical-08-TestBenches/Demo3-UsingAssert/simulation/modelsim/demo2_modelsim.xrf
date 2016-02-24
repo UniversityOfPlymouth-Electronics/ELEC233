@@ -1,0 +1,13 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/noutram/Desktop/TestBench/Demo3-UsingAssert/myxor.vhd
+source_file = 1, C:/Users/noutram/Desktop/TestBench/Demo3-UsingAssert/simulation/modelsim/myxor.vht
+source_file = 1, C:/Users/noutram/Desktop/TestBench/Demo3-UsingAssert/db/demo2.cbx.xml
+source_file = 1, c:/altera/13.1_subscription/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.1_subscription/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.1_subscription/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.1_subscription/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = myxor
+instance = comp, \y~output\, y~output, myxor, 1
+instance = comp, \a~input\, a~input, myxor, 1
+instance = comp, \b~input\, b~input, myxor, 1
+instance = comp, \y~0\, y~0, myxor, 1

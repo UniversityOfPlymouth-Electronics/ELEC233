@@ -1,0 +1,43 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\noutram\Desktop\TestBench\Demo3\simulation\modelsim
+Emyxor
+Z1 w1352984562
+Z2 DPx4 ieee 16 vital_primitives 0 22 ?9@G<YMlTc7lEZ?USDEOL0
+Z3 DPx9 cycloneii 19 cycloneii_atom_pack 0 22 4Xi3o1^LzmM;NIYkY1Q4S2
+Z4 DPx4 ieee 12 vital_timing 0 22 S^n>oJ2GS[H5aTKMo9OkE0
+Z5 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z6 DPx9 cycloneii 20 cycloneii_components 0 22 @h8J[G3UnmTbGB_5P`d?00
+Z7 dC:\Users\noutram\Desktop\TestBench\Demo3\simulation\modelsim
+Z8 8demo2.vho
+Z9 Fdemo2.vho
+l0
+L34
+Vzni`[>FO7jk=US<8zhL8N0
+!s100 Rn1^:^lD;gPS2Z33ck;X=0
+Z10 OV;C;6.6d;45
+31
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+DEx4 work 5 myxor 0 22 zni`[>FO7jk=US<8zhL8N0
+l65
+L48
+VT`5S1j5O?:<<DO:gB07_E3
+!s100 nHJcK22JR39eKXj;n^R3^0
+R10
+31
+Mx5 9 cycloneii 20 cycloneii_components
+Z13 Mx4 4 ieee 14 std_logic_1164
+Z14 Mx3 4 ieee 12 vital_timing
+Mx2 9 cycloneii 19 cycloneii_atom_pack
+Z15 Mx1 4 ieee 16 vital_primitives
+R11
+R12

@@ -1,0 +1,112 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\noutram\Desktop\TestBench\Demo1-SimpleTestbench\simulation\modelsim
+Edemo1
+Z1 w1417416280
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\noutram\Desktop\TestBench\Demo1-SimpleTestbench\simulation\modelsim
+Z5 8C:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/demo1.vhd
+Z6 FC:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/demo1.vhd
+l0
+L24
+VAD65DN`7PamYfJ8?e5d@K3
+Z7 OV;C;10.1d;51
+32
+Z8 !s108 1417416313.881000
+Z9 !s90 -reportprogress|300|-work|work|C:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/demo1.vhd|
+Z10 !s107 C:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/demo1.vhd|
+Z11 o-work work -O0
+Z12 tExplicit 1
+!s100 A1Y7B;^J:5`:^ME[o2Ez:1
+!i10b 1
+Abdf_type
+R2
+R3
+DEx4 work 5 demo1 0 22 AD65DN`7PamYfJ8?e5d@K3
+l44
+L33
+VoY]_CgPFVDfBA3T9GEzYj1
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 jCA?ij49gY0i10ZOQ[NTD1
+!i10b 1
+Edemo1_vhd_tst
+Z13 w1417416210
+R2
+R3
+R4
+Z14 8C:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/simulation/modelsim/demo1.vht
+Z15 FC:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/simulation/modelsim/demo1.vht
+l0
+L30
+VmHJL9BJUFQ]W@PoEON<Ln2
+!s100 Sb7JkMUA`<B3FoID7FWDS1
+R7
+32
+!i10b 1
+Z16 !s108 1417416321.092000
+Z17 !s90 -reportprogress|300|-work|work|C:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/simulation/modelsim/demo1.vht|
+Z18 !s107 C:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/simulation/modelsim/demo1.vht|
+R11
+R12
+Ademo1_arch
+R2
+R3
+Z19 DEx4 work 13 demo1_vhd_tst 0 22 mHJL9BJUFQ]W@PoEON<Ln2
+l45
+L32
+Z20 VYz`DCDEFolZmW:VS7BD]62
+Z21 !s100 ed7:0j]IANF0[8gO9e?ID0
+R7
+32
+!i10b 1
+R16
+R17
+R18
+R11
+R12
+Emyxor
+Z22 w1352974476
+Z23 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z24 8C:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/myxor.vhd
+Z25 FC:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/myxor.vhd
+l0
+L8
+VC4liTZR3;zPFK55EYnjSV0
+R7
+31
+Z26 !s108 1417416221.074000
+Z27 !s90 -reportprogress|300|-93|-work|work|C:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/myxor.vhd|
+Z28 !s107 C:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/myxor.vhd|
+Z29 o-93 -work work -O0
+R12
+!s100 J]k9``OJ^3L]J2cI?Nmcm0
+!i10b 1
+Amyxor_v1
+R23
+R2
+R3
+DEx4 work 5 myxor 0 22 C4liTZR3;zPFK55EYnjSV0
+l22
+L17
+VVNHeWH1AQ7Roc6Rn?E1>F3
+R7
+31
+R26
+R27
+R28
+R29
+R12
+!s100 @d@_hnNR]Z5;Em[5OeDUT1
+!i10b 1

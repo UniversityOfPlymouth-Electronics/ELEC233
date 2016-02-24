@@ -1,0 +1,17 @@
+|behavioural
+Y <= uop_pattern_gen:inst.output
+CLK => uop_pattern_gen:inst.clk
+P => uop_pattern_gen:inst.pattern
+RESET => uop_pattern_gen:inst.reset
+
+
+|behavioural|uop_pattern_gen:inst
+clk => state~3.DATAIN
+pattern => state.DATAA
+pattern => state.DATAA
+reset => state.OUTPUTSELECT
+reset => state.OUTPUTSELECT
+reset => Selector0.IN2
+output <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+
+

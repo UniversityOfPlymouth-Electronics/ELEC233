@@ -1,0 +1,26 @@
+|myproject
+Y[0] <= vector_bits:inst.Y[0]
+Y[1] <= vector_bits:inst.Y[1]
+DATA[0] => vector_bits:inst.X[0]
+DATA[1] => vector_bits:inst.X[1]
+DATA[2] => vector_bits:inst.X[2]
+DATA[3] => vector_bits:inst.X[3]
+DATA[4] => vector_bits:inst.X[4]
+DATA[5] => vector_bits:inst.X[5]
+DATA[6] => vector_bits:inst.X[6]
+DATA[7] => vector_bits:inst.X[7]
+
+
+|myproject|vector_bits:inst
+X[0] => Y.IN0
+X[1] => Y.IN1
+X[2] => Y.IN1
+X[3] => Y.IN1
+X[4] => Y.IN0
+X[5] => Y.IN1
+X[6] => Y.IN1
+X[7] => Y.IN1
+Y[0] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

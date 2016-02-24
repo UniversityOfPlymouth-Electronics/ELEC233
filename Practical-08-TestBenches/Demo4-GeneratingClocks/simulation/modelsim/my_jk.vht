@@ -1,0 +1,105 @@
+-- Copyright (C) 1991-2011 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+
+-- ***************************************************************************
+-- This file contains a Vhdl test bench template that is freely editable to   
+-- suit user's needs .Comments are provided in each section to help the user  
+-- fill out necessary details.                                                
+-- ***************************************************************************
+-- Generated on "11/21/2012 16:57:33"
+                                                            
+-- Vhdl Test Bench template for design  :  my_jk
+-- 
+-- Simulation tool : ModelSim-Altera (VHDL)
+-- 
+
+LIBRARY ieee;                                               
+USE ieee.std_logic_1164.all;                                
+
+ENTITY my_jk_vhd_tst IS
+END my_jk_vhd_tst;
+ARCHITECTURE my_jk_arch OF my_jk_vhd_tst IS
+-- constants                                                 
+-- signals                                                   
+SIGNAL CLK : STD_LOGIC;
+SIGNAL J : STD_LOGIC;
+SIGNAL K : STD_LOGIC;
+SIGNAL Q : STD_LOGIC;
+COMPONENT my_jk
+	PORT (
+	CLK : IN STD_LOGIC;
+	J : IN STD_LOGIC;
+	K : IN STD_LOGIC;
+	Q : OUT STD_LOGIC
+	);
+END COMPONENT;
+
+BEGIN
+	-- instantiate a JK flip-flop
+	i1 : my_jk
+	PORT MAP (
+	CLK => CLK,
+	J => J,
+	K => K,
+	Q => Q );
+
+init : PROCESS                                               
+-- variable declarations 										
+BEGIN                                                        
+        -- code that executes only once                      
+WAIT;                                                       
+END PROCESS init;                                           
+
+-- Clock Generation (Runs forever)
+clock_gen : PROCESS
+	variable SYS_CLK : std_logic := '0';
+BEGIN
+  for i in 0 to 19 loop -- 20 clock cycles
+	 CLK <= SYS_CLK;
+	 SYS_CLK := not SYS_CLK;
+	 wait for 50 ns;
+	end loop;
+	WAIT;
+END PROCESS clock_gen;
+
+-- Test stimulus
+always : PROCESS                                              
+BEGIN
+   -- initial inputs
+	J <= '0'; K <= '0';
+	
+	-- wait for rising edge using a 'wait until'
+	-- note: you cannot mix sensitivity lists with wait instructions
+	wait until CLK = '1';
+	wait for 25 ns; -- halfway through the MARK portion of the clock
+	J <= '1'; K <= '0';	-- SET (Q=1)
+	wait for 100 ns; -- wait a whole clock cycle
+	assert ( Q = '1')
+	 report "Set failed"
+	 severity ERROR;
+	J <= '0'; K <= '0'; -- LATCH (Q=1)
+	wait for 100 ns;
+	J <= '0'; K <= '1'; -- RESET (Q=0)
+	wait for 100 ns;
+	J <= '0'; K <= '0'; -- LATCH (Q=0)
+	wait for 100 ns;
+	J <= '1'; K <= '1'; -- TOGGLE (Q=1)
+	wait for 100 ns;
+	J <= '1'; K <= '1'; -- TOGGLE (Q=0)
+	wait for 100 ns;
+	
+WAIT; -- STOP SIMULATION                                                       
+END PROCESS always;
+                                          
+END my_jk_arch;

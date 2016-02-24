@@ -1,0 +1,655 @@
+Simulator report for behavioural
+Fri Nov 26 07:06:06 2010
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 233 nodes    ;
+; Simulation Coverage         ;      27.21 % ;
+; Total Number of Transitions ; 900          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C5Q208C7  ;
++-----------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                 ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
+; Option                                                                                     ; Setting               ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
+; Simulation mode                                                                            ; Timing                ; Timing        ;
+; Start time                                                                                 ; 0 ns                  ; 0 ns          ;
+; End time                                                                                   ; 1 ms                  ;               ;
+; Simulation results format                                                                  ; CVWF                  ;               ;
+; Vector input source                                                                        ; behavioural_tests.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                    ; On            ;
+; Check outputs                                                                              ; Off                   ; Off           ;
+; Report simulation coverage                                                                 ; On                    ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                    ; On            ;
+; Display missing 1-value coverage report                                                    ; On                    ; On            ;
+; Display missing 0-value coverage report                                                    ; On                    ; On            ;
+; Detect setup and hold time violations                                                      ; Off                   ; Off           ;
+; Detect glitches                                                                            ; Off                   ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                   ; Off           ;
+; Generate Signal Activity File                                                              ; Off                   ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                   ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                   ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                    ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE            ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                   ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                   ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                  ; Auto          ;
++--------------------------------------------------------------------------------------------+-----------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      27.21 % ;
+; Total nodes checked                                 ; 233          ;
+; Total output ports checked                          ; 294          ;
+; Total output ports with complete 1/0-value coverage ; 80           ;
+; Total output ports with no 1/0-value coverage       ; 198          ;
+; Total output ports with no 1-value coverage         ; 204          ;
+; Total output ports with no 0-value coverage         ; 208          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                      ;
++-------------------------------------------------------+-------------------------------------------------------+------------------+
+; Node Name                                             ; Output Port Name                                      ; Output Port Type ;
++-------------------------------------------------------+-------------------------------------------------------+------------------+
+; |behavioural|uop_shiftreg_p2s:inst1|idx[1]            ; |behavioural|uop_shiftreg_p2s:inst1|idx[1]            ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[0]            ; |behavioural|uop_shiftreg_p2s:inst1|idx[0]            ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[2]            ; |behavioural|uop_shiftreg_p2s:inst1|idx[2]            ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|DATA_OUT~0        ; |behavioural|uop_shiftreg_p2s:inst1|DATA_OUT~0        ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~0             ; |behavioural|uop_shiftreg_s2p:inst|Add0~0             ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~0             ; |behavioural|uop_shiftreg_s2p:inst|Add0~1             ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~2             ; |behavioural|uop_shiftreg_s2p:inst|Add0~2             ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~2             ; |behavioural|uop_shiftreg_s2p:inst|Add0~3             ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~4             ; |behavioural|uop_shiftreg_s2p:inst|Add0~4             ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~4             ; |behavioural|uop_shiftreg_s2p:inst|Add0~5             ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~6             ; |behavioural|uop_shiftreg_s2p:inst|Add0~6             ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[0]~32         ; |behavioural|uop_shiftreg_p2s:inst1|idx[0]~32         ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[0]~32         ; |behavioural|uop_shiftreg_p2s:inst1|idx[0]~33         ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[1]~34         ; |behavioural|uop_shiftreg_p2s:inst1|idx[1]~34         ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[1]~34         ; |behavioural|uop_shiftreg_p2s:inst1|idx[1]~35         ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[2]~37         ; |behavioural|uop_shiftreg_p2s:inst1|idx[2]~37         ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[2]~37         ; |behavioural|uop_shiftreg_p2s:inst1|idx[2]~38         ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[3]~39         ; |behavioural|uop_shiftreg_p2s:inst1|idx[3]~39         ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[7]        ; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[7]        ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[5]        ; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[5]        ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[3]        ; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[3]        ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[2]        ; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[2]        ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[1]        ; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[1]        ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[0]        ; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[0]        ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|Nreg[2]           ; |behavioural|uop_shiftreg_p2s:inst1|Nreg[2]           ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|Nreg[0]           ; |behavioural|uop_shiftreg_p2s:inst1|Nreg[0]           ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|Mux0~0            ; |behavioural|uop_shiftreg_p2s:inst1|Mux0~0            ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Mux0~1            ; |behavioural|uop_shiftreg_p2s:inst1|Mux0~1            ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Mux0~2            ; |behavioural|uop_shiftreg_p2s:inst1|Mux0~2            ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Mux0~3            ; |behavioural|uop_shiftreg_p2s:inst1|Mux0~3            ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg[7]            ; |behavioural|uop_shiftreg_s2p:inst|Nreg[7]            ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[2]             ; |behavioural|uop_shiftreg_s2p:inst|idx[2]             ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[1]             ; |behavioural|uop_shiftreg_s2p:inst|idx[1]             ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[0]             ; |behavioural|uop_shiftreg_s2p:inst|idx[0]             ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg~0             ; |behavioural|uop_shiftreg_s2p:inst|Nreg~0             ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg~1             ; |behavioural|uop_shiftreg_s2p:inst|Nreg~1             ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Equal0~0           ; |behavioural|uop_shiftreg_s2p:inst|Equal0~0           ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Equal0~4           ; |behavioural|uop_shiftreg_s2p:inst|Equal0~4           ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Equal0~10          ; |behavioural|uop_shiftreg_s2p:inst|Equal0~10          ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg~2             ; |behavioural|uop_shiftreg_s2p:inst|Nreg~2             ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg~3             ; |behavioural|uop_shiftreg_s2p:inst|Nreg~3             ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg[5]            ; |behavioural|uop_shiftreg_s2p:inst|Nreg[5]            ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg~4             ; |behavioural|uop_shiftreg_s2p:inst|Nreg~4             ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg~5             ; |behavioural|uop_shiftreg_s2p:inst|Nreg~5             ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg~6             ; |behavioural|uop_shiftreg_s2p:inst|Nreg~6             ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg~7             ; |behavioural|uop_shiftreg_s2p:inst|Nreg~7             ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg[3]            ; |behavioural|uop_shiftreg_s2p:inst|Nreg[3]            ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg~8             ; |behavioural|uop_shiftreg_s2p:inst|Nreg~8             ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg~9             ; |behavioural|uop_shiftreg_s2p:inst|Nreg~9             ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg[2]            ; |behavioural|uop_shiftreg_s2p:inst|Nreg[2]            ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg~10            ; |behavioural|uop_shiftreg_s2p:inst|Nreg~10            ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg[1]            ; |behavioural|uop_shiftreg_s2p:inst|Nreg[1]            ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg~11            ; |behavioural|uop_shiftreg_s2p:inst|Nreg~11            ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg[0]            ; |behavioural|uop_shiftreg_s2p:inst|Nreg[0]            ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg~12            ; |behavioural|uop_shiftreg_s2p:inst|Nreg~12            ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg~13            ; |behavioural|uop_shiftreg_s2p:inst|Nreg~13            ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Nreg[2]~0         ; |behavioural|uop_shiftreg_p2s:inst1|Nreg[2]~0         ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Equal0~0          ; |behavioural|uop_shiftreg_p2s:inst1|Equal0~0          ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Equal0~4          ; |behavioural|uop_shiftreg_p2s:inst1|Equal0~4          ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[4]~36         ; |behavioural|uop_shiftreg_p2s:inst1|idx[4]~36         ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Nreg[0]~2         ; |behavioural|uop_shiftreg_p2s:inst1|Nreg[0]~2         ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|idx~0              ; |behavioural|uop_shiftreg_s2p:inst|idx~0              ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|idx~1              ; |behavioural|uop_shiftreg_s2p:inst|idx~1              ; combout          ;
+; |behavioural|Y                                        ; |behavioural|Y                                        ; padio            ;
+; |behavioural|Y1[7]                                    ; |behavioural|Y1[7]                                    ; padio            ;
+; |behavioural|Y1[5]                                    ; |behavioural|Y1[5]                                    ; padio            ;
+; |behavioural|Y1[3]                                    ; |behavioural|Y1[3]                                    ; padio            ;
+; |behavioural|Y1[2]                                    ; |behavioural|Y1[2]                                    ; padio            ;
+; |behavioural|Y1[1]                                    ; |behavioural|Y1[1]                                    ; padio            ;
+; |behavioural|Y1[0]                                    ; |behavioural|Y1[0]                                    ; padio            ;
+; |behavioural|CLK                                      ; |behavioural|CLK~corein                               ; combout          ;
+; |behavioural|LOAD                                     ; |behavioural|LOAD~corein                              ; combout          ;
+; |behavioural|Rx                                       ; |behavioural|Rx~corein                                ; combout          ;
+; |behavioural|CLK~clkctrl                              ; |behavioural|CLK~clkctrl                              ; outclk           ;
+; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[7]~feeder ; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[7]~feeder ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[4]~feeder ; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[4]~feeder ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[3]~feeder ; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[3]~feeder ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[2]~feeder ; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[2]~feeder ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[1]~feeder ; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[1]~feeder ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[0]~feeder ; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[0]~feeder ; combout          ;
++-------------------------------------------------------+-------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                           ;
++------------------------------------------------+------------------------------------------------+------------------+
+; Node Name                                      ; Output Port Name                               ; Output Port Type ;
++------------------------------------------------+------------------------------------------------+------------------+
+; |behavioural|uop_shiftreg_s2p:inst|Add0~6      ; |behavioural|uop_shiftreg_s2p:inst|Add0~7      ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~8      ; |behavioural|uop_shiftreg_s2p:inst|Add0~8      ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~8      ; |behavioural|uop_shiftreg_s2p:inst|Add0~9      ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~10     ; |behavioural|uop_shiftreg_s2p:inst|Add0~10     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~10     ; |behavioural|uop_shiftreg_s2p:inst|Add0~11     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~12     ; |behavioural|uop_shiftreg_s2p:inst|Add0~12     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~12     ; |behavioural|uop_shiftreg_s2p:inst|Add0~13     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~14     ; |behavioural|uop_shiftreg_s2p:inst|Add0~14     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~14     ; |behavioural|uop_shiftreg_s2p:inst|Add0~15     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~16     ; |behavioural|uop_shiftreg_s2p:inst|Add0~16     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~16     ; |behavioural|uop_shiftreg_s2p:inst|Add0~17     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~18     ; |behavioural|uop_shiftreg_s2p:inst|Add0~18     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~18     ; |behavioural|uop_shiftreg_s2p:inst|Add0~19     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~20     ; |behavioural|uop_shiftreg_s2p:inst|Add0~20     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~20     ; |behavioural|uop_shiftreg_s2p:inst|Add0~21     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~22     ; |behavioural|uop_shiftreg_s2p:inst|Add0~22     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~22     ; |behavioural|uop_shiftreg_s2p:inst|Add0~23     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~24     ; |behavioural|uop_shiftreg_s2p:inst|Add0~24     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~24     ; |behavioural|uop_shiftreg_s2p:inst|Add0~25     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~26     ; |behavioural|uop_shiftreg_s2p:inst|Add0~26     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~26     ; |behavioural|uop_shiftreg_s2p:inst|Add0~27     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~28     ; |behavioural|uop_shiftreg_s2p:inst|Add0~28     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~28     ; |behavioural|uop_shiftreg_s2p:inst|Add0~29     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~30     ; |behavioural|uop_shiftreg_s2p:inst|Add0~30     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~30     ; |behavioural|uop_shiftreg_s2p:inst|Add0~31     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~32     ; |behavioural|uop_shiftreg_s2p:inst|Add0~32     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~32     ; |behavioural|uop_shiftreg_s2p:inst|Add0~33     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~34     ; |behavioural|uop_shiftreg_s2p:inst|Add0~34     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~34     ; |behavioural|uop_shiftreg_s2p:inst|Add0~35     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~36     ; |behavioural|uop_shiftreg_s2p:inst|Add0~36     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~36     ; |behavioural|uop_shiftreg_s2p:inst|Add0~37     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~38     ; |behavioural|uop_shiftreg_s2p:inst|Add0~38     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~38     ; |behavioural|uop_shiftreg_s2p:inst|Add0~39     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~40     ; |behavioural|uop_shiftreg_s2p:inst|Add0~40     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~40     ; |behavioural|uop_shiftreg_s2p:inst|Add0~41     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~42     ; |behavioural|uop_shiftreg_s2p:inst|Add0~42     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~42     ; |behavioural|uop_shiftreg_s2p:inst|Add0~43     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~44     ; |behavioural|uop_shiftreg_s2p:inst|Add0~44     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~44     ; |behavioural|uop_shiftreg_s2p:inst|Add0~45     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~46     ; |behavioural|uop_shiftreg_s2p:inst|Add0~46     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~46     ; |behavioural|uop_shiftreg_s2p:inst|Add0~47     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~48     ; |behavioural|uop_shiftreg_s2p:inst|Add0~48     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~48     ; |behavioural|uop_shiftreg_s2p:inst|Add0~49     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~50     ; |behavioural|uop_shiftreg_s2p:inst|Add0~50     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~50     ; |behavioural|uop_shiftreg_s2p:inst|Add0~51     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~52     ; |behavioural|uop_shiftreg_s2p:inst|Add0~52     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~52     ; |behavioural|uop_shiftreg_s2p:inst|Add0~53     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~54     ; |behavioural|uop_shiftreg_s2p:inst|Add0~54     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~54     ; |behavioural|uop_shiftreg_s2p:inst|Add0~55     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~56     ; |behavioural|uop_shiftreg_s2p:inst|Add0~56     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~56     ; |behavioural|uop_shiftreg_s2p:inst|Add0~57     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~58     ; |behavioural|uop_shiftreg_s2p:inst|Add0~58     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~58     ; |behavioural|uop_shiftreg_s2p:inst|Add0~59     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~60     ; |behavioural|uop_shiftreg_s2p:inst|Add0~60     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~60     ; |behavioural|uop_shiftreg_s2p:inst|Add0~61     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~62     ; |behavioural|uop_shiftreg_s2p:inst|Add0~62     ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[3]     ; |behavioural|uop_shiftreg_p2s:inst1|idx[3]     ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[4]     ; |behavioural|uop_shiftreg_p2s:inst1|idx[4]     ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[5]     ; |behavioural|uop_shiftreg_p2s:inst1|idx[5]     ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[6]     ; |behavioural|uop_shiftreg_p2s:inst1|idx[6]     ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[7]     ; |behavioural|uop_shiftreg_p2s:inst1|idx[7]     ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[8]     ; |behavioural|uop_shiftreg_p2s:inst1|idx[8]     ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[9]     ; |behavioural|uop_shiftreg_p2s:inst1|idx[9]     ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[10]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[10]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[11]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[11]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[12]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[12]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[13]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[13]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[14]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[14]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[15]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[15]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[16]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[16]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[17]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[17]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[18]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[18]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[19]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[19]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[20]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[20]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[21]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[21]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[22]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[22]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[23]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[23]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[24]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[24]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[25]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[25]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[26]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[26]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[27]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[27]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[28]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[28]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[29]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[29]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[30]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[30]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[31]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[31]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[3]~39  ; |behavioural|uop_shiftreg_p2s:inst1|idx[3]~40  ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[4]~41  ; |behavioural|uop_shiftreg_p2s:inst1|idx[4]~41  ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[4]~41  ; |behavioural|uop_shiftreg_p2s:inst1|idx[4]~42  ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[5]~43  ; |behavioural|uop_shiftreg_p2s:inst1|idx[5]~43  ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[5]~43  ; |behavioural|uop_shiftreg_p2s:inst1|idx[5]~44  ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[6]~45  ; |behavioural|uop_shiftreg_p2s:inst1|idx[6]~45  ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[6]~45  ; |behavioural|uop_shiftreg_p2s:inst1|idx[6]~46  ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[7]~47  ; |behavioural|uop_shiftreg_p2s:inst1|idx[7]~47  ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[7]~47  ; |behavioural|uop_shiftreg_p2s:inst1|idx[7]~48  ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[8]~49  ; |behavioural|uop_shiftreg_p2s:inst1|idx[8]~49  ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[8]~49  ; |behavioural|uop_shiftreg_p2s:inst1|idx[8]~50  ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[9]~51  ; |behavioural|uop_shiftreg_p2s:inst1|idx[9]~51  ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[9]~51  ; |behavioural|uop_shiftreg_p2s:inst1|idx[9]~52  ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[10]~53 ; |behavioural|uop_shiftreg_p2s:inst1|idx[10]~53 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[10]~53 ; |behavioural|uop_shiftreg_p2s:inst1|idx[10]~54 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[11]~55 ; |behavioural|uop_shiftreg_p2s:inst1|idx[11]~55 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[11]~55 ; |behavioural|uop_shiftreg_p2s:inst1|idx[11]~56 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[12]~57 ; |behavioural|uop_shiftreg_p2s:inst1|idx[12]~57 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[12]~57 ; |behavioural|uop_shiftreg_p2s:inst1|idx[12]~58 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[13]~59 ; |behavioural|uop_shiftreg_p2s:inst1|idx[13]~59 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[13]~59 ; |behavioural|uop_shiftreg_p2s:inst1|idx[13]~60 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[14]~61 ; |behavioural|uop_shiftreg_p2s:inst1|idx[14]~61 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[14]~61 ; |behavioural|uop_shiftreg_p2s:inst1|idx[14]~62 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[15]~63 ; |behavioural|uop_shiftreg_p2s:inst1|idx[15]~63 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[15]~63 ; |behavioural|uop_shiftreg_p2s:inst1|idx[15]~64 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[16]~65 ; |behavioural|uop_shiftreg_p2s:inst1|idx[16]~65 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[16]~65 ; |behavioural|uop_shiftreg_p2s:inst1|idx[16]~66 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[17]~67 ; |behavioural|uop_shiftreg_p2s:inst1|idx[17]~67 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[17]~67 ; |behavioural|uop_shiftreg_p2s:inst1|idx[17]~68 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[18]~69 ; |behavioural|uop_shiftreg_p2s:inst1|idx[18]~69 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[18]~69 ; |behavioural|uop_shiftreg_p2s:inst1|idx[18]~70 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[19]~71 ; |behavioural|uop_shiftreg_p2s:inst1|idx[19]~71 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[19]~71 ; |behavioural|uop_shiftreg_p2s:inst1|idx[19]~72 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[20]~73 ; |behavioural|uop_shiftreg_p2s:inst1|idx[20]~73 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[20]~73 ; |behavioural|uop_shiftreg_p2s:inst1|idx[20]~74 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[21]~75 ; |behavioural|uop_shiftreg_p2s:inst1|idx[21]~75 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[21]~75 ; |behavioural|uop_shiftreg_p2s:inst1|idx[21]~76 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[22]~77 ; |behavioural|uop_shiftreg_p2s:inst1|idx[22]~77 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[22]~77 ; |behavioural|uop_shiftreg_p2s:inst1|idx[22]~78 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[23]~79 ; |behavioural|uop_shiftreg_p2s:inst1|idx[23]~79 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[23]~79 ; |behavioural|uop_shiftreg_p2s:inst1|idx[23]~80 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[24]~81 ; |behavioural|uop_shiftreg_p2s:inst1|idx[24]~81 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[24]~81 ; |behavioural|uop_shiftreg_p2s:inst1|idx[24]~82 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[25]~83 ; |behavioural|uop_shiftreg_p2s:inst1|idx[25]~83 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[25]~83 ; |behavioural|uop_shiftreg_p2s:inst1|idx[25]~84 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[26]~85 ; |behavioural|uop_shiftreg_p2s:inst1|idx[26]~85 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[26]~85 ; |behavioural|uop_shiftreg_p2s:inst1|idx[26]~86 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[27]~87 ; |behavioural|uop_shiftreg_p2s:inst1|idx[27]~87 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[27]~87 ; |behavioural|uop_shiftreg_p2s:inst1|idx[27]~88 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[28]~89 ; |behavioural|uop_shiftreg_p2s:inst1|idx[28]~89 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[28]~89 ; |behavioural|uop_shiftreg_p2s:inst1|idx[28]~90 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[29]~91 ; |behavioural|uop_shiftreg_p2s:inst1|idx[29]~91 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[29]~91 ; |behavioural|uop_shiftreg_p2s:inst1|idx[29]~92 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[30]~93 ; |behavioural|uop_shiftreg_p2s:inst1|idx[30]~93 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[30]~93 ; |behavioural|uop_shiftreg_p2s:inst1|idx[30]~94 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[31]~95 ; |behavioural|uop_shiftreg_p2s:inst1|idx[31]~95 ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[6] ; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[6] ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[4] ; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[4] ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|Nreg[6]    ; |behavioural|uop_shiftreg_p2s:inst1|Nreg[6]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|Nreg[4]    ; |behavioural|uop_shiftreg_p2s:inst1|Nreg[4]    ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[3]      ; |behavioural|uop_shiftreg_s2p:inst|idx[3]      ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[4]      ; |behavioural|uop_shiftreg_s2p:inst|idx[4]      ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[5]      ; |behavioural|uop_shiftreg_s2p:inst|idx[5]      ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[6]      ; |behavioural|uop_shiftreg_s2p:inst|idx[6]      ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[7]      ; |behavioural|uop_shiftreg_s2p:inst|idx[7]      ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Equal0~1    ; |behavioural|uop_shiftreg_s2p:inst|Equal0~1    ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[8]      ; |behavioural|uop_shiftreg_s2p:inst|idx[8]      ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[9]      ; |behavioural|uop_shiftreg_s2p:inst|idx[9]      ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[10]     ; |behavioural|uop_shiftreg_s2p:inst|idx[10]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[11]     ; |behavioural|uop_shiftreg_s2p:inst|idx[11]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Equal0~2    ; |behavioural|uop_shiftreg_s2p:inst|Equal0~2    ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[12]     ; |behavioural|uop_shiftreg_s2p:inst|idx[12]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[13]     ; |behavioural|uop_shiftreg_s2p:inst|idx[13]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[14]     ; |behavioural|uop_shiftreg_s2p:inst|idx[14]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[15]     ; |behavioural|uop_shiftreg_s2p:inst|idx[15]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Equal0~3    ; |behavioural|uop_shiftreg_s2p:inst|Equal0~3    ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[16]     ; |behavioural|uop_shiftreg_s2p:inst|idx[16]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[17]     ; |behavioural|uop_shiftreg_s2p:inst|idx[17]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[18]     ; |behavioural|uop_shiftreg_s2p:inst|idx[18]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[19]     ; |behavioural|uop_shiftreg_s2p:inst|idx[19]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Equal0~5    ; |behavioural|uop_shiftreg_s2p:inst|Equal0~5    ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[20]     ; |behavioural|uop_shiftreg_s2p:inst|idx[20]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[21]     ; |behavioural|uop_shiftreg_s2p:inst|idx[21]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Equal0~6    ; |behavioural|uop_shiftreg_s2p:inst|Equal0~6    ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[22]     ; |behavioural|uop_shiftreg_s2p:inst|idx[22]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[23]     ; |behavioural|uop_shiftreg_s2p:inst|idx[23]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Equal0~7    ; |behavioural|uop_shiftreg_s2p:inst|Equal0~7    ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[24]     ; |behavioural|uop_shiftreg_s2p:inst|idx[24]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[25]     ; |behavioural|uop_shiftreg_s2p:inst|idx[25]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[26]     ; |behavioural|uop_shiftreg_s2p:inst|idx[26]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[27]     ; |behavioural|uop_shiftreg_s2p:inst|idx[27]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Equal0~8    ; |behavioural|uop_shiftreg_s2p:inst|Equal0~8    ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[28]     ; |behavioural|uop_shiftreg_s2p:inst|idx[28]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[29]     ; |behavioural|uop_shiftreg_s2p:inst|idx[29]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[30]     ; |behavioural|uop_shiftreg_s2p:inst|idx[30]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[31]     ; |behavioural|uop_shiftreg_s2p:inst|idx[31]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Equal0~9    ; |behavioural|uop_shiftreg_s2p:inst|Equal0~9    ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg[6]     ; |behavioural|uop_shiftreg_s2p:inst|Nreg[6]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg[4]     ; |behavioural|uop_shiftreg_s2p:inst|Nreg[4]     ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|Equal0~1   ; |behavioural|uop_shiftreg_p2s:inst1|Equal0~1   ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Equal0~2   ; |behavioural|uop_shiftreg_p2s:inst1|Equal0~2   ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Equal0~3   ; |behavioural|uop_shiftreg_p2s:inst1|Equal0~3   ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Equal0~5   ; |behavioural|uop_shiftreg_p2s:inst1|Equal0~5   ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Equal0~6   ; |behavioural|uop_shiftreg_p2s:inst1|Equal0~6   ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Equal0~7   ; |behavioural|uop_shiftreg_p2s:inst1|Equal0~7   ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Equal0~8   ; |behavioural|uop_shiftreg_p2s:inst1|Equal0~8   ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Equal0~9   ; |behavioural|uop_shiftreg_p2s:inst1|Equal0~9   ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Nreg[6]~5  ; |behavioural|uop_shiftreg_p2s:inst1|Nreg[6]~5  ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Nreg[4]~6  ; |behavioural|uop_shiftreg_p2s:inst1|Nreg[4]~6  ; combout          ;
+; |behavioural|Y1[6]                             ; |behavioural|Y1[6]                             ; padio            ;
+; |behavioural|Y1[4]                             ; |behavioural|Y1[4]                             ; padio            ;
+; |behavioural|DATA_IN[2]                        ; |behavioural|DATA_IN[2]~corein                 ; combout          ;
+; |behavioural|DATA_IN[1]                        ; |behavioural|DATA_IN[1]~corein                 ; combout          ;
+; |behavioural|DATA_IN[0]                        ; |behavioural|DATA_IN[0]~corein                 ; combout          ;
+; |behavioural|DATA_IN[3]                        ; |behavioural|DATA_IN[3]~corein                 ; combout          ;
+; |behavioural|DATA_IN[5]                        ; |behavioural|DATA_IN[5]~corein                 ; combout          ;
+; |behavioural|DATA_IN[6]                        ; |behavioural|DATA_IN[6]~corein                 ; combout          ;
+; |behavioural|DATA_IN[4]                        ; |behavioural|DATA_IN[4]~corein                 ; combout          ;
+; |behavioural|DATA_IN[7]                        ; |behavioural|DATA_IN[7]~corein                 ; combout          ;
++------------------------------------------------+------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                           ;
++------------------------------------------------+------------------------------------------------+------------------+
+; Node Name                                      ; Output Port Name                               ; Output Port Type ;
++------------------------------------------------+------------------------------------------------+------------------+
+; |behavioural|uop_shiftreg_s2p:inst|Add0~6      ; |behavioural|uop_shiftreg_s2p:inst|Add0~7      ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~8      ; |behavioural|uop_shiftreg_s2p:inst|Add0~8      ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~8      ; |behavioural|uop_shiftreg_s2p:inst|Add0~9      ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~10     ; |behavioural|uop_shiftreg_s2p:inst|Add0~10     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~10     ; |behavioural|uop_shiftreg_s2p:inst|Add0~11     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~12     ; |behavioural|uop_shiftreg_s2p:inst|Add0~12     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~12     ; |behavioural|uop_shiftreg_s2p:inst|Add0~13     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~14     ; |behavioural|uop_shiftreg_s2p:inst|Add0~14     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~14     ; |behavioural|uop_shiftreg_s2p:inst|Add0~15     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~16     ; |behavioural|uop_shiftreg_s2p:inst|Add0~16     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~16     ; |behavioural|uop_shiftreg_s2p:inst|Add0~17     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~18     ; |behavioural|uop_shiftreg_s2p:inst|Add0~18     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~18     ; |behavioural|uop_shiftreg_s2p:inst|Add0~19     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~20     ; |behavioural|uop_shiftreg_s2p:inst|Add0~20     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~20     ; |behavioural|uop_shiftreg_s2p:inst|Add0~21     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~22     ; |behavioural|uop_shiftreg_s2p:inst|Add0~22     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~22     ; |behavioural|uop_shiftreg_s2p:inst|Add0~23     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~24     ; |behavioural|uop_shiftreg_s2p:inst|Add0~24     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~24     ; |behavioural|uop_shiftreg_s2p:inst|Add0~25     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~26     ; |behavioural|uop_shiftreg_s2p:inst|Add0~26     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~26     ; |behavioural|uop_shiftreg_s2p:inst|Add0~27     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~28     ; |behavioural|uop_shiftreg_s2p:inst|Add0~28     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~28     ; |behavioural|uop_shiftreg_s2p:inst|Add0~29     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~30     ; |behavioural|uop_shiftreg_s2p:inst|Add0~30     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~30     ; |behavioural|uop_shiftreg_s2p:inst|Add0~31     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~32     ; |behavioural|uop_shiftreg_s2p:inst|Add0~32     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~32     ; |behavioural|uop_shiftreg_s2p:inst|Add0~33     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~34     ; |behavioural|uop_shiftreg_s2p:inst|Add0~34     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~34     ; |behavioural|uop_shiftreg_s2p:inst|Add0~35     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~36     ; |behavioural|uop_shiftreg_s2p:inst|Add0~36     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~36     ; |behavioural|uop_shiftreg_s2p:inst|Add0~37     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~38     ; |behavioural|uop_shiftreg_s2p:inst|Add0~38     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~38     ; |behavioural|uop_shiftreg_s2p:inst|Add0~39     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~40     ; |behavioural|uop_shiftreg_s2p:inst|Add0~40     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~40     ; |behavioural|uop_shiftreg_s2p:inst|Add0~41     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~42     ; |behavioural|uop_shiftreg_s2p:inst|Add0~42     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~42     ; |behavioural|uop_shiftreg_s2p:inst|Add0~43     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~44     ; |behavioural|uop_shiftreg_s2p:inst|Add0~44     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~44     ; |behavioural|uop_shiftreg_s2p:inst|Add0~45     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~46     ; |behavioural|uop_shiftreg_s2p:inst|Add0~46     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~46     ; |behavioural|uop_shiftreg_s2p:inst|Add0~47     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~48     ; |behavioural|uop_shiftreg_s2p:inst|Add0~48     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~48     ; |behavioural|uop_shiftreg_s2p:inst|Add0~49     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~50     ; |behavioural|uop_shiftreg_s2p:inst|Add0~50     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~50     ; |behavioural|uop_shiftreg_s2p:inst|Add0~51     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~52     ; |behavioural|uop_shiftreg_s2p:inst|Add0~52     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~52     ; |behavioural|uop_shiftreg_s2p:inst|Add0~53     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~54     ; |behavioural|uop_shiftreg_s2p:inst|Add0~54     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~54     ; |behavioural|uop_shiftreg_s2p:inst|Add0~55     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~56     ; |behavioural|uop_shiftreg_s2p:inst|Add0~56     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~56     ; |behavioural|uop_shiftreg_s2p:inst|Add0~57     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~58     ; |behavioural|uop_shiftreg_s2p:inst|Add0~58     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~58     ; |behavioural|uop_shiftreg_s2p:inst|Add0~59     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~60     ; |behavioural|uop_shiftreg_s2p:inst|Add0~60     ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~60     ; |behavioural|uop_shiftreg_s2p:inst|Add0~61     ; cout             ;
+; |behavioural|uop_shiftreg_s2p:inst|Add0~62     ; |behavioural|uop_shiftreg_s2p:inst|Add0~62     ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[3]     ; |behavioural|uop_shiftreg_p2s:inst1|idx[3]     ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[4]     ; |behavioural|uop_shiftreg_p2s:inst1|idx[4]     ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[5]     ; |behavioural|uop_shiftreg_p2s:inst1|idx[5]     ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[6]     ; |behavioural|uop_shiftreg_p2s:inst1|idx[6]     ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[7]     ; |behavioural|uop_shiftreg_p2s:inst1|idx[7]     ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[8]     ; |behavioural|uop_shiftreg_p2s:inst1|idx[8]     ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[9]     ; |behavioural|uop_shiftreg_p2s:inst1|idx[9]     ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[10]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[10]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[11]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[11]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[12]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[12]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[13]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[13]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[14]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[14]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[15]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[15]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[16]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[16]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[17]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[17]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[18]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[18]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[19]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[19]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[20]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[20]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[21]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[21]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[22]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[22]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[23]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[23]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[24]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[24]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[25]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[25]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[26]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[26]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[27]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[27]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[28]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[28]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[29]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[29]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[30]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[30]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[31]    ; |behavioural|uop_shiftreg_p2s:inst1|idx[31]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[3]~39  ; |behavioural|uop_shiftreg_p2s:inst1|idx[3]~40  ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[4]~41  ; |behavioural|uop_shiftreg_p2s:inst1|idx[4]~41  ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[4]~41  ; |behavioural|uop_shiftreg_p2s:inst1|idx[4]~42  ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[5]~43  ; |behavioural|uop_shiftreg_p2s:inst1|idx[5]~43  ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[5]~43  ; |behavioural|uop_shiftreg_p2s:inst1|idx[5]~44  ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[6]~45  ; |behavioural|uop_shiftreg_p2s:inst1|idx[6]~45  ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[6]~45  ; |behavioural|uop_shiftreg_p2s:inst1|idx[6]~46  ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[7]~47  ; |behavioural|uop_shiftreg_p2s:inst1|idx[7]~47  ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[7]~47  ; |behavioural|uop_shiftreg_p2s:inst1|idx[7]~48  ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[8]~49  ; |behavioural|uop_shiftreg_p2s:inst1|idx[8]~49  ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[8]~49  ; |behavioural|uop_shiftreg_p2s:inst1|idx[8]~50  ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[9]~51  ; |behavioural|uop_shiftreg_p2s:inst1|idx[9]~51  ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[9]~51  ; |behavioural|uop_shiftreg_p2s:inst1|idx[9]~52  ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[10]~53 ; |behavioural|uop_shiftreg_p2s:inst1|idx[10]~53 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[10]~53 ; |behavioural|uop_shiftreg_p2s:inst1|idx[10]~54 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[11]~55 ; |behavioural|uop_shiftreg_p2s:inst1|idx[11]~55 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[11]~55 ; |behavioural|uop_shiftreg_p2s:inst1|idx[11]~56 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[12]~57 ; |behavioural|uop_shiftreg_p2s:inst1|idx[12]~57 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[12]~57 ; |behavioural|uop_shiftreg_p2s:inst1|idx[12]~58 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[13]~59 ; |behavioural|uop_shiftreg_p2s:inst1|idx[13]~59 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[13]~59 ; |behavioural|uop_shiftreg_p2s:inst1|idx[13]~60 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[14]~61 ; |behavioural|uop_shiftreg_p2s:inst1|idx[14]~61 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[14]~61 ; |behavioural|uop_shiftreg_p2s:inst1|idx[14]~62 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[15]~63 ; |behavioural|uop_shiftreg_p2s:inst1|idx[15]~63 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[15]~63 ; |behavioural|uop_shiftreg_p2s:inst1|idx[15]~64 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[16]~65 ; |behavioural|uop_shiftreg_p2s:inst1|idx[16]~65 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[16]~65 ; |behavioural|uop_shiftreg_p2s:inst1|idx[16]~66 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[17]~67 ; |behavioural|uop_shiftreg_p2s:inst1|idx[17]~67 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[17]~67 ; |behavioural|uop_shiftreg_p2s:inst1|idx[17]~68 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[18]~69 ; |behavioural|uop_shiftreg_p2s:inst1|idx[18]~69 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[18]~69 ; |behavioural|uop_shiftreg_p2s:inst1|idx[18]~70 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[19]~71 ; |behavioural|uop_shiftreg_p2s:inst1|idx[19]~71 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[19]~71 ; |behavioural|uop_shiftreg_p2s:inst1|idx[19]~72 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[20]~73 ; |behavioural|uop_shiftreg_p2s:inst1|idx[20]~73 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[20]~73 ; |behavioural|uop_shiftreg_p2s:inst1|idx[20]~74 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[21]~75 ; |behavioural|uop_shiftreg_p2s:inst1|idx[21]~75 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[21]~75 ; |behavioural|uop_shiftreg_p2s:inst1|idx[21]~76 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[22]~77 ; |behavioural|uop_shiftreg_p2s:inst1|idx[22]~77 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[22]~77 ; |behavioural|uop_shiftreg_p2s:inst1|idx[22]~78 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[23]~79 ; |behavioural|uop_shiftreg_p2s:inst1|idx[23]~79 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[23]~79 ; |behavioural|uop_shiftreg_p2s:inst1|idx[23]~80 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[24]~81 ; |behavioural|uop_shiftreg_p2s:inst1|idx[24]~81 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[24]~81 ; |behavioural|uop_shiftreg_p2s:inst1|idx[24]~82 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[25]~83 ; |behavioural|uop_shiftreg_p2s:inst1|idx[25]~83 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[25]~83 ; |behavioural|uop_shiftreg_p2s:inst1|idx[25]~84 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[26]~85 ; |behavioural|uop_shiftreg_p2s:inst1|idx[26]~85 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[26]~85 ; |behavioural|uop_shiftreg_p2s:inst1|idx[26]~86 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[27]~87 ; |behavioural|uop_shiftreg_p2s:inst1|idx[27]~87 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[27]~87 ; |behavioural|uop_shiftreg_p2s:inst1|idx[27]~88 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[28]~89 ; |behavioural|uop_shiftreg_p2s:inst1|idx[28]~89 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[28]~89 ; |behavioural|uop_shiftreg_p2s:inst1|idx[28]~90 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[29]~91 ; |behavioural|uop_shiftreg_p2s:inst1|idx[29]~91 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[29]~91 ; |behavioural|uop_shiftreg_p2s:inst1|idx[29]~92 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[30]~93 ; |behavioural|uop_shiftreg_p2s:inst1|idx[30]~93 ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[30]~93 ; |behavioural|uop_shiftreg_p2s:inst1|idx[30]~94 ; cout             ;
+; |behavioural|uop_shiftreg_p2s:inst1|idx[31]~95 ; |behavioural|uop_shiftreg_p2s:inst1|idx[31]~95 ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[6] ; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[6] ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[4] ; |behavioural|uop_shiftreg_s2p:inst|DATA_OUT[4] ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|Nreg[1]    ; |behavioural|uop_shiftreg_p2s:inst1|Nreg[1]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|Nreg[3]    ; |behavioural|uop_shiftreg_p2s:inst1|Nreg[3]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|Nreg[5]    ; |behavioural|uop_shiftreg_p2s:inst1|Nreg[5]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|Nreg[6]    ; |behavioural|uop_shiftreg_p2s:inst1|Nreg[6]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|Nreg[4]    ; |behavioural|uop_shiftreg_p2s:inst1|Nreg[4]    ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|Nreg[7]    ; |behavioural|uop_shiftreg_p2s:inst1|Nreg[7]    ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[3]      ; |behavioural|uop_shiftreg_s2p:inst|idx[3]      ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[4]      ; |behavioural|uop_shiftreg_s2p:inst|idx[4]      ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[5]      ; |behavioural|uop_shiftreg_s2p:inst|idx[5]      ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[6]      ; |behavioural|uop_shiftreg_s2p:inst|idx[6]      ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[7]      ; |behavioural|uop_shiftreg_s2p:inst|idx[7]      ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Equal0~1    ; |behavioural|uop_shiftreg_s2p:inst|Equal0~1    ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[8]      ; |behavioural|uop_shiftreg_s2p:inst|idx[8]      ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[9]      ; |behavioural|uop_shiftreg_s2p:inst|idx[9]      ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[10]     ; |behavioural|uop_shiftreg_s2p:inst|idx[10]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[11]     ; |behavioural|uop_shiftreg_s2p:inst|idx[11]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Equal0~2    ; |behavioural|uop_shiftreg_s2p:inst|Equal0~2    ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[12]     ; |behavioural|uop_shiftreg_s2p:inst|idx[12]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[13]     ; |behavioural|uop_shiftreg_s2p:inst|idx[13]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[14]     ; |behavioural|uop_shiftreg_s2p:inst|idx[14]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[15]     ; |behavioural|uop_shiftreg_s2p:inst|idx[15]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Equal0~3    ; |behavioural|uop_shiftreg_s2p:inst|Equal0~3    ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[16]     ; |behavioural|uop_shiftreg_s2p:inst|idx[16]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[17]     ; |behavioural|uop_shiftreg_s2p:inst|idx[17]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[18]     ; |behavioural|uop_shiftreg_s2p:inst|idx[18]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[19]     ; |behavioural|uop_shiftreg_s2p:inst|idx[19]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Equal0~5    ; |behavioural|uop_shiftreg_s2p:inst|Equal0~5    ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[20]     ; |behavioural|uop_shiftreg_s2p:inst|idx[20]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[21]     ; |behavioural|uop_shiftreg_s2p:inst|idx[21]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Equal0~6    ; |behavioural|uop_shiftreg_s2p:inst|Equal0~6    ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[22]     ; |behavioural|uop_shiftreg_s2p:inst|idx[22]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[23]     ; |behavioural|uop_shiftreg_s2p:inst|idx[23]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Equal0~7    ; |behavioural|uop_shiftreg_s2p:inst|Equal0~7    ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[24]     ; |behavioural|uop_shiftreg_s2p:inst|idx[24]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[25]     ; |behavioural|uop_shiftreg_s2p:inst|idx[25]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[26]     ; |behavioural|uop_shiftreg_s2p:inst|idx[26]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[27]     ; |behavioural|uop_shiftreg_s2p:inst|idx[27]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Equal0~8    ; |behavioural|uop_shiftreg_s2p:inst|Equal0~8    ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[28]     ; |behavioural|uop_shiftreg_s2p:inst|idx[28]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[29]     ; |behavioural|uop_shiftreg_s2p:inst|idx[29]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[30]     ; |behavioural|uop_shiftreg_s2p:inst|idx[30]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|idx[31]     ; |behavioural|uop_shiftreg_s2p:inst|idx[31]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Equal0~9    ; |behavioural|uop_shiftreg_s2p:inst|Equal0~9    ; combout          ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg[6]     ; |behavioural|uop_shiftreg_s2p:inst|Nreg[6]     ; regout           ;
+; |behavioural|uop_shiftreg_s2p:inst|Nreg[4]     ; |behavioural|uop_shiftreg_s2p:inst|Nreg[4]     ; regout           ;
+; |behavioural|uop_shiftreg_p2s:inst1|Equal0~1   ; |behavioural|uop_shiftreg_p2s:inst1|Equal0~1   ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Equal0~2   ; |behavioural|uop_shiftreg_p2s:inst1|Equal0~2   ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Equal0~3   ; |behavioural|uop_shiftreg_p2s:inst1|Equal0~3   ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Equal0~5   ; |behavioural|uop_shiftreg_p2s:inst1|Equal0~5   ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Equal0~6   ; |behavioural|uop_shiftreg_p2s:inst1|Equal0~6   ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Equal0~7   ; |behavioural|uop_shiftreg_p2s:inst1|Equal0~7   ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Equal0~8   ; |behavioural|uop_shiftreg_p2s:inst1|Equal0~8   ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Equal0~9   ; |behavioural|uop_shiftreg_p2s:inst1|Equal0~9   ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Nreg[1]~1  ; |behavioural|uop_shiftreg_p2s:inst1|Nreg[1]~1  ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Nreg[3]~3  ; |behavioural|uop_shiftreg_p2s:inst1|Nreg[3]~3  ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Nreg[5]~4  ; |behavioural|uop_shiftreg_p2s:inst1|Nreg[5]~4  ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Nreg[6]~5  ; |behavioural|uop_shiftreg_p2s:inst1|Nreg[6]~5  ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Nreg[4]~6  ; |behavioural|uop_shiftreg_p2s:inst1|Nreg[4]~6  ; combout          ;
+; |behavioural|uop_shiftreg_p2s:inst1|Nreg[7]~7  ; |behavioural|uop_shiftreg_p2s:inst1|Nreg[7]~7  ; combout          ;
+; |behavioural|Y1[6]                             ; |behavioural|Y1[6]                             ; padio            ;
+; |behavioural|Y1[4]                             ; |behavioural|Y1[4]                             ; padio            ;
+; |behavioural|RESET                             ; |behavioural|RESET~corein                      ; combout          ;
+; |behavioural|DATA_IN[6]                        ; |behavioural|DATA_IN[6]~corein                 ; combout          ;
+; |behavioural|DATA_IN[4]                        ; |behavioural|DATA_IN[4]~corein                 ; combout          ;
+; |behavioural|RESET~clkctrl                     ; |behavioural|RESET~clkctrl                     ; outclk           ;
++------------------------------------------------+------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Fri Nov 26 07:06:06 2010
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off behavioural -c behavioural
+Info: Using vector source file "C:/Users/noutram/Desktop/07 - Sequential Machines/tasks/Task 01-02 - Parallel to Serial SR/behavioural_tests.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      27.21 %
+Info: Number of transitions in simulation is 900
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 162 megabytes
+    Info: Processing ended: Fri Nov 26 07:06:08 2010
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:00
+
+

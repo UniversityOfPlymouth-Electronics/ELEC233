@@ -1,0 +1,15 @@
+|myproject
+Y <= inst.DB_MAX_OUTPUT_PORT_TYPE
+A => inst.IN0
+A => myand:inst1.A
+B => inst.IN1
+B => myand:inst1.B
+Y1 <= myand:inst1.Y
+
+
+|myproject|myand:inst1
+A => Y.IN0
+B => Y.IN1
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

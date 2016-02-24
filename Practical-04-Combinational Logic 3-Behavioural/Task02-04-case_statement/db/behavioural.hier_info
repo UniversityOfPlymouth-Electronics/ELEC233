@@ -1,0 +1,66 @@
+|behavioural
+Y <= mux_case:inst.Y
+EN => mux_case:inst.EN
+SS[0] => mux_case:inst.SEL[0]
+SS[1] => mux_case:inst.SEL[1]
+SS[2] => mux_case:inst.SEL[2]
+DATA[0] => mux_case:inst.X[0]
+DATA[1] => mux_case:inst.X[1]
+DATA[2] => mux_case:inst.X[2]
+DATA[3] => mux_case:inst.X[3]
+DATA[4] => mux_case:inst.X[4]
+DATA[5] => mux_case:inst.X[5]
+DATA[6] => mux_case:inst.X[6]
+DATA[7] => mux_case:inst.X[7]
+DATA[8] => mux_case:inst.X[8]
+DATA[9] => mux_case:inst.X[9]
+DATA[10] => mux_case:inst.X[10]
+DATA[11] => mux_case:inst.X[11]
+DATA[12] => mux_case:inst.X[12]
+DATA[13] => mux_case:inst.X[13]
+DATA[14] => mux_case:inst.X[14]
+DATA[15] => mux_case:inst.X[15]
+
+
+|behavioural|mux_case:inst
+X[0] => Y.DATAB
+X[1] => Y.DATAB
+X[2] => Y.DATAB
+X[3] => Y.DATAB
+X[4] => Y.DATAB
+X[5] => Y.DATAB
+X[6] => Y.DATAB
+X[7] => Y.DATAA
+X[8] => ~NO_FANOUT~
+X[9] => ~NO_FANOUT~
+X[10] => ~NO_FANOUT~
+X[11] => ~NO_FANOUT~
+X[12] => ~NO_FANOUT~
+X[13] => ~NO_FANOUT~
+X[14] => ~NO_FANOUT~
+X[15] => ~NO_FANOUT~
+SEL[0] => Equal0.IN2
+SEL[0] => Equal1.IN2
+SEL[0] => Equal2.IN1
+SEL[0] => Equal3.IN2
+SEL[0] => Equal4.IN1
+SEL[0] => Equal5.IN2
+SEL[0] => Equal6.IN0
+SEL[1] => Equal0.IN1
+SEL[1] => Equal1.IN1
+SEL[1] => Equal2.IN2
+SEL[1] => Equal3.IN1
+SEL[1] => Equal4.IN0
+SEL[1] => Equal5.IN0
+SEL[1] => Equal6.IN2
+SEL[2] => Equal0.IN0
+SEL[2] => Equal1.IN0
+SEL[2] => Equal2.IN0
+SEL[2] => Equal3.IN0
+SEL[2] => Equal4.IN2
+SEL[2] => Equal5.IN1
+SEL[2] => Equal6.IN1
+EN => ~NO_FANOUT~
+Y <= Y.DB_MAX_OUTPUT_PORT_TYPE
+
+

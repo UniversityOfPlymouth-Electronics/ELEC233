@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/noutram/Desktop/Topic4-Tasks/Task02-03-if_statements_and_latching/behavioural.bdf
+source_file = 1, C:/Users/noutram/Desktop/Topic4-Tasks/Task02-03-if_statements_and_latching/behavioural_tests.vwf
+source_file = 1, C:/Users/noutram/Desktop/Topic4-Tasks/Task02-03-if_statements_and_latching/clevergate_behavioural.vhd
+source_file = 1, C:/Users/noutram/Desktop/Topic4-Tasks/Task02-03-if_statements_and_latching/dlatch_behavioural.vhd
+source_file = 1, C:/Users/noutram/Desktop/Topic4-Tasks/Task02-03-if_statements_and_latching/db/behavioural.cbx.xml
+source_file = 1, c:/altera/13.1_subscription/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.1_subscription/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.1_subscription/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.1_subscription/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = behavioural
+instance = comp, \Y~output , Y~output, behavioural, 1
+instance = comp, \DATA~input , DATA~input, behavioural, 1
+instance = comp, \EN~input , EN~input, behavioural, 1
+instance = comp, \inst|Q , inst|Q, behavioural, 1

@@ -1,0 +1,57 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do clock_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/noutram/Desktop/TestBench/Demo4-GeneratingClocks/my_jk.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity my_jk
+# -- Compiling architecture jk_v1 of my_jk
+# 
+vsim -voptargs=+acc work.my_jk
+# vsim -voptargs=+acc work.my_jk 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.my_jk(jk_v1)
+quit -sim
+vcom -reportprogress 300 -work work C:/Users/noutram/Desktop/TestBench/Demo4-GeneratingClocks/simulation/modelsim/my_jk.vht
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity my_jk_vhd_tst
+# -- Compiling architecture my_jk_arch of my_jk_vhd_tst
+vcom -reportprogress 300 -work work C:/Users/noutram/Desktop/TestBench/Demo4-GeneratingClocks/simulation/modelsim/my_jk.vht
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity my_jk_vhd_tst
+# -- Compiling architecture my_jk_arch of my_jk_vhd_tst
+vsim work.my_jk_vhd_tst
+# vsim work.my_jk_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.my_jk_vhd_tst(my_jk_arch)
+# Loading ieee.numeric_std(body)
+# Loading work.my_jk(jk_v1)
+add wave -position end  sim:/my_jk_vhd_tst/CLK
+add wave -position end  sim:/my_jk_vhd_tst/J
+add wave -position end  sim:/my_jk_vhd_tst/K
+add wave -position end  sim:/my_jk_vhd_tst/Q
+run -all
+quit -sim

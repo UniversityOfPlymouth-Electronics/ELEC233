@@ -1,0 +1,168 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do demo2_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/noutram/Desktop/TestBench/Demo2-ForLoop/myxor.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity myxor
+# -- Compiling architecture myxor_v1 of myxor
+# 
+vcom -reportprogress 300 -work work C:/Users/noutram/Desktop/TestBench/Demo2-ForLoop/simulation/modelsim/myxor.vht
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity myxor_vhd_tst
+# -- Compiling architecture myxor_arch of myxor_vhd_tst
+vsim work.myxor_vhd_tst
+# vsim work.myxor_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.myxor_vhd_tst(myxor_arch)
+# Loading work.myxor(myxor_v1)
+add wave -position end  sim:/myxor_vhd_tst/a
+add wave -position end  sim:/myxor_vhd_tst/b
+add wave -position end  sim:/myxor_vhd_tst/y
+run -all
+quit -sim
+vsim -voptargs=+acc work.myxor_vhd_tst
+# vsim -voptargs=+acc work.myxor_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.myxor_vhd_tst(myxor_arch)
+# Loading work.myxor(myxor_v1)
+quit -sim
+vcom -work work -O0 C:/Users/noutram/Desktop/TestBench/Demo2-ForLoop/simulation/modelsim/myxor.vht
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity myxor_vhd_tst
+# -- Compiling architecture myxor_arch of myxor_vhd_tst
+vsim -voptargs=+acc work.myxor_vhd_tst
+# vsim -voptargs=+acc work.myxor_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.myxor_vhd_tst(myxor_arch)
+# Loading work.myxor(myxor_v1)
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+# Next activity is in 20 ns.
+step
+step
+step
+step
+step
+step
+step
+step
+step
+# Next activity is in 20 ns.
+step
+step
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+step -over
+# Next activity is in 20 ns.
+step -out
+step
+step
+step
+step
+step
+step
+step -out
+step
+# Next activity is in 20 ns.
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+# Next activity is in 20 ns.
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+# Next activity is in 20 ns.
+step
+step
+step
+step
+step
+# WARNING: No extended dataflow license exists
+# No drivers or ports for count
+step
+step
+step
+step
+step
+step
+# Next activity is in 20 ns.
+step
+run -all
+quit -sim
+vsim -voptargs=+acc work.myxor_vhd_tst
+# vsim -voptargs=+acc work.myxor_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.myxor_vhd_tst(myxor_arch)
+# Loading work.myxor(myxor_v1)
+add wave -position end  sim:/myxor_vhd_tst/a
+add wave -position end  sim:/myxor_vhd_tst/b
+add wave -position end  sim:/myxor_vhd_tst/y
+step
+step
+step
+run -all
+quit -sim

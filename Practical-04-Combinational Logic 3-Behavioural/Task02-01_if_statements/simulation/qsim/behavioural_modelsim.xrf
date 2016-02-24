@@ -1,0 +1,15 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/noutram/Desktop/ELE233-P3/Task02-01_if_statements/behavioural.bdf
+source_file = 1, C:/Users/noutram/Desktop/ELE233-P3/Task02-01_if_statements/behavioural_tests.vwf
+source_file = 1, C:/Users/noutram/Desktop/ELE233-P3/Task02-01_if_statements/clevergate_behavioural.vhd
+source_file = 1, C:/Users/noutram/Desktop/ELE233-P3/Task02-01_if_statements/db/behavioural.cbx.xml
+source_file = 1, c:/altera/13.1_subscription/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/13.1_subscription/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/13.1_subscription/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/13.1_subscription/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = behavioural
+instance = comp, \Y_behave~output , Y_behave~output, behavioural, 1
+instance = comp, \B~input , B~input, behavioural, 1
+instance = comp, \A~input , A~input, behavioural, 1
+instance = comp, \CTRL~input , CTRL~input, behavioural, 1
+instance = comp, \inst|Y~0 , inst|Y~0, behavioural, 1

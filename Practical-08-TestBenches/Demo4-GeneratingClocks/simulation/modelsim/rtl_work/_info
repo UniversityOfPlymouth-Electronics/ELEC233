@@ -1,0 +1,77 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\noutram\Desktop\TestBench\Demo4-GeneratingClocks\simulation\modelsim
+Emy_jk
+Z1 w1353516982
+Z2 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z3 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z4 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z5 dC:\Users\noutram\Desktop\TestBench\Demo4-GeneratingClocks\simulation\modelsim
+Z6 8C:/Users/noutram/Desktop/TestBench/Demo4-GeneratingClocks/my_jk.vhd
+Z7 FC:/Users/noutram/Desktop/TestBench/Demo4-GeneratingClocks/my_jk.vhd
+l0
+L8
+V8bMQZaC6zc975fdV_akeM0
+Z8 OV;C;10.1d;51
+31
+Z9 !s108 1417418018.587000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/noutram/Desktop/TestBench/Demo4-GeneratingClocks/my_jk.vhd|
+Z11 !s107 C:/Users/noutram/Desktop/TestBench/Demo4-GeneratingClocks/my_jk.vhd|
+Z12 o-93 -work work -O0
+Z13 tExplicit 1
+!s100 f73XD3]XYNfR[H_EfGKYn2
+!i10b 1
+Ajk_v1
+R2
+R3
+R4
+DEx4 work 5 my_jk 0 22 8bMQZaC6zc975fdV_akeM0
+l18
+L16
+VN4361mVEfo3DZL>7_QF`k1
+R8
+31
+R9
+R10
+R11
+R12
+R13
+!s100 US3jiZia_U;@2QDROi<kP0
+!i10b 1
+Emy_jk_vhd_tst
+Z14 w1353521272
+R3
+R4
+R5
+Z15 8C:/Users/noutram/Desktop/TestBench/Demo4-GeneratingClocks/simulation/modelsim/my_jk.vht
+Z16 FC:/Users/noutram/Desktop/TestBench/Demo4-GeneratingClocks/simulation/modelsim/my_jk.vht
+l0
+L30
+Vi0eFdkD2aJz[ARb<RQCJ`3
+!s100 aEcbl1YmQ=CglOLn6ZLPg2
+R8
+32
+!i10b 1
+Z17 !s108 1417418044.238000
+Z18 !s90 -reportprogress|300|-work|work|C:/Users/noutram/Desktop/TestBench/Demo4-GeneratingClocks/simulation/modelsim/my_jk.vht|
+Z19 !s107 C:/Users/noutram/Desktop/TestBench/Demo4-GeneratingClocks/simulation/modelsim/my_jk.vht|
+Z20 o-work work -O0
+R13
+Amy_jk_arch
+R3
+R4
+Z21 DEx4 work 13 my_jk_vhd_tst 0 22 i0eFdkD2aJz[ARb<RQCJ`3
+l48
+L32
+Z22 VLF<:a:GNPjQVTVV]6LBQ?3
+Z23 !s100 55h]K]ljm863T<6Gb_RPC3
+R8
+32
+!i10b 1
+R17
+R18
+R19
+R20
+R13

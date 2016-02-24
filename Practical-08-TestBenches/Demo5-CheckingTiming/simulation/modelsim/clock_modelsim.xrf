@@ -1,0 +1,14 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/noutram/Desktop/TestBench/Demo5 - checking timing/my_jk.vhd
+source_file = 1, C:/Users/noutram/Desktop/TestBench/Demo5 - checking timing/simulation/modelsim/my_jk.vht
+source_file = 1, C:/Users/noutram/Desktop/TestBench/Demo5 - checking timing/db/clock.cbx.xml
+source_file = 1, c:/altera/11.0sp1/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/11.0sp1/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/11.0sp1/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/11.0sp1/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = my_jk
+instance = comp, \J~I\, J, my_jk, 1
+instance = comp, \CLK~I\, CLK, my_jk, 1
+instance = comp, \K~I\, K, my_jk, 1
+instance = comp, \state~0\, state~0, my_jk, 1
+instance = comp, \Q~I\, Q, my_jk, 1

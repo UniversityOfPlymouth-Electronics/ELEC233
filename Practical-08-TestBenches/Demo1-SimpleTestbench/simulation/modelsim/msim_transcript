@@ -1,0 +1,78 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do demo1_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/myxor.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity myxor
+# -- Compiling architecture myxor_v1 of myxor
+# 
+vcom -reportprogress 300 -work work C:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/simulation/modelsim/demo1.vht
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity demo1_vhd_tst
+# -- Compiling architecture demo1_arch of demo1_vhd_tst
+vsim work.demo1_vhd_tst
+# vsim work.demo1_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.demo1_vhd_tst(demo1_arch)
+# ** Warning: (vsim-3473) Component instance "i1 : demo1" is not bound.
+#    Time: 0 ps  Iteration: 0  Instance: /demo1_vhd_tst File: C:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/simulation/modelsim/demo1.vht
+add wave -position end  sim:/demo1_vhd_tst/A
+add wave -position end  sim:/demo1_vhd_tst/B
+add wave -position end  sim:/demo1_vhd_tst/Y
+run -all
+quit -sim
+vcom -reportprogress 300 -work work C:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/demo1.vhd
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity demo1
+# -- Compiling architecture bdf_type of demo1
+vcom -reportprogress 300 -work work C:/Users/noutram/Desktop/TestBench/Demo1-SimpleTestbench/simulation/modelsim/demo1.vht
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity demo1_vhd_tst
+# -- Compiling architecture demo1_arch of demo1_vhd_tst
+vsim work.demo1
+# vsim work.demo1 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.demo1(bdf_type)
+# Loading ieee.numeric_std(body)
+# Loading work.myxor(myxor_v1)
+quit -sim
+vsim -voptargs=+acc work.demo1_vhd_tst
+# vsim -voptargs=+acc work.demo1_vhd_tst 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.demo1_vhd_tst(demo1_arch)
+# Loading work.demo1(bdf_type)
+# Loading ieee.numeric_std(body)
+# Loading work.myxor(myxor_v1)
+add wave -position end  sim:/demo1_vhd_tst/A
+add wave -position end  sim:/demo1_vhd_tst/B
+add wave -position end  sim:/demo1_vhd_tst/Y
+run -all
+quit -sim

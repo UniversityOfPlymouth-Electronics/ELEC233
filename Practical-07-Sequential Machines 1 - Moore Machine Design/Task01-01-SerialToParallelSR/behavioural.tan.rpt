@@ -1,0 +1,510 @@
+Classic Timing Analyzer report for behavioural
+Fri Nov 19 09:14:27 2010
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Clock Setup: 'CLK'
+  6. tsu
+  7. tco
+  8. th
+  9. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                           ;
++------------------------------+-------+---------------+----------------------------------+---------------------------------+--------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                            ; To                             ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+---------------------------------+--------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 6.245 ns                         ; LOAD                            ; uop_shiftreg_p2s:inst1|idx[23] ; --         ; CLK      ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 7.300 ns                         ; uop_shiftreg_p2s:inst1|DATA_OUT ; Y                              ; CLK        ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 0.097 ns                         ; DATA_IN[7]                      ; uop_shiftreg_p2s:inst1|Nreg[7] ; --         ; CLK      ; 0            ;
+; Clock Setup: 'CLK'           ; N/A   ; None          ; 198.53 MHz ( period = 5.037 ns ) ; uop_shiftreg_p2s:inst1|idx[26]  ; uop_shiftreg_p2s:inst1|idx[23] ; CLK        ; CLK      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                 ;                                ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+---------------------------------+--------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C5Q208C7        ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; CLK             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CLK'                                                                                                                                                                                                                                                          ;
++-----------------------------------------+-----------------------------------------------------+--------------------------------+--------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                           ; To                             ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+--------------------------------+--------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 198.53 MHz ( period = 5.037 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[26] ; CLK        ; CLK      ; None                        ; None                      ; 4.798 ns                ;
+; N/A                                     ; 198.53 MHz ( period = 5.037 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[25] ; CLK        ; CLK      ; None                        ; None                      ; 4.798 ns                ;
+; N/A                                     ; 198.53 MHz ( period = 5.037 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[27] ; CLK        ; CLK      ; None                        ; None                      ; 4.798 ns                ;
+; N/A                                     ; 198.53 MHz ( period = 5.037 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[24] ; CLK        ; CLK      ; None                        ; None                      ; 4.798 ns                ;
+; N/A                                     ; 198.53 MHz ( period = 5.037 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[30] ; CLK        ; CLK      ; None                        ; None                      ; 4.798 ns                ;
+; N/A                                     ; 198.53 MHz ( period = 5.037 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[31] ; CLK        ; CLK      ; None                        ; None                      ; 4.798 ns                ;
+; N/A                                     ; 198.53 MHz ( period = 5.037 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[28] ; CLK        ; CLK      ; None                        ; None                      ; 4.798 ns                ;
+; N/A                                     ; 198.53 MHz ( period = 5.037 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[29] ; CLK        ; CLK      ; None                        ; None                      ; 4.798 ns                ;
+; N/A                                     ; 198.53 MHz ( period = 5.037 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[16] ; CLK        ; CLK      ; None                        ; None                      ; 4.798 ns                ;
+; N/A                                     ; 198.53 MHz ( period = 5.037 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[19] ; CLK        ; CLK      ; None                        ; None                      ; 4.798 ns                ;
+; N/A                                     ; 198.53 MHz ( period = 5.037 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[18] ; CLK        ; CLK      ; None                        ; None                      ; 4.798 ns                ;
+; N/A                                     ; 198.53 MHz ( period = 5.037 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[17] ; CLK        ; CLK      ; None                        ; None                      ; 4.798 ns                ;
+; N/A                                     ; 198.53 MHz ( period = 5.037 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[20] ; CLK        ; CLK      ; None                        ; None                      ; 4.798 ns                ;
+; N/A                                     ; 198.53 MHz ( period = 5.037 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[22] ; CLK        ; CLK      ; None                        ; None                      ; 4.798 ns                ;
+; N/A                                     ; 198.53 MHz ( period = 5.037 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[21] ; CLK        ; CLK      ; None                        ; None                      ; 4.798 ns                ;
+; N/A                                     ; 198.53 MHz ( period = 5.037 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[23] ; CLK        ; CLK      ; None                        ; None                      ; 4.798 ns                ;
+; N/A                                     ; 199.88 MHz ( period = 5.003 ns )                    ; uop_shiftreg_p2s:inst1|idx[25] ; uop_shiftreg_p2s:inst1|idx[26] ; CLK        ; CLK      ; None                        ; None                      ; 4.764 ns                ;
+; N/A                                     ; 199.88 MHz ( period = 5.003 ns )                    ; uop_shiftreg_p2s:inst1|idx[25] ; uop_shiftreg_p2s:inst1|idx[25] ; CLK        ; CLK      ; None                        ; None                      ; 4.764 ns                ;
+; N/A                                     ; 199.88 MHz ( period = 5.003 ns )                    ; uop_shiftreg_p2s:inst1|idx[25] ; uop_shiftreg_p2s:inst1|idx[27] ; CLK        ; CLK      ; None                        ; None                      ; 4.764 ns                ;
+; N/A                                     ; 199.88 MHz ( period = 5.003 ns )                    ; uop_shiftreg_p2s:inst1|idx[25] ; uop_shiftreg_p2s:inst1|idx[24] ; CLK        ; CLK      ; None                        ; None                      ; 4.764 ns                ;
+; N/A                                     ; 199.88 MHz ( period = 5.003 ns )                    ; uop_shiftreg_p2s:inst1|idx[25] ; uop_shiftreg_p2s:inst1|idx[30] ; CLK        ; CLK      ; None                        ; None                      ; 4.764 ns                ;
+; N/A                                     ; 199.88 MHz ( period = 5.003 ns )                    ; uop_shiftreg_p2s:inst1|idx[25] ; uop_shiftreg_p2s:inst1|idx[31] ; CLK        ; CLK      ; None                        ; None                      ; 4.764 ns                ;
+; N/A                                     ; 199.88 MHz ( period = 5.003 ns )                    ; uop_shiftreg_p2s:inst1|idx[25] ; uop_shiftreg_p2s:inst1|idx[28] ; CLK        ; CLK      ; None                        ; None                      ; 4.764 ns                ;
+; N/A                                     ; 199.88 MHz ( period = 5.003 ns )                    ; uop_shiftreg_p2s:inst1|idx[25] ; uop_shiftreg_p2s:inst1|idx[29] ; CLK        ; CLK      ; None                        ; None                      ; 4.764 ns                ;
+; N/A                                     ; 199.88 MHz ( period = 5.003 ns )                    ; uop_shiftreg_p2s:inst1|idx[25] ; uop_shiftreg_p2s:inst1|idx[16] ; CLK        ; CLK      ; None                        ; None                      ; 4.764 ns                ;
+; N/A                                     ; 199.88 MHz ( period = 5.003 ns )                    ; uop_shiftreg_p2s:inst1|idx[25] ; uop_shiftreg_p2s:inst1|idx[19] ; CLK        ; CLK      ; None                        ; None                      ; 4.764 ns                ;
+; N/A                                     ; 199.88 MHz ( period = 5.003 ns )                    ; uop_shiftreg_p2s:inst1|idx[25] ; uop_shiftreg_p2s:inst1|idx[18] ; CLK        ; CLK      ; None                        ; None                      ; 4.764 ns                ;
+; N/A                                     ; 199.88 MHz ( period = 5.003 ns )                    ; uop_shiftreg_p2s:inst1|idx[25] ; uop_shiftreg_p2s:inst1|idx[17] ; CLK        ; CLK      ; None                        ; None                      ; 4.764 ns                ;
+; N/A                                     ; 199.88 MHz ( period = 5.003 ns )                    ; uop_shiftreg_p2s:inst1|idx[25] ; uop_shiftreg_p2s:inst1|idx[20] ; CLK        ; CLK      ; None                        ; None                      ; 4.764 ns                ;
+; N/A                                     ; 199.88 MHz ( period = 5.003 ns )                    ; uop_shiftreg_p2s:inst1|idx[25] ; uop_shiftreg_p2s:inst1|idx[22] ; CLK        ; CLK      ; None                        ; None                      ; 4.764 ns                ;
+; N/A                                     ; 199.88 MHz ( period = 5.003 ns )                    ; uop_shiftreg_p2s:inst1|idx[25] ; uop_shiftreg_p2s:inst1|idx[21] ; CLK        ; CLK      ; None                        ; None                      ; 4.764 ns                ;
+; N/A                                     ; 199.88 MHz ( period = 5.003 ns )                    ; uop_shiftreg_p2s:inst1|idx[25] ; uop_shiftreg_p2s:inst1|idx[23] ; CLK        ; CLK      ; None                        ; None                      ; 4.764 ns                ;
+; N/A                                     ; 200.60 MHz ( period = 4.985 ns )                    ; uop_shiftreg_p2s:inst1|idx[30] ; uop_shiftreg_p2s:inst1|idx[26] ; CLK        ; CLK      ; None                        ; None                      ; 4.746 ns                ;
+; N/A                                     ; 200.60 MHz ( period = 4.985 ns )                    ; uop_shiftreg_p2s:inst1|idx[30] ; uop_shiftreg_p2s:inst1|idx[25] ; CLK        ; CLK      ; None                        ; None                      ; 4.746 ns                ;
+; N/A                                     ; 200.60 MHz ( period = 4.985 ns )                    ; uop_shiftreg_p2s:inst1|idx[30] ; uop_shiftreg_p2s:inst1|idx[27] ; CLK        ; CLK      ; None                        ; None                      ; 4.746 ns                ;
+; N/A                                     ; 200.60 MHz ( period = 4.985 ns )                    ; uop_shiftreg_p2s:inst1|idx[30] ; uop_shiftreg_p2s:inst1|idx[24] ; CLK        ; CLK      ; None                        ; None                      ; 4.746 ns                ;
+; N/A                                     ; 200.60 MHz ( period = 4.985 ns )                    ; uop_shiftreg_p2s:inst1|idx[30] ; uop_shiftreg_p2s:inst1|idx[30] ; CLK        ; CLK      ; None                        ; None                      ; 4.746 ns                ;
+; N/A                                     ; 200.60 MHz ( period = 4.985 ns )                    ; uop_shiftreg_p2s:inst1|idx[30] ; uop_shiftreg_p2s:inst1|idx[31] ; CLK        ; CLK      ; None                        ; None                      ; 4.746 ns                ;
+; N/A                                     ; 200.60 MHz ( period = 4.985 ns )                    ; uop_shiftreg_p2s:inst1|idx[30] ; uop_shiftreg_p2s:inst1|idx[28] ; CLK        ; CLK      ; None                        ; None                      ; 4.746 ns                ;
+; N/A                                     ; 200.60 MHz ( period = 4.985 ns )                    ; uop_shiftreg_p2s:inst1|idx[30] ; uop_shiftreg_p2s:inst1|idx[29] ; CLK        ; CLK      ; None                        ; None                      ; 4.746 ns                ;
+; N/A                                     ; 200.60 MHz ( period = 4.985 ns )                    ; uop_shiftreg_p2s:inst1|idx[30] ; uop_shiftreg_p2s:inst1|idx[16] ; CLK        ; CLK      ; None                        ; None                      ; 4.746 ns                ;
+; N/A                                     ; 200.60 MHz ( period = 4.985 ns )                    ; uop_shiftreg_p2s:inst1|idx[30] ; uop_shiftreg_p2s:inst1|idx[19] ; CLK        ; CLK      ; None                        ; None                      ; 4.746 ns                ;
+; N/A                                     ; 200.60 MHz ( period = 4.985 ns )                    ; uop_shiftreg_p2s:inst1|idx[30] ; uop_shiftreg_p2s:inst1|idx[18] ; CLK        ; CLK      ; None                        ; None                      ; 4.746 ns                ;
+; N/A                                     ; 200.60 MHz ( period = 4.985 ns )                    ; uop_shiftreg_p2s:inst1|idx[30] ; uop_shiftreg_p2s:inst1|idx[17] ; CLK        ; CLK      ; None                        ; None                      ; 4.746 ns                ;
+; N/A                                     ; 200.60 MHz ( period = 4.985 ns )                    ; uop_shiftreg_p2s:inst1|idx[30] ; uop_shiftreg_p2s:inst1|idx[20] ; CLK        ; CLK      ; None                        ; None                      ; 4.746 ns                ;
+; N/A                                     ; 200.60 MHz ( period = 4.985 ns )                    ; uop_shiftreg_p2s:inst1|idx[30] ; uop_shiftreg_p2s:inst1|idx[22] ; CLK        ; CLK      ; None                        ; None                      ; 4.746 ns                ;
+; N/A                                     ; 200.60 MHz ( period = 4.985 ns )                    ; uop_shiftreg_p2s:inst1|idx[30] ; uop_shiftreg_p2s:inst1|idx[21] ; CLK        ; CLK      ; None                        ; None                      ; 4.746 ns                ;
+; N/A                                     ; 200.60 MHz ( period = 4.985 ns )                    ; uop_shiftreg_p2s:inst1|idx[30] ; uop_shiftreg_p2s:inst1|idx[23] ; CLK        ; CLK      ; None                        ; None                      ; 4.746 ns                ;
+; N/A                                     ; 202.06 MHz ( period = 4.949 ns )                    ; uop_shiftreg_p2s:inst1|idx[31] ; uop_shiftreg_p2s:inst1|idx[26] ; CLK        ; CLK      ; None                        ; None                      ; 4.710 ns                ;
+; N/A                                     ; 202.06 MHz ( period = 4.949 ns )                    ; uop_shiftreg_p2s:inst1|idx[31] ; uop_shiftreg_p2s:inst1|idx[25] ; CLK        ; CLK      ; None                        ; None                      ; 4.710 ns                ;
+; N/A                                     ; 202.06 MHz ( period = 4.949 ns )                    ; uop_shiftreg_p2s:inst1|idx[31] ; uop_shiftreg_p2s:inst1|idx[27] ; CLK        ; CLK      ; None                        ; None                      ; 4.710 ns                ;
+; N/A                                     ; 202.06 MHz ( period = 4.949 ns )                    ; uop_shiftreg_p2s:inst1|idx[31] ; uop_shiftreg_p2s:inst1|idx[24] ; CLK        ; CLK      ; None                        ; None                      ; 4.710 ns                ;
+; N/A                                     ; 202.06 MHz ( period = 4.949 ns )                    ; uop_shiftreg_p2s:inst1|idx[31] ; uop_shiftreg_p2s:inst1|idx[30] ; CLK        ; CLK      ; None                        ; None                      ; 4.710 ns                ;
+; N/A                                     ; 202.06 MHz ( period = 4.949 ns )                    ; uop_shiftreg_p2s:inst1|idx[31] ; uop_shiftreg_p2s:inst1|idx[31] ; CLK        ; CLK      ; None                        ; None                      ; 4.710 ns                ;
+; N/A                                     ; 202.06 MHz ( period = 4.949 ns )                    ; uop_shiftreg_p2s:inst1|idx[31] ; uop_shiftreg_p2s:inst1|idx[28] ; CLK        ; CLK      ; None                        ; None                      ; 4.710 ns                ;
+; N/A                                     ; 202.06 MHz ( period = 4.949 ns )                    ; uop_shiftreg_p2s:inst1|idx[31] ; uop_shiftreg_p2s:inst1|idx[29] ; CLK        ; CLK      ; None                        ; None                      ; 4.710 ns                ;
+; N/A                                     ; 202.06 MHz ( period = 4.949 ns )                    ; uop_shiftreg_p2s:inst1|idx[31] ; uop_shiftreg_p2s:inst1|idx[16] ; CLK        ; CLK      ; None                        ; None                      ; 4.710 ns                ;
+; N/A                                     ; 202.06 MHz ( period = 4.949 ns )                    ; uop_shiftreg_p2s:inst1|idx[31] ; uop_shiftreg_p2s:inst1|idx[19] ; CLK        ; CLK      ; None                        ; None                      ; 4.710 ns                ;
+; N/A                                     ; 202.06 MHz ( period = 4.949 ns )                    ; uop_shiftreg_p2s:inst1|idx[31] ; uop_shiftreg_p2s:inst1|idx[18] ; CLK        ; CLK      ; None                        ; None                      ; 4.710 ns                ;
+; N/A                                     ; 202.06 MHz ( period = 4.949 ns )                    ; uop_shiftreg_p2s:inst1|idx[31] ; uop_shiftreg_p2s:inst1|idx[17] ; CLK        ; CLK      ; None                        ; None                      ; 4.710 ns                ;
+; N/A                                     ; 202.06 MHz ( period = 4.949 ns )                    ; uop_shiftreg_p2s:inst1|idx[31] ; uop_shiftreg_p2s:inst1|idx[20] ; CLK        ; CLK      ; None                        ; None                      ; 4.710 ns                ;
+; N/A                                     ; 202.06 MHz ( period = 4.949 ns )                    ; uop_shiftreg_p2s:inst1|idx[31] ; uop_shiftreg_p2s:inst1|idx[22] ; CLK        ; CLK      ; None                        ; None                      ; 4.710 ns                ;
+; N/A                                     ; 202.06 MHz ( period = 4.949 ns )                    ; uop_shiftreg_p2s:inst1|idx[31] ; uop_shiftreg_p2s:inst1|idx[21] ; CLK        ; CLK      ; None                        ; None                      ; 4.710 ns                ;
+; N/A                                     ; 202.06 MHz ( period = 4.949 ns )                    ; uop_shiftreg_p2s:inst1|idx[31] ; uop_shiftreg_p2s:inst1|idx[23] ; CLK        ; CLK      ; None                        ; None                      ; 4.710 ns                ;
+; N/A                                     ; 204.50 MHz ( period = 4.890 ns )                    ; uop_shiftreg_p2s:inst1|idx[15] ; uop_shiftreg_p2s:inst1|idx[26] ; CLK        ; CLK      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 204.50 MHz ( period = 4.890 ns )                    ; uop_shiftreg_p2s:inst1|idx[15] ; uop_shiftreg_p2s:inst1|idx[25] ; CLK        ; CLK      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 204.50 MHz ( period = 4.890 ns )                    ; uop_shiftreg_p2s:inst1|idx[15] ; uop_shiftreg_p2s:inst1|idx[27] ; CLK        ; CLK      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 204.50 MHz ( period = 4.890 ns )                    ; uop_shiftreg_p2s:inst1|idx[15] ; uop_shiftreg_p2s:inst1|idx[24] ; CLK        ; CLK      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 204.50 MHz ( period = 4.890 ns )                    ; uop_shiftreg_p2s:inst1|idx[15] ; uop_shiftreg_p2s:inst1|idx[30] ; CLK        ; CLK      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 204.50 MHz ( period = 4.890 ns )                    ; uop_shiftreg_p2s:inst1|idx[15] ; uop_shiftreg_p2s:inst1|idx[31] ; CLK        ; CLK      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 204.50 MHz ( period = 4.890 ns )                    ; uop_shiftreg_p2s:inst1|idx[15] ; uop_shiftreg_p2s:inst1|idx[28] ; CLK        ; CLK      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 204.50 MHz ( period = 4.890 ns )                    ; uop_shiftreg_p2s:inst1|idx[15] ; uop_shiftreg_p2s:inst1|idx[29] ; CLK        ; CLK      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 204.50 MHz ( period = 4.890 ns )                    ; uop_shiftreg_p2s:inst1|idx[15] ; uop_shiftreg_p2s:inst1|idx[16] ; CLK        ; CLK      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 204.50 MHz ( period = 4.890 ns )                    ; uop_shiftreg_p2s:inst1|idx[15] ; uop_shiftreg_p2s:inst1|idx[19] ; CLK        ; CLK      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 204.50 MHz ( period = 4.890 ns )                    ; uop_shiftreg_p2s:inst1|idx[15] ; uop_shiftreg_p2s:inst1|idx[18] ; CLK        ; CLK      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 204.50 MHz ( period = 4.890 ns )                    ; uop_shiftreg_p2s:inst1|idx[15] ; uop_shiftreg_p2s:inst1|idx[17] ; CLK        ; CLK      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 204.50 MHz ( period = 4.890 ns )                    ; uop_shiftreg_p2s:inst1|idx[15] ; uop_shiftreg_p2s:inst1|idx[20] ; CLK        ; CLK      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 204.50 MHz ( period = 4.890 ns )                    ; uop_shiftreg_p2s:inst1|idx[15] ; uop_shiftreg_p2s:inst1|idx[22] ; CLK        ; CLK      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 204.50 MHz ( period = 4.890 ns )                    ; uop_shiftreg_p2s:inst1|idx[15] ; uop_shiftreg_p2s:inst1|idx[21] ; CLK        ; CLK      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 204.50 MHz ( period = 4.890 ns )                    ; uop_shiftreg_p2s:inst1|idx[15] ; uop_shiftreg_p2s:inst1|idx[23] ; CLK        ; CLK      ; None                        ; None                      ; 4.649 ns                ;
+; N/A                                     ; 206.19 MHz ( period = 4.850 ns )                    ; uop_shiftreg_p2s:inst1|idx[7]  ; uop_shiftreg_p2s:inst1|idx[26] ; CLK        ; CLK      ; None                        ; None                      ; 4.609 ns                ;
+; N/A                                     ; 206.19 MHz ( period = 4.850 ns )                    ; uop_shiftreg_p2s:inst1|idx[7]  ; uop_shiftreg_p2s:inst1|idx[25] ; CLK        ; CLK      ; None                        ; None                      ; 4.609 ns                ;
+; N/A                                     ; 206.19 MHz ( period = 4.850 ns )                    ; uop_shiftreg_p2s:inst1|idx[7]  ; uop_shiftreg_p2s:inst1|idx[27] ; CLK        ; CLK      ; None                        ; None                      ; 4.609 ns                ;
+; N/A                                     ; 206.19 MHz ( period = 4.850 ns )                    ; uop_shiftreg_p2s:inst1|idx[7]  ; uop_shiftreg_p2s:inst1|idx[24] ; CLK        ; CLK      ; None                        ; None                      ; 4.609 ns                ;
+; N/A                                     ; 206.19 MHz ( period = 4.850 ns )                    ; uop_shiftreg_p2s:inst1|idx[7]  ; uop_shiftreg_p2s:inst1|idx[30] ; CLK        ; CLK      ; None                        ; None                      ; 4.609 ns                ;
+; N/A                                     ; 206.19 MHz ( period = 4.850 ns )                    ; uop_shiftreg_p2s:inst1|idx[7]  ; uop_shiftreg_p2s:inst1|idx[31] ; CLK        ; CLK      ; None                        ; None                      ; 4.609 ns                ;
+; N/A                                     ; 206.19 MHz ( period = 4.850 ns )                    ; uop_shiftreg_p2s:inst1|idx[7]  ; uop_shiftreg_p2s:inst1|idx[28] ; CLK        ; CLK      ; None                        ; None                      ; 4.609 ns                ;
+; N/A                                     ; 206.19 MHz ( period = 4.850 ns )                    ; uop_shiftreg_p2s:inst1|idx[7]  ; uop_shiftreg_p2s:inst1|idx[29] ; CLK        ; CLK      ; None                        ; None                      ; 4.609 ns                ;
+; N/A                                     ; 206.19 MHz ( period = 4.850 ns )                    ; uop_shiftreg_p2s:inst1|idx[7]  ; uop_shiftreg_p2s:inst1|idx[16] ; CLK        ; CLK      ; None                        ; None                      ; 4.609 ns                ;
+; N/A                                     ; 206.19 MHz ( period = 4.850 ns )                    ; uop_shiftreg_p2s:inst1|idx[7]  ; uop_shiftreg_p2s:inst1|idx[19] ; CLK        ; CLK      ; None                        ; None                      ; 4.609 ns                ;
+; N/A                                     ; 206.19 MHz ( period = 4.850 ns )                    ; uop_shiftreg_p2s:inst1|idx[7]  ; uop_shiftreg_p2s:inst1|idx[18] ; CLK        ; CLK      ; None                        ; None                      ; 4.609 ns                ;
+; N/A                                     ; 206.19 MHz ( period = 4.850 ns )                    ; uop_shiftreg_p2s:inst1|idx[7]  ; uop_shiftreg_p2s:inst1|idx[17] ; CLK        ; CLK      ; None                        ; None                      ; 4.609 ns                ;
+; N/A                                     ; 206.19 MHz ( period = 4.850 ns )                    ; uop_shiftreg_p2s:inst1|idx[7]  ; uop_shiftreg_p2s:inst1|idx[20] ; CLK        ; CLK      ; None                        ; None                      ; 4.609 ns                ;
+; N/A                                     ; 206.19 MHz ( period = 4.850 ns )                    ; uop_shiftreg_p2s:inst1|idx[7]  ; uop_shiftreg_p2s:inst1|idx[22] ; CLK        ; CLK      ; None                        ; None                      ; 4.609 ns                ;
+; N/A                                     ; 206.19 MHz ( period = 4.850 ns )                    ; uop_shiftreg_p2s:inst1|idx[7]  ; uop_shiftreg_p2s:inst1|idx[21] ; CLK        ; CLK      ; None                        ; None                      ; 4.609 ns                ;
+; N/A                                     ; 206.19 MHz ( period = 4.850 ns )                    ; uop_shiftreg_p2s:inst1|idx[7]  ; uop_shiftreg_p2s:inst1|idx[23] ; CLK        ; CLK      ; None                        ; None                      ; 4.609 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; uop_shiftreg_p2s:inst1|idx[14] ; uop_shiftreg_p2s:inst1|idx[26] ; CLK        ; CLK      ; None                        ; None                      ; 4.603 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; uop_shiftreg_p2s:inst1|idx[14] ; uop_shiftreg_p2s:inst1|idx[25] ; CLK        ; CLK      ; None                        ; None                      ; 4.603 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; uop_shiftreg_p2s:inst1|idx[14] ; uop_shiftreg_p2s:inst1|idx[27] ; CLK        ; CLK      ; None                        ; None                      ; 4.603 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; uop_shiftreg_p2s:inst1|idx[14] ; uop_shiftreg_p2s:inst1|idx[24] ; CLK        ; CLK      ; None                        ; None                      ; 4.603 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; uop_shiftreg_p2s:inst1|idx[14] ; uop_shiftreg_p2s:inst1|idx[30] ; CLK        ; CLK      ; None                        ; None                      ; 4.603 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; uop_shiftreg_p2s:inst1|idx[14] ; uop_shiftreg_p2s:inst1|idx[31] ; CLK        ; CLK      ; None                        ; None                      ; 4.603 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; uop_shiftreg_p2s:inst1|idx[14] ; uop_shiftreg_p2s:inst1|idx[28] ; CLK        ; CLK      ; None                        ; None                      ; 4.603 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; uop_shiftreg_p2s:inst1|idx[14] ; uop_shiftreg_p2s:inst1|idx[29] ; CLK        ; CLK      ; None                        ; None                      ; 4.603 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; uop_shiftreg_p2s:inst1|idx[14] ; uop_shiftreg_p2s:inst1|idx[16] ; CLK        ; CLK      ; None                        ; None                      ; 4.603 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; uop_shiftreg_p2s:inst1|idx[14] ; uop_shiftreg_p2s:inst1|idx[19] ; CLK        ; CLK      ; None                        ; None                      ; 4.603 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; uop_shiftreg_p2s:inst1|idx[14] ; uop_shiftreg_p2s:inst1|idx[18] ; CLK        ; CLK      ; None                        ; None                      ; 4.603 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; uop_shiftreg_p2s:inst1|idx[14] ; uop_shiftreg_p2s:inst1|idx[17] ; CLK        ; CLK      ; None                        ; None                      ; 4.603 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; uop_shiftreg_p2s:inst1|idx[14] ; uop_shiftreg_p2s:inst1|idx[20] ; CLK        ; CLK      ; None                        ; None                      ; 4.603 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; uop_shiftreg_p2s:inst1|idx[14] ; uop_shiftreg_p2s:inst1|idx[22] ; CLK        ; CLK      ; None                        ; None                      ; 4.603 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; uop_shiftreg_p2s:inst1|idx[14] ; uop_shiftreg_p2s:inst1|idx[21] ; CLK        ; CLK      ; None                        ; None                      ; 4.603 ns                ;
+; N/A                                     ; 206.44 MHz ( period = 4.844 ns )                    ; uop_shiftreg_p2s:inst1|idx[14] ; uop_shiftreg_p2s:inst1|idx[23] ; CLK        ; CLK      ; None                        ; None                      ; 4.603 ns                ;
+; N/A                                     ; 208.77 MHz ( period = 4.790 ns )                    ; uop_shiftreg_p2s:inst1|idx[4]  ; uop_shiftreg_p2s:inst1|idx[26] ; CLK        ; CLK      ; None                        ; None                      ; 4.549 ns                ;
+; N/A                                     ; 208.77 MHz ( period = 4.790 ns )                    ; uop_shiftreg_p2s:inst1|idx[4]  ; uop_shiftreg_p2s:inst1|idx[25] ; CLK        ; CLK      ; None                        ; None                      ; 4.549 ns                ;
+; N/A                                     ; 208.77 MHz ( period = 4.790 ns )                    ; uop_shiftreg_p2s:inst1|idx[4]  ; uop_shiftreg_p2s:inst1|idx[27] ; CLK        ; CLK      ; None                        ; None                      ; 4.549 ns                ;
+; N/A                                     ; 208.77 MHz ( period = 4.790 ns )                    ; uop_shiftreg_p2s:inst1|idx[4]  ; uop_shiftreg_p2s:inst1|idx[24] ; CLK        ; CLK      ; None                        ; None                      ; 4.549 ns                ;
+; N/A                                     ; 208.77 MHz ( period = 4.790 ns )                    ; uop_shiftreg_p2s:inst1|idx[4]  ; uop_shiftreg_p2s:inst1|idx[30] ; CLK        ; CLK      ; None                        ; None                      ; 4.549 ns                ;
+; N/A                                     ; 208.77 MHz ( period = 4.790 ns )                    ; uop_shiftreg_p2s:inst1|idx[4]  ; uop_shiftreg_p2s:inst1|idx[31] ; CLK        ; CLK      ; None                        ; None                      ; 4.549 ns                ;
+; N/A                                     ; 208.77 MHz ( period = 4.790 ns )                    ; uop_shiftreg_p2s:inst1|idx[4]  ; uop_shiftreg_p2s:inst1|idx[28] ; CLK        ; CLK      ; None                        ; None                      ; 4.549 ns                ;
+; N/A                                     ; 208.77 MHz ( period = 4.790 ns )                    ; uop_shiftreg_p2s:inst1|idx[4]  ; uop_shiftreg_p2s:inst1|idx[29] ; CLK        ; CLK      ; None                        ; None                      ; 4.549 ns                ;
+; N/A                                     ; 208.77 MHz ( period = 4.790 ns )                    ; uop_shiftreg_p2s:inst1|idx[4]  ; uop_shiftreg_p2s:inst1|idx[16] ; CLK        ; CLK      ; None                        ; None                      ; 4.549 ns                ;
+; N/A                                     ; 208.77 MHz ( period = 4.790 ns )                    ; uop_shiftreg_p2s:inst1|idx[4]  ; uop_shiftreg_p2s:inst1|idx[19] ; CLK        ; CLK      ; None                        ; None                      ; 4.549 ns                ;
+; N/A                                     ; 208.77 MHz ( period = 4.790 ns )                    ; uop_shiftreg_p2s:inst1|idx[4]  ; uop_shiftreg_p2s:inst1|idx[18] ; CLK        ; CLK      ; None                        ; None                      ; 4.549 ns                ;
+; N/A                                     ; 208.77 MHz ( period = 4.790 ns )                    ; uop_shiftreg_p2s:inst1|idx[4]  ; uop_shiftreg_p2s:inst1|idx[17] ; CLK        ; CLK      ; None                        ; None                      ; 4.549 ns                ;
+; N/A                                     ; 208.77 MHz ( period = 4.790 ns )                    ; uop_shiftreg_p2s:inst1|idx[4]  ; uop_shiftreg_p2s:inst1|idx[20] ; CLK        ; CLK      ; None                        ; None                      ; 4.549 ns                ;
+; N/A                                     ; 208.77 MHz ( period = 4.790 ns )                    ; uop_shiftreg_p2s:inst1|idx[4]  ; uop_shiftreg_p2s:inst1|idx[22] ; CLK        ; CLK      ; None                        ; None                      ; 4.549 ns                ;
+; N/A                                     ; 208.77 MHz ( period = 4.790 ns )                    ; uop_shiftreg_p2s:inst1|idx[4]  ; uop_shiftreg_p2s:inst1|idx[21] ; CLK        ; CLK      ; None                        ; None                      ; 4.549 ns                ;
+; N/A                                     ; 208.77 MHz ( period = 4.790 ns )                    ; uop_shiftreg_p2s:inst1|idx[4]  ; uop_shiftreg_p2s:inst1|idx[23] ; CLK        ; CLK      ; None                        ; None                      ; 4.549 ns                ;
+; N/A                                     ; 209.64 MHz ( period = 4.770 ns )                    ; uop_shiftreg_p2s:inst1|idx[27] ; uop_shiftreg_p2s:inst1|idx[26] ; CLK        ; CLK      ; None                        ; None                      ; 4.531 ns                ;
+; N/A                                     ; 209.64 MHz ( period = 4.770 ns )                    ; uop_shiftreg_p2s:inst1|idx[27] ; uop_shiftreg_p2s:inst1|idx[25] ; CLK        ; CLK      ; None                        ; None                      ; 4.531 ns                ;
+; N/A                                     ; 209.64 MHz ( period = 4.770 ns )                    ; uop_shiftreg_p2s:inst1|idx[27] ; uop_shiftreg_p2s:inst1|idx[27] ; CLK        ; CLK      ; None                        ; None                      ; 4.531 ns                ;
+; N/A                                     ; 209.64 MHz ( period = 4.770 ns )                    ; uop_shiftreg_p2s:inst1|idx[27] ; uop_shiftreg_p2s:inst1|idx[24] ; CLK        ; CLK      ; None                        ; None                      ; 4.531 ns                ;
+; N/A                                     ; 209.64 MHz ( period = 4.770 ns )                    ; uop_shiftreg_p2s:inst1|idx[27] ; uop_shiftreg_p2s:inst1|idx[30] ; CLK        ; CLK      ; None                        ; None                      ; 4.531 ns                ;
+; N/A                                     ; 209.64 MHz ( period = 4.770 ns )                    ; uop_shiftreg_p2s:inst1|idx[27] ; uop_shiftreg_p2s:inst1|idx[31] ; CLK        ; CLK      ; None                        ; None                      ; 4.531 ns                ;
+; N/A                                     ; 209.64 MHz ( period = 4.770 ns )                    ; uop_shiftreg_p2s:inst1|idx[27] ; uop_shiftreg_p2s:inst1|idx[28] ; CLK        ; CLK      ; None                        ; None                      ; 4.531 ns                ;
+; N/A                                     ; 209.64 MHz ( period = 4.770 ns )                    ; uop_shiftreg_p2s:inst1|idx[27] ; uop_shiftreg_p2s:inst1|idx[29] ; CLK        ; CLK      ; None                        ; None                      ; 4.531 ns                ;
+; N/A                                     ; 209.64 MHz ( period = 4.770 ns )                    ; uop_shiftreg_p2s:inst1|idx[27] ; uop_shiftreg_p2s:inst1|idx[16] ; CLK        ; CLK      ; None                        ; None                      ; 4.531 ns                ;
+; N/A                                     ; 209.64 MHz ( period = 4.770 ns )                    ; uop_shiftreg_p2s:inst1|idx[27] ; uop_shiftreg_p2s:inst1|idx[19] ; CLK        ; CLK      ; None                        ; None                      ; 4.531 ns                ;
+; N/A                                     ; 209.64 MHz ( period = 4.770 ns )                    ; uop_shiftreg_p2s:inst1|idx[27] ; uop_shiftreg_p2s:inst1|idx[18] ; CLK        ; CLK      ; None                        ; None                      ; 4.531 ns                ;
+; N/A                                     ; 209.64 MHz ( period = 4.770 ns )                    ; uop_shiftreg_p2s:inst1|idx[27] ; uop_shiftreg_p2s:inst1|idx[17] ; CLK        ; CLK      ; None                        ; None                      ; 4.531 ns                ;
+; N/A                                     ; 209.64 MHz ( period = 4.770 ns )                    ; uop_shiftreg_p2s:inst1|idx[27] ; uop_shiftreg_p2s:inst1|idx[20] ; CLK        ; CLK      ; None                        ; None                      ; 4.531 ns                ;
+; N/A                                     ; 209.64 MHz ( period = 4.770 ns )                    ; uop_shiftreg_p2s:inst1|idx[27] ; uop_shiftreg_p2s:inst1|idx[22] ; CLK        ; CLK      ; None                        ; None                      ; 4.531 ns                ;
+; N/A                                     ; 209.64 MHz ( period = 4.770 ns )                    ; uop_shiftreg_p2s:inst1|idx[27] ; uop_shiftreg_p2s:inst1|idx[21] ; CLK        ; CLK      ; None                        ; None                      ; 4.531 ns                ;
+; N/A                                     ; 209.64 MHz ( period = 4.770 ns )                    ; uop_shiftreg_p2s:inst1|idx[27] ; uop_shiftreg_p2s:inst1|idx[23] ; CLK        ; CLK      ; None                        ; None                      ; 4.531 ns                ;
+; N/A                                     ; 212.04 MHz ( period = 4.716 ns )                    ; uop_shiftreg_p2s:inst1|idx[10] ; uop_shiftreg_p2s:inst1|idx[26] ; CLK        ; CLK      ; None                        ; None                      ; 4.475 ns                ;
+; N/A                                     ; 212.04 MHz ( period = 4.716 ns )                    ; uop_shiftreg_p2s:inst1|idx[10] ; uop_shiftreg_p2s:inst1|idx[25] ; CLK        ; CLK      ; None                        ; None                      ; 4.475 ns                ;
+; N/A                                     ; 212.04 MHz ( period = 4.716 ns )                    ; uop_shiftreg_p2s:inst1|idx[10] ; uop_shiftreg_p2s:inst1|idx[27] ; CLK        ; CLK      ; None                        ; None                      ; 4.475 ns                ;
+; N/A                                     ; 212.04 MHz ( period = 4.716 ns )                    ; uop_shiftreg_p2s:inst1|idx[10] ; uop_shiftreg_p2s:inst1|idx[24] ; CLK        ; CLK      ; None                        ; None                      ; 4.475 ns                ;
+; N/A                                     ; 212.04 MHz ( period = 4.716 ns )                    ; uop_shiftreg_p2s:inst1|idx[10] ; uop_shiftreg_p2s:inst1|idx[30] ; CLK        ; CLK      ; None                        ; None                      ; 4.475 ns                ;
+; N/A                                     ; 212.04 MHz ( period = 4.716 ns )                    ; uop_shiftreg_p2s:inst1|idx[10] ; uop_shiftreg_p2s:inst1|idx[31] ; CLK        ; CLK      ; None                        ; None                      ; 4.475 ns                ;
+; N/A                                     ; 212.04 MHz ( period = 4.716 ns )                    ; uop_shiftreg_p2s:inst1|idx[10] ; uop_shiftreg_p2s:inst1|idx[28] ; CLK        ; CLK      ; None                        ; None                      ; 4.475 ns                ;
+; N/A                                     ; 212.04 MHz ( period = 4.716 ns )                    ; uop_shiftreg_p2s:inst1|idx[10] ; uop_shiftreg_p2s:inst1|idx[29] ; CLK        ; CLK      ; None                        ; None                      ; 4.475 ns                ;
+; N/A                                     ; 212.04 MHz ( period = 4.716 ns )                    ; uop_shiftreg_p2s:inst1|idx[10] ; uop_shiftreg_p2s:inst1|idx[16] ; CLK        ; CLK      ; None                        ; None                      ; 4.475 ns                ;
+; N/A                                     ; 212.04 MHz ( period = 4.716 ns )                    ; uop_shiftreg_p2s:inst1|idx[10] ; uop_shiftreg_p2s:inst1|idx[19] ; CLK        ; CLK      ; None                        ; None                      ; 4.475 ns                ;
+; N/A                                     ; 212.04 MHz ( period = 4.716 ns )                    ; uop_shiftreg_p2s:inst1|idx[10] ; uop_shiftreg_p2s:inst1|idx[18] ; CLK        ; CLK      ; None                        ; None                      ; 4.475 ns                ;
+; N/A                                     ; 212.04 MHz ( period = 4.716 ns )                    ; uop_shiftreg_p2s:inst1|idx[10] ; uop_shiftreg_p2s:inst1|idx[17] ; CLK        ; CLK      ; None                        ; None                      ; 4.475 ns                ;
+; N/A                                     ; 212.04 MHz ( period = 4.716 ns )                    ; uop_shiftreg_p2s:inst1|idx[10] ; uop_shiftreg_p2s:inst1|idx[20] ; CLK        ; CLK      ; None                        ; None                      ; 4.475 ns                ;
+; N/A                                     ; 212.04 MHz ( period = 4.716 ns )                    ; uop_shiftreg_p2s:inst1|idx[10] ; uop_shiftreg_p2s:inst1|idx[22] ; CLK        ; CLK      ; None                        ; None                      ; 4.475 ns                ;
+; N/A                                     ; 212.04 MHz ( period = 4.716 ns )                    ; uop_shiftreg_p2s:inst1|idx[10] ; uop_shiftreg_p2s:inst1|idx[21] ; CLK        ; CLK      ; None                        ; None                      ; 4.475 ns                ;
+; N/A                                     ; 212.04 MHz ( period = 4.716 ns )                    ; uop_shiftreg_p2s:inst1|idx[10] ; uop_shiftreg_p2s:inst1|idx[23] ; CLK        ; CLK      ; None                        ; None                      ; 4.475 ns                ;
+; N/A                                     ; 212.27 MHz ( period = 4.711 ns )                    ; uop_shiftreg_p2s:inst1|idx[28] ; uop_shiftreg_p2s:inst1|idx[26] ; CLK        ; CLK      ; None                        ; None                      ; 4.472 ns                ;
+; N/A                                     ; 212.27 MHz ( period = 4.711 ns )                    ; uop_shiftreg_p2s:inst1|idx[28] ; uop_shiftreg_p2s:inst1|idx[25] ; CLK        ; CLK      ; None                        ; None                      ; 4.472 ns                ;
+; N/A                                     ; 212.27 MHz ( period = 4.711 ns )                    ; uop_shiftreg_p2s:inst1|idx[28] ; uop_shiftreg_p2s:inst1|idx[27] ; CLK        ; CLK      ; None                        ; None                      ; 4.472 ns                ;
+; N/A                                     ; 212.27 MHz ( period = 4.711 ns )                    ; uop_shiftreg_p2s:inst1|idx[28] ; uop_shiftreg_p2s:inst1|idx[24] ; CLK        ; CLK      ; None                        ; None                      ; 4.472 ns                ;
+; N/A                                     ; 212.27 MHz ( period = 4.711 ns )                    ; uop_shiftreg_p2s:inst1|idx[28] ; uop_shiftreg_p2s:inst1|idx[30] ; CLK        ; CLK      ; None                        ; None                      ; 4.472 ns                ;
+; N/A                                     ; 212.27 MHz ( period = 4.711 ns )                    ; uop_shiftreg_p2s:inst1|idx[28] ; uop_shiftreg_p2s:inst1|idx[31] ; CLK        ; CLK      ; None                        ; None                      ; 4.472 ns                ;
+; N/A                                     ; 212.27 MHz ( period = 4.711 ns )                    ; uop_shiftreg_p2s:inst1|idx[28] ; uop_shiftreg_p2s:inst1|idx[28] ; CLK        ; CLK      ; None                        ; None                      ; 4.472 ns                ;
+; N/A                                     ; 212.27 MHz ( period = 4.711 ns )                    ; uop_shiftreg_p2s:inst1|idx[28] ; uop_shiftreg_p2s:inst1|idx[29] ; CLK        ; CLK      ; None                        ; None                      ; 4.472 ns                ;
+; N/A                                     ; 212.27 MHz ( period = 4.711 ns )                    ; uop_shiftreg_p2s:inst1|idx[28] ; uop_shiftreg_p2s:inst1|idx[16] ; CLK        ; CLK      ; None                        ; None                      ; 4.472 ns                ;
+; N/A                                     ; 212.27 MHz ( period = 4.711 ns )                    ; uop_shiftreg_p2s:inst1|idx[28] ; uop_shiftreg_p2s:inst1|idx[19] ; CLK        ; CLK      ; None                        ; None                      ; 4.472 ns                ;
+; N/A                                     ; 212.27 MHz ( period = 4.711 ns )                    ; uop_shiftreg_p2s:inst1|idx[28] ; uop_shiftreg_p2s:inst1|idx[18] ; CLK        ; CLK      ; None                        ; None                      ; 4.472 ns                ;
+; N/A                                     ; 212.27 MHz ( period = 4.711 ns )                    ; uop_shiftreg_p2s:inst1|idx[28] ; uop_shiftreg_p2s:inst1|idx[17] ; CLK        ; CLK      ; None                        ; None                      ; 4.472 ns                ;
+; N/A                                     ; 212.27 MHz ( period = 4.711 ns )                    ; uop_shiftreg_p2s:inst1|idx[28] ; uop_shiftreg_p2s:inst1|idx[20] ; CLK        ; CLK      ; None                        ; None                      ; 4.472 ns                ;
+; N/A                                     ; 212.27 MHz ( period = 4.711 ns )                    ; uop_shiftreg_p2s:inst1|idx[28] ; uop_shiftreg_p2s:inst1|idx[22] ; CLK        ; CLK      ; None                        ; None                      ; 4.472 ns                ;
+; N/A                                     ; 212.27 MHz ( period = 4.711 ns )                    ; uop_shiftreg_p2s:inst1|idx[28] ; uop_shiftreg_p2s:inst1|idx[21] ; CLK        ; CLK      ; None                        ; None                      ; 4.472 ns                ;
+; N/A                                     ; 212.27 MHz ( period = 4.711 ns )                    ; uop_shiftreg_p2s:inst1|idx[28] ; uop_shiftreg_p2s:inst1|idx[23] ; CLK        ; CLK      ; None                        ; None                      ; 4.472 ns                ;
+; N/A                                     ; 212.63 MHz ( period = 4.703 ns )                    ; uop_shiftreg_p2s:inst1|idx[19] ; uop_shiftreg_p2s:inst1|idx[26] ; CLK        ; CLK      ; None                        ; None                      ; 4.464 ns                ;
+; N/A                                     ; 212.63 MHz ( period = 4.703 ns )                    ; uop_shiftreg_p2s:inst1|idx[19] ; uop_shiftreg_p2s:inst1|idx[25] ; CLK        ; CLK      ; None                        ; None                      ; 4.464 ns                ;
+; N/A                                     ; 212.63 MHz ( period = 4.703 ns )                    ; uop_shiftreg_p2s:inst1|idx[19] ; uop_shiftreg_p2s:inst1|idx[27] ; CLK        ; CLK      ; None                        ; None                      ; 4.464 ns                ;
+; N/A                                     ; 212.63 MHz ( period = 4.703 ns )                    ; uop_shiftreg_p2s:inst1|idx[19] ; uop_shiftreg_p2s:inst1|idx[24] ; CLK        ; CLK      ; None                        ; None                      ; 4.464 ns                ;
+; N/A                                     ; 212.63 MHz ( period = 4.703 ns )                    ; uop_shiftreg_p2s:inst1|idx[19] ; uop_shiftreg_p2s:inst1|idx[30] ; CLK        ; CLK      ; None                        ; None                      ; 4.464 ns                ;
+; N/A                                     ; 212.63 MHz ( period = 4.703 ns )                    ; uop_shiftreg_p2s:inst1|idx[19] ; uop_shiftreg_p2s:inst1|idx[31] ; CLK        ; CLK      ; None                        ; None                      ; 4.464 ns                ;
+; N/A                                     ; 212.63 MHz ( period = 4.703 ns )                    ; uop_shiftreg_p2s:inst1|idx[19] ; uop_shiftreg_p2s:inst1|idx[28] ; CLK        ; CLK      ; None                        ; None                      ; 4.464 ns                ;
+; N/A                                     ; 212.63 MHz ( period = 4.703 ns )                    ; uop_shiftreg_p2s:inst1|idx[19] ; uop_shiftreg_p2s:inst1|idx[29] ; CLK        ; CLK      ; None                        ; None                      ; 4.464 ns                ;
+; N/A                                     ; 212.63 MHz ( period = 4.703 ns )                    ; uop_shiftreg_p2s:inst1|idx[19] ; uop_shiftreg_p2s:inst1|idx[16] ; CLK        ; CLK      ; None                        ; None                      ; 4.464 ns                ;
+; N/A                                     ; 212.63 MHz ( period = 4.703 ns )                    ; uop_shiftreg_p2s:inst1|idx[19] ; uop_shiftreg_p2s:inst1|idx[19] ; CLK        ; CLK      ; None                        ; None                      ; 4.464 ns                ;
+; N/A                                     ; 212.63 MHz ( period = 4.703 ns )                    ; uop_shiftreg_p2s:inst1|idx[19] ; uop_shiftreg_p2s:inst1|idx[18] ; CLK        ; CLK      ; None                        ; None                      ; 4.464 ns                ;
+; N/A                                     ; 212.63 MHz ( period = 4.703 ns )                    ; uop_shiftreg_p2s:inst1|idx[19] ; uop_shiftreg_p2s:inst1|idx[17] ; CLK        ; CLK      ; None                        ; None                      ; 4.464 ns                ;
+; N/A                                     ; 212.63 MHz ( period = 4.703 ns )                    ; uop_shiftreg_p2s:inst1|idx[19] ; uop_shiftreg_p2s:inst1|idx[20] ; CLK        ; CLK      ; None                        ; None                      ; 4.464 ns                ;
+; N/A                                     ; 212.63 MHz ( period = 4.703 ns )                    ; uop_shiftreg_p2s:inst1|idx[19] ; uop_shiftreg_p2s:inst1|idx[22] ; CLK        ; CLK      ; None                        ; None                      ; 4.464 ns                ;
+; N/A                                     ; 212.63 MHz ( period = 4.703 ns )                    ; uop_shiftreg_p2s:inst1|idx[19] ; uop_shiftreg_p2s:inst1|idx[21] ; CLK        ; CLK      ; None                        ; None                      ; 4.464 ns                ;
+; N/A                                     ; 212.63 MHz ( period = 4.703 ns )                    ; uop_shiftreg_p2s:inst1|idx[19] ; uop_shiftreg_p2s:inst1|idx[23] ; CLK        ; CLK      ; None                        ; None                      ; 4.464 ns                ;
+; N/A                                     ; 212.81 MHz ( period = 4.699 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[7]  ; CLK        ; CLK      ; None                        ; None                      ; 4.462 ns                ;
+; N/A                                     ; 212.81 MHz ( period = 4.699 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[4]  ; CLK        ; CLK      ; None                        ; None                      ; 4.462 ns                ;
+; N/A                                     ; 212.81 MHz ( period = 4.699 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[5]  ; CLK        ; CLK      ; None                        ; None                      ; 4.462 ns                ;
+; N/A                                     ; 212.81 MHz ( period = 4.699 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[6]  ; CLK        ; CLK      ; None                        ; None                      ; 4.462 ns                ;
+; N/A                                     ; 212.81 MHz ( period = 4.699 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[3]  ; CLK        ; CLK      ; None                        ; None                      ; 4.462 ns                ;
+; N/A                                     ; 212.81 MHz ( period = 4.699 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[10] ; CLK        ; CLK      ; None                        ; None                      ; 4.462 ns                ;
+; N/A                                     ; 212.81 MHz ( period = 4.699 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[8]  ; CLK        ; CLK      ; None                        ; None                      ; 4.462 ns                ;
+; N/A                                     ; 212.81 MHz ( period = 4.699 ns )                    ; uop_shiftreg_p2s:inst1|idx[26] ; uop_shiftreg_p2s:inst1|idx[11] ; CLK        ; CLK      ; None                        ; None                      ; 4.462 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                ;                                ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+--------------------------------+--------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; tsu                                                                                         ;
++-------+--------------+------------+------------+---------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From       ; To                              ; To Clock ;
++-------+--------------+------------+------------+---------------------------------+----------+
+; N/A   ; None         ; 6.245 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[26]  ; CLK      ;
+; N/A   ; None         ; 6.245 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[25]  ; CLK      ;
+; N/A   ; None         ; 6.245 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[27]  ; CLK      ;
+; N/A   ; None         ; 6.245 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[24]  ; CLK      ;
+; N/A   ; None         ; 6.245 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[30]  ; CLK      ;
+; N/A   ; None         ; 6.245 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[31]  ; CLK      ;
+; N/A   ; None         ; 6.245 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[28]  ; CLK      ;
+; N/A   ; None         ; 6.245 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[29]  ; CLK      ;
+; N/A   ; None         ; 6.245 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[16]  ; CLK      ;
+; N/A   ; None         ; 6.245 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[19]  ; CLK      ;
+; N/A   ; None         ; 6.245 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[18]  ; CLK      ;
+; N/A   ; None         ; 6.245 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[17]  ; CLK      ;
+; N/A   ; None         ; 6.245 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[20]  ; CLK      ;
+; N/A   ; None         ; 6.245 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[22]  ; CLK      ;
+; N/A   ; None         ; 6.245 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[21]  ; CLK      ;
+; N/A   ; None         ; 6.245 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[23]  ; CLK      ;
+; N/A   ; None         ; 5.907 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[2]   ; CLK      ;
+; N/A   ; None         ; 5.907 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[1]   ; CLK      ;
+; N/A   ; None         ; 5.907 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[0]   ; CLK      ;
+; N/A   ; None         ; 5.907 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[15]  ; CLK      ;
+; N/A   ; None         ; 5.907 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[14]  ; CLK      ;
+; N/A   ; None         ; 5.907 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[12]  ; CLK      ;
+; N/A   ; None         ; 5.907 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[13]  ; CLK      ;
+; N/A   ; None         ; 5.907 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[7]   ; CLK      ;
+; N/A   ; None         ; 5.907 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[4]   ; CLK      ;
+; N/A   ; None         ; 5.907 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[5]   ; CLK      ;
+; N/A   ; None         ; 5.907 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[6]   ; CLK      ;
+; N/A   ; None         ; 5.907 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[3]   ; CLK      ;
+; N/A   ; None         ; 5.907 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[10]  ; CLK      ;
+; N/A   ; None         ; 5.907 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[8]   ; CLK      ;
+; N/A   ; None         ; 5.907 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[11]  ; CLK      ;
+; N/A   ; None         ; 5.907 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|idx[9]   ; CLK      ;
+; N/A   ; None         ; 5.063 ns   ; DATA_IN[1] ; uop_shiftreg_p2s:inst1|Nreg[1]  ; CLK      ;
+; N/A   ; None         ; 5.015 ns   ; DATA_IN[6] ; uop_shiftreg_p2s:inst1|Nreg[6]  ; CLK      ;
+; N/A   ; None         ; 4.653 ns   ; DATA_IN[4] ; uop_shiftreg_p2s:inst1|Nreg[4]  ; CLK      ;
+; N/A   ; None         ; 4.508 ns   ; DATA_IN[5] ; uop_shiftreg_p2s:inst1|Nreg[5]  ; CLK      ;
+; N/A   ; None         ; 4.390 ns   ; DATA_IN[3] ; uop_shiftreg_p2s:inst1|Nreg[3]  ; CLK      ;
+; N/A   ; None         ; 4.139 ns   ; DATA_IN[2] ; uop_shiftreg_p2s:inst1|Nreg[2]  ; CLK      ;
+; N/A   ; None         ; 4.123 ns   ; DATA_IN[0] ; uop_shiftreg_p2s:inst1|Nreg[0]  ; CLK      ;
+; N/A   ; None         ; 4.010 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|DATA_OUT ; CLK      ;
+; N/A   ; None         ; 3.913 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|Nreg[6]  ; CLK      ;
+; N/A   ; None         ; 3.891 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|Nreg[5]  ; CLK      ;
+; N/A   ; None         ; 3.880 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|Nreg[1]  ; CLK      ;
+; N/A   ; None         ; 3.574 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|Nreg[4]  ; CLK      ;
+; N/A   ; None         ; 3.572 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|Nreg[3]  ; CLK      ;
+; N/A   ; None         ; 3.569 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|Nreg[0]  ; CLK      ;
+; N/A   ; None         ; 3.568 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|Nreg[2]  ; CLK      ;
+; N/A   ; None         ; 3.564 ns   ; LOAD       ; uop_shiftreg_p2s:inst1|Nreg[7]  ; CLK      ;
+; N/A   ; None         ; 0.151 ns   ; DATA_IN[7] ; uop_shiftreg_p2s:inst1|Nreg[7]  ; CLK      ;
++-------+--------------+------------+------------+---------------------------------+----------+
+
+
++---------------------------------------------------------------------------------------+
+; tco                                                                                   ;
++-------+--------------+------------+---------------------------------+----+------------+
+; Slack ; Required tco ; Actual tco ; From                            ; To ; From Clock ;
++-------+--------------+------------+---------------------------------+----+------------+
+; N/A   ; None         ; 7.300 ns   ; uop_shiftreg_p2s:inst1|DATA_OUT ; Y  ; CLK        ;
++-------+--------------+------------+---------------------------------+----+------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; th                                                                                                ;
++---------------+-------------+-----------+------------+---------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From       ; To                              ; To Clock ;
++---------------+-------------+-----------+------------+---------------------------------+----------+
+; N/A           ; None        ; 0.097 ns  ; DATA_IN[7] ; uop_shiftreg_p2s:inst1|Nreg[7]  ; CLK      ;
+; N/A           ; None        ; -3.316 ns ; LOAD       ; uop_shiftreg_p2s:inst1|Nreg[7]  ; CLK      ;
+; N/A           ; None        ; -3.320 ns ; LOAD       ; uop_shiftreg_p2s:inst1|Nreg[2]  ; CLK      ;
+; N/A           ; None        ; -3.321 ns ; LOAD       ; uop_shiftreg_p2s:inst1|Nreg[0]  ; CLK      ;
+; N/A           ; None        ; -3.324 ns ; LOAD       ; uop_shiftreg_p2s:inst1|Nreg[3]  ; CLK      ;
+; N/A           ; None        ; -3.326 ns ; LOAD       ; uop_shiftreg_p2s:inst1|Nreg[4]  ; CLK      ;
+; N/A           ; None        ; -3.632 ns ; LOAD       ; uop_shiftreg_p2s:inst1|Nreg[1]  ; CLK      ;
+; N/A           ; None        ; -3.643 ns ; LOAD       ; uop_shiftreg_p2s:inst1|Nreg[5]  ; CLK      ;
+; N/A           ; None        ; -3.665 ns ; LOAD       ; uop_shiftreg_p2s:inst1|Nreg[6]  ; CLK      ;
+; N/A           ; None        ; -3.762 ns ; LOAD       ; uop_shiftreg_p2s:inst1|DATA_OUT ; CLK      ;
+; N/A           ; None        ; -3.875 ns ; DATA_IN[0] ; uop_shiftreg_p2s:inst1|Nreg[0]  ; CLK      ;
+; N/A           ; None        ; -3.891 ns ; DATA_IN[2] ; uop_shiftreg_p2s:inst1|Nreg[2]  ; CLK      ;
+; N/A           ; None        ; -4.142 ns ; DATA_IN[3] ; uop_shiftreg_p2s:inst1|Nreg[3]  ; CLK      ;
+; N/A           ; None        ; -4.260 ns ; DATA_IN[5] ; uop_shiftreg_p2s:inst1|Nreg[5]  ; CLK      ;
+; N/A           ; None        ; -4.405 ns ; DATA_IN[4] ; uop_shiftreg_p2s:inst1|Nreg[4]  ; CLK      ;
+; N/A           ; None        ; -4.767 ns ; DATA_IN[6] ; uop_shiftreg_p2s:inst1|Nreg[6]  ; CLK      ;
+; N/A           ; None        ; -4.815 ns ; DATA_IN[1] ; uop_shiftreg_p2s:inst1|Nreg[1]  ; CLK      ;
+; N/A           ; None        ; -5.659 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[2]   ; CLK      ;
+; N/A           ; None        ; -5.659 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[1]   ; CLK      ;
+; N/A           ; None        ; -5.659 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[0]   ; CLK      ;
+; N/A           ; None        ; -5.659 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[15]  ; CLK      ;
+; N/A           ; None        ; -5.659 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[14]  ; CLK      ;
+; N/A           ; None        ; -5.659 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[12]  ; CLK      ;
+; N/A           ; None        ; -5.659 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[13]  ; CLK      ;
+; N/A           ; None        ; -5.659 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[7]   ; CLK      ;
+; N/A           ; None        ; -5.659 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[4]   ; CLK      ;
+; N/A           ; None        ; -5.659 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[5]   ; CLK      ;
+; N/A           ; None        ; -5.659 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[6]   ; CLK      ;
+; N/A           ; None        ; -5.659 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[3]   ; CLK      ;
+; N/A           ; None        ; -5.659 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[10]  ; CLK      ;
+; N/A           ; None        ; -5.659 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[8]   ; CLK      ;
+; N/A           ; None        ; -5.659 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[11]  ; CLK      ;
+; N/A           ; None        ; -5.659 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[9]   ; CLK      ;
+; N/A           ; None        ; -5.997 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[26]  ; CLK      ;
+; N/A           ; None        ; -5.997 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[25]  ; CLK      ;
+; N/A           ; None        ; -5.997 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[27]  ; CLK      ;
+; N/A           ; None        ; -5.997 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[24]  ; CLK      ;
+; N/A           ; None        ; -5.997 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[30]  ; CLK      ;
+; N/A           ; None        ; -5.997 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[31]  ; CLK      ;
+; N/A           ; None        ; -5.997 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[28]  ; CLK      ;
+; N/A           ; None        ; -5.997 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[29]  ; CLK      ;
+; N/A           ; None        ; -5.997 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[16]  ; CLK      ;
+; N/A           ; None        ; -5.997 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[19]  ; CLK      ;
+; N/A           ; None        ; -5.997 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[18]  ; CLK      ;
+; N/A           ; None        ; -5.997 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[17]  ; CLK      ;
+; N/A           ; None        ; -5.997 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[20]  ; CLK      ;
+; N/A           ; None        ; -5.997 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[22]  ; CLK      ;
+; N/A           ; None        ; -5.997 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[21]  ; CLK      ;
+; N/A           ; None        ; -5.997 ns ; LOAD       ; uop_shiftreg_p2s:inst1|idx[23]  ; CLK      ;
++---------------+-------------+-----------+------------+---------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Full Version
+    Info: Processing started: Fri Nov 19 09:14:27 2010
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off behavioural -c behavioural --timing_analysis_only
+Info: Only one processor detected - disabling parallel compilation
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "CLK" is an undefined clock
+Info: Clock "CLK" has Internal fmax of 198.53 MHz between source register "uop_shiftreg_p2s:inst1|idx[26]" and destination register "uop_shiftreg_p2s:inst1|idx[26]" (period= 5.037 ns)
+    Info: + Longest register to register delay is 4.798 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X24_Y12_N21; Fanout = 3; REG Node = 'uop_shiftreg_p2s:inst1|idx[26]'
+        Info: 2: + IC(1.211 ns) + CELL(0.545 ns) = 1.756 ns; Loc. = LCCOMB_X22_Y13_N20; Fanout = 1; COMB Node = 'uop_shiftreg_p2s:inst1|Equal0~7'
+        Info: 3: + IC(0.320 ns) + CELL(0.545 ns) = 2.621 ns; Loc. = LCCOMB_X22_Y13_N0; Fanout = 1; COMB Node = 'uop_shiftreg_p2s:inst1|Equal0~9'
+        Info: 4: + IC(0.292 ns) + CELL(0.178 ns) = 3.091 ns; Loc. = LCCOMB_X22_Y13_N26; Fanout = 32; COMB Node = 'uop_shiftreg_p2s:inst1|idx[19]~36'
+        Info: 5: + IC(1.127 ns) + CELL(0.580 ns) = 4.798 ns; Loc. = LCFF_X24_Y12_N21; Fanout = 3; REG Node = 'uop_shiftreg_p2s:inst1|idx[26]'
+        Info: Total cell delay = 1.848 ns ( 38.52 % )
+        Info: Total interconnect delay = 2.950 ns ( 61.48 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "CLK" to destination register is 2.590 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.066 ns) = 1.066 ns; Loc. = PIN_23; Fanout = 1; CLK Node = 'CLK'
+            Info: 2: + IC(0.132 ns) + CELL(0.000 ns) = 1.198 ns; Loc. = CLKCTRL_G2; Fanout = 41; COMB Node = 'CLK~clkctrl'
+            Info: 3: + IC(0.790 ns) + CELL(0.602 ns) = 2.590 ns; Loc. = LCFF_X24_Y12_N21; Fanout = 3; REG Node = 'uop_shiftreg_p2s:inst1|idx[26]'
+            Info: Total cell delay = 1.668 ns ( 64.40 % )
+            Info: Total interconnect delay = 0.922 ns ( 35.60 % )
+        Info: - Longest clock path from clock "CLK" to source register is 2.590 ns
+            Info: 1: + IC(0.000 ns) + CELL(1.066 ns) = 1.066 ns; Loc. = PIN_23; Fanout = 1; CLK Node = 'CLK'
+            Info: 2: + IC(0.132 ns) + CELL(0.000 ns) = 1.198 ns; Loc. = CLKCTRL_G2; Fanout = 41; COMB Node = 'CLK~clkctrl'
+            Info: 3: + IC(0.790 ns) + CELL(0.602 ns) = 2.590 ns; Loc. = LCFF_X24_Y12_N21; Fanout = 3; REG Node = 'uop_shiftreg_p2s:inst1|idx[26]'
+            Info: Total cell delay = 1.668 ns ( 64.40 % )
+            Info: Total interconnect delay = 0.922 ns ( 35.60 % )
+    Info: + Micro clock to output delay of source is 0.277 ns
+    Info: + Micro setup delay of destination is -0.038 ns
+Info: tsu for register "uop_shiftreg_p2s:inst1|idx[26]" (data pin = "LOAD", clock pin = "CLK") is 6.245 ns
+    Info: + Longest pin to register delay is 8.873 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.944 ns) = 0.944 ns; Loc. = PIN_5; Fanout = 10; PIN Node = 'LOAD'
+        Info: 2: + IC(5.677 ns) + CELL(0.545 ns) = 7.166 ns; Loc. = LCCOMB_X22_Y13_N26; Fanout = 32; COMB Node = 'uop_shiftreg_p2s:inst1|idx[19]~36'
+        Info: 3: + IC(1.127 ns) + CELL(0.580 ns) = 8.873 ns; Loc. = LCFF_X24_Y12_N21; Fanout = 3; REG Node = 'uop_shiftreg_p2s:inst1|idx[26]'
+        Info: Total cell delay = 2.069 ns ( 23.32 % )
+        Info: Total interconnect delay = 6.804 ns ( 76.68 % )
+    Info: + Micro setup delay of destination is -0.038 ns
+    Info: - Shortest clock path from clock "CLK" to destination register is 2.590 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.066 ns) = 1.066 ns; Loc. = PIN_23; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.132 ns) + CELL(0.000 ns) = 1.198 ns; Loc. = CLKCTRL_G2; Fanout = 41; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(0.790 ns) + CELL(0.602 ns) = 2.590 ns; Loc. = LCFF_X24_Y12_N21; Fanout = 3; REG Node = 'uop_shiftreg_p2s:inst1|idx[26]'
+        Info: Total cell delay = 1.668 ns ( 64.40 % )
+        Info: Total interconnect delay = 0.922 ns ( 35.60 % )
+Info: tco from clock "CLK" to destination pin "Y" through register "uop_shiftreg_p2s:inst1|DATA_OUT" is 7.300 ns
+    Info: + Longest clock path from clock "CLK" to source register is 2.578 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.066 ns) = 1.066 ns; Loc. = PIN_23; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.132 ns) + CELL(0.000 ns) = 1.198 ns; Loc. = CLKCTRL_G2; Fanout = 41; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(0.778 ns) + CELL(0.602 ns) = 2.578 ns; Loc. = LCFF_X1_Y13_N17; Fanout = 2; REG Node = 'uop_shiftreg_p2s:inst1|DATA_OUT'
+        Info: Total cell delay = 1.668 ns ( 64.70 % )
+        Info: Total interconnect delay = 0.910 ns ( 35.30 % )
+    Info: + Micro clock to output delay of source is 0.277 ns
+    Info: + Longest register to pin delay is 4.445 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X1_Y13_N17; Fanout = 2; REG Node = 'uop_shiftreg_p2s:inst1|DATA_OUT'
+        Info: 2: + IC(1.555 ns) + CELL(2.890 ns) = 4.445 ns; Loc. = PIN_40; Fanout = 0; PIN Node = 'Y'
+        Info: Total cell delay = 2.890 ns ( 65.02 % )
+        Info: Total interconnect delay = 1.555 ns ( 34.98 % )
+Info: th for register "uop_shiftreg_p2s:inst1|Nreg[7]" (data pin = "DATA_IN[7]", clock pin = "CLK") is 0.097 ns
+    Info: + Longest clock path from clock "CLK" to destination register is 2.578 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.066 ns) = 1.066 ns; Loc. = PIN_23; Fanout = 1; CLK Node = 'CLK'
+        Info: 2: + IC(0.132 ns) + CELL(0.000 ns) = 1.198 ns; Loc. = CLKCTRL_G2; Fanout = 41; COMB Node = 'CLK~clkctrl'
+        Info: 3: + IC(0.778 ns) + CELL(0.602 ns) = 2.578 ns; Loc. = LCFF_X1_Y13_N23; Fanout = 2; REG Node = 'uop_shiftreg_p2s:inst1|Nreg[7]'
+        Info: Total cell delay = 1.668 ns ( 64.70 % )
+        Info: Total interconnect delay = 0.910 ns ( 35.30 % )
+    Info: + Micro hold delay of destination is 0.286 ns
+    Info: - Shortest pin to register delay is 2.767 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.056 ns) = 1.056 ns; Loc. = PIN_24; Fanout = 1; PIN Node = 'DATA_IN[7]'
+        Info: 2: + IC(1.094 ns) + CELL(0.521 ns) = 2.671 ns; Loc. = LCCOMB_X1_Y13_N22; Fanout = 1; COMB Node = 'uop_shiftreg_p2s:inst1|Nreg[7]~7'
+        Info: 3: + IC(0.000 ns) + CELL(0.096 ns) = 2.767 ns; Loc. = LCFF_X1_Y13_N23; Fanout = 2; REG Node = 'uop_shiftreg_p2s:inst1|Nreg[7]'
+        Info: Total cell delay = 1.673 ns ( 60.46 % )
+        Info: Total interconnect delay = 1.094 ns ( 39.54 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 176 megabytes
+    Info: Processing ended: Fri Nov 19 09:14:27 2010
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

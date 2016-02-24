@@ -1,0 +1,29 @@
+# do behavioural.do 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module behavioural
+# 
+# Top level modules:
+# 	behavioural
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module behavioural_vlg_sample_tst
+# -- Compiling module behavioural_vlg_check_tst
+# -- Compiling module behavioural_vlg_vec_tst
+# 
+# Top level modules:
+# 	behavioural_vlg_vec_tst
+# vsim -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -voptargs=\"+acc\" -t 1ps -novopt work.behavioural_vlg_vec_tst 
+# Loading work.behavioural_vlg_vec_tst
+# Loading work.behavioural
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# Loading work.behavioural_vlg_sample_tst
+# Loading work.behavioural_vlg_check_tst
+# Loading altera_ver.PRIM_GDFF_LOW
+# Simulation passed !
+# ** Note: $finish    : behavioural_tests.vwf.vt(154)
+#    Time: 1 us  Iteration: 0  Instance: /behavioural_vlg_vec_tst/tb_out

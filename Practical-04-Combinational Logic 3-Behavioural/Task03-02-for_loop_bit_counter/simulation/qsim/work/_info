@@ -1,0 +1,81 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\noutram\Desktop\ELE233-P3\Task03-02-for_loop_bit_counter\simulation\qsim
+vbehavioural
+Z1 !s100 9efgFCZ]<[f8MI:iz2jE02
+Z2 I]Ze[C8JOfDF5eS<YB6^F53
+Z3 V]daQZLKK4ai;D<YCEGkAC1
+Z4 dC:\Users\noutram\Desktop\Topic4-Tasks\Task03-02-for_loop_bit_counter\simulation\qsim
+Z5 w1413887631
+Z6 8behavioural.vo
+Z7 Fbehavioural.vo
+L0 31
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -work|work|behavioural.vo|
+Z10 o-work work -O0
+!i10b 1
+!s85 0
+Z11 !s108 1413887632.898000
+Z12 !s107 behavioural.vo|
+!s101 -O0
+vbehavioural_vlg_check_tst
+!i10b 1
+Z13 !s100 RW:ITI7`XEQ183k<2YAlg3
+Z14 IkLASff<42BcoBHFAi:NU]2
+Z15 Vn>f0kZ8]l9S76aD:iNlV@2
+R4
+Z16 w1413887627
+Z17 8behavioural_tests.vwf.vt
+Z18 Fbehavioural_tests.vwf.vt
+L0 57
+R8
+r1
+!s85 0
+31
+Z19 !s108 1413887632.991000
+Z20 !s107 behavioural_tests.vwf.vt|
+Z21 !s90 -work|work|behavioural_tests.vwf.vt|
+!s101 -O0
+R10
+vbehavioural_vlg_sample_tst
+!i10b 1
+Z22 !s100 I]6KEedSKI@CNcKFAV@ie2
+Z23 IFN_e8J_QSo133LBf<o`EE3
+Z24 VZ7R5eW>8J9LPDdobG<SC]3
+R4
+R16
+R17
+R18
+L0 29
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10
+vbehavioural_vlg_vec_tst
+!i10b 1
+Z25 !s100 eVP_GY:P88NGHg]60a`go1
+Z26 IYenUz7o@gF6c<BjWX?4Q82
+Z27 VH2@8K6OXgjBQE6V71MWAI2
+R4
+R16
+R17
+R18
+Z28 L0 421
+R8
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R10

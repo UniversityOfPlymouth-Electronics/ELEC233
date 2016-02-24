@@ -1,0 +1,52 @@
+|behavioural
+Y[0] <= leading_ones:inst.Y[0]
+Y[1] <= leading_ones:inst.Y[1]
+Y[2] <= leading_ones:inst.Y[2]
+Y[3] <= leading_ones:inst.Y[3]
+GO => leading_ones:inst.GO
+DATA[0] => leading_ones:inst.X[0]
+DATA[1] => leading_ones:inst.X[1]
+DATA[2] => leading_ones:inst.X[2]
+DATA[3] => leading_ones:inst.X[3]
+DATA[4] => leading_ones:inst.X[4]
+DATA[5] => leading_ones:inst.X[5]
+DATA[6] => leading_ones:inst.X[6]
+DATA[7] => leading_ones:inst.X[7]
+DATA[8] => leading_ones:inst.X[8]
+DATA[9] => leading_ones:inst.X[9]
+DATA[10] => leading_ones:inst.X[10]
+DATA[11] => leading_ones:inst.X[11]
+DATA[12] => leading_ones:inst.X[12]
+DATA[13] => leading_ones:inst.X[13]
+DATA[14] => leading_ones:inst.X[14]
+DATA[15] => leading_ones:inst.X[15]
+
+
+|behavioural|leading_ones:inst
+X[0] => process_0.IN1
+X[1] => process_0.IN1
+X[2] => process_0.IN1
+X[3] => process_0.IN1
+X[4] => process_0.IN1
+X[5] => process_0.IN1
+X[6] => process_0.IN1
+X[7] => process_0.IN1
+X[8] => process_0.IN1
+X[9] => process_0.IN1
+X[10] => process_0.IN1
+X[11] => process_0.IN1
+X[12] => process_0.IN1
+X[13] => process_0.IN1
+X[14] => process_0.IN0
+X[15] => process_0.DATAB
+X[15] => process_0.IN1
+GO => Y[0].OE
+GO => Y[1].OE
+GO => Y[2].OE
+GO => Y[3].OE
+Y[0] <= Y[0].DB_MAX_OUTPUT_PORT_TYPE
+Y[1] <= Y[1].DB_MAX_OUTPUT_PORT_TYPE
+Y[2] <= Y[2].DB_MAX_OUTPUT_PORT_TYPE
+Y[3] <= Y[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
