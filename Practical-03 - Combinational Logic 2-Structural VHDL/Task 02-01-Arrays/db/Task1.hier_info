@@ -1,0 +1,8 @@
+|Block1
+LED[0] <= ARRAY_TEST:inst.Y
+
+
+|Block1|ARRAY_TEST:inst
+Y <= <VCC>
+
+

@@ -1,16 +1,16 @@
-Fitter Status : Successful - Fri Oct 15 06:11:26 2010
-Quartus II Version : 9.1 Build 350 03/24/2010 SP 2 SJ Full Version
+Fitter Status : Successful - Wed Feb 08 17:21:48 2017
+Quartus II 64-Bit Version : 15.0.2 Build 153 07/15/2015 SJ Web Edition
 Revision Name : example
 Top-level Entity Name : top_level
-Family : Cyclone II
-Device : EP2C5Q208C7
+Family : Cyclone IV E
+Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 1 / 4,608 ( < 1 % )
-    Total combinational functions : 1 / 4,608 ( < 1 % )
-    Dedicated logic registers : 0 / 4,608 ( 0 % )
+Total logic elements : 1 / 22,320 ( < 1 % )
+    Total combinational functions : 1 / 22,320 ( < 1 % )
+    Dedicated logic registers : 0 / 22,320 ( 0 % )
 Total registers : 0
-Total pins : 3 / 142 ( 2 % )
+Total pins : 3 / 154 ( 2 % )
 Total virtual pins : 0
-Total memory bits : 0 / 119,808 ( 0 % )
-Embedded Multiplier 9-bit elements : 0 / 26 ( 0 % )
-Total PLLs : 0 / 2 ( 0 % )
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

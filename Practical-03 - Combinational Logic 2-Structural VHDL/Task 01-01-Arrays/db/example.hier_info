@@ -1,8 +1,0 @@
-|top_level
-Y <= ARRAY_TEST:inst.Y
-
-
-|top_level|ARRAY_TEST:inst
-Y <= <VCC>
-
-
